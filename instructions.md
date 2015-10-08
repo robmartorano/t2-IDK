@@ -26,3 +26,7 @@
 # git commit -m "Insert your message here" (please put message)
 # git push origin (name of your branch) EX: david_branch (pushes the file to server)
 # git pull (pulls latest version of all files to your computer)
+
+
+
+### View your site at: cs.duke.edu/~csaccount/t2-IDK
