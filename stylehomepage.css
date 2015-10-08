@@ -1,0 +1,161 @@
+a {
+	color:white;
+	text-decoration: none;
+	text-align: center;
+}
+body {
+	
+	margin: 0;
+	background-color:#e0e4ed;
+	width:100%;
+	
+}
+	
+.navigation{
+	margin:0;
+	padding:0;
+	
+	display:block;
+	width:100%;
+    
+    text-align: right	;    
+	font-family:"Helvetica Neue","Helvetica",sans;
+	font-size: 1em;
+	font-weight:900;
+	color: white;
+}
+.forms{
+	margin-top: 20%;
+	color:rgba(0,51,102,.85);
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	font-family:"Helvetica Neue","Helvetica",sans;
+	font-size: 1em;
+	font-weight:900;
+	
+	width:40%;
+}
+#name{
+	
+	font-size: 2em;
+	text-align:center;
+
+}
+.tabs{
+	
+	background-color:rgba(0,51,102,.85);
+	width: 100%;
+	list-style-type: none;
+    
+	margin-bottom: auto;
+	margin: 0;
+	padding: 0;
+	
+}
+li{
+	display:inline-block;
+	margin:0;
+	
+	width: 10%;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:10px;
+	
+}
+li:hover{
+	background-color:#52527A;
+	cursor: hand;
+	
+}
+#facebook{
+	color:blue;
+	
+	text-decoration: underline;
+	
+}
+
+.hi{
+	display:block;
+	padding:75px;
+	margin-left:auto;
+	margin-right:auto;
+	width:50%;
+	
+	text-align:left;
+	background-color:white;
+	font-family:"Times New Roman",Times,sans;
+	font-size: 1.25em
+}
+
+.about{
+	margin-top: 3%;
+	border-radius:5%;
+	
+	padding:25px;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:white;
+	font-family:"Times New Roman",Times,serif;
+	margin-bottom: 1%;
+}
+#Description{
+	font-family:"Helvetica Neue","Helvetica",sans;
+	color:rgba(0,51,102,.85);
+	text-align: center;
+	font-weight: bold;
+	font-size:1.2em;
+	padding: 5px;
+}
+img{
+	
+	display:block;
+	margin-top:50px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	}
+#picdescript{
+	color:rgba(0,51,102,.85);
+	font-family:"Helvetica Neue","Helvetica",sans;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: 600;
+}
+
+	
+@media screen and (min-width: 1em){
+	li{
+		display:block;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	.about{
+		width:70%;
+		font-size:1em;
+	}
+
+	img{
+		width:360px;
+		height:240px;
+	
+		}
+}
+
+
+@media screen and (min-width: 40em){
+	li{
+		display:inline-block;
+	}
+
+	.about{
+		width:50%;
+		font-size:1.5em;
+	}
+	img{
+		width:640px;
+		height:360px;
+		}
+
+}
