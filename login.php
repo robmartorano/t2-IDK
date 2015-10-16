@@ -1,0 +1,29 @@
+<html>
+	<head>
+<link rel="stylesheet" href="stylehomepage.css">
+	</head>
+
+<body>
+	<header>
+		<?php require_once 'nav.php';?>
+	</header>	
+<div class="logo">
+ Sign In to buy textbooks
+</div>
+
+<div class="forms">
+
+<form action="abc.php" method="post">
+<img class="loginpic" src="login.png" alt="Login" ></img>
+
+<input type="text" name="NetID" placeholder="Duke E-mail"><br>
+<input type="text" name="password" placeholder="Password"><br>
+
+
+
+<input type="submit">
+</div>
+</form>
+
+</body>
+</html>

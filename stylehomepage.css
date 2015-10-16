@@ -6,7 +6,7 @@ a {
 body {
 	
 	margin: 0;
-	background-color:#e0e4ed;
+	background-color:white;
 	width:100%;
 	
 }
@@ -24,18 +24,82 @@ body {
 	font-weight:900;
 	color: white;
 }
-.forms{
-	margin-top: 20%;
+#home{
+	margin-left:auto;
+	margin-right: auto;
+	width:40%;
+}
+#home:hover{
+	
+	cursor: hand;
+	
+}
+
+.logo{
+	padding: 10px;
 	color:rgba(0,51,102,.85);
+	margin-top: 5%;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	font-family:"Helvetica Neue","Helvetica",sans;
+	font-size: 2em;
+	font-weight:100;
+	width: 40%;
+	text-align:center;
+}
+.forms{
+	padding: 5px;
+	margin-top: 2%;
+	color:rgba(0,51,102,.85);
+	background-color: #e0e4ed;
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
 	font-family:"Helvetica Neue","Helvetica",sans;
 	font-size: 1em;
 	font-weight:900;
+	width: 20%;
+	height: 45%;
+	text-align:center;
 	
-	width:40%;
 }
+.loginpic{
+	padding:0;
+	height: 120px;
+	width: 120px;
+}
+input[type=text] {
+	
+	
+  margin-top: 5%;
+  border-radius: 0;
+  width: 60%;
+  height: 10%;
+  padding:0;
+
+  -webkit-appearance: box;
+}
+
+input[type=submit] {
+  height: 10%;
+  border-radius: 15px;
+  width: 60%;
+  margin-top: 5%;
+  padding: 5px;
+  color:white;
+  background-color:rgba(0,51,102,.85);
+
+  -webkit-appearance: box;
+}
+input[type=submit]:hover {
+  cursor: hand;
+  
+  background-color:rgba(0,51,102,1);
+
+  
+}
+
 #name{
 	
 	font-size: 2em;
@@ -63,11 +127,17 @@ li{
 	padding-bottom:10px;
 	
 }
-li:hover{
+#login:hover{
 	background-color:#52527A;
 	cursor: hand;
 	
 }
+#registration:hover{
+	background-color:#52527A;
+	cursor: hand;
+	
+}
+
 #facebook{
 	color:blue;
 	
