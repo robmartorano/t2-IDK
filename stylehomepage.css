@@ -1,7 +1,17 @@
 a {
 	color:white;
+	float: center;	
+	display:block;
 	text-decoration: none;
 	text-align: center;
+	
+	background-color:rgba(0,51,102,.85);
+	width: 100%;
+	list-style-type: none;
+    
+	margin-bottom: auto;
+	margin: 0;
+	padding: 0;
 }
 body {
 	
@@ -34,6 +44,17 @@ body {
 	cursor: hand;
 	
 }
+.tabs{
+	
+	background-color:rgba(0,51,102,.85);
+	width: 100%;
+	list-style-type: none;
+    
+	margin-bottom: auto;
+	margin: 0;
+	padding: 0;
+	
+}
 
 .logo{
 	padding: 10px;
@@ -60,15 +81,14 @@ body {
 	font-size: 1em;
 	font-weight:900;
 	width: 20%;
-	height: 50%;
+	height: 45%;
 	text-align:center;
 	
 }
-
 .loginpic{
 	padding:0;
-	height: 120px;
-	width: 120px;
+	height: 30%;
+	width: 35%;
 }
 input[type=text] {
 	
@@ -107,17 +127,7 @@ input[type=submit]:hover {
 	text-align:center;
 
 }
-.tabs{
-	
-	background-color:rgba(0,51,102,.85);
-	width: 100%;
-	list-style-type: none;
-    
-	margin-bottom: auto;
-	margin: 0;
-	padding: 0;
-	
-}
+
 li{
 	display:inline-block;
 	margin:0;
@@ -196,37 +206,3 @@ img{
 }
 
 	
-@media screen and (min-width: 1em){
-	li{
-		display:block;
-		margin-left:auto;
-		margin-right:auto;
-	}
-	.about{
-		width:70%;
-		font-size:1em;
-	}
-
-	img{
-		width:360px;
-		height:240px;
-	
-		}
-}
-
-
-@media screen and (min-width: 40em){
-	li{
-		display:inline-block;
-	}
-
-	.about{
-		width:50%;
-		font-size:1.5em;
-	}
-	img{
-		width:640px;
-		height:360px;
-		}
-
-}
