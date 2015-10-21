@@ -1,0 +1,124 @@
+a {
+	color:white;
+	text-decoration: none;
+	text-align: center;
+}
+body {
+	
+	margin: 0;
+	background-color:white;
+	width:100%;
+	
+}
+	
+.navigation{
+	margin:0;
+	padding:0;
+	
+	display:block;
+	width:100%;
+    
+    text-align: right	;    
+	font-family:"Helvetica Neue","Helvetica",sans;
+	font-size: 1em;
+	font-weight:900;
+	color: white;
+}
+#home{
+	margin-left:auto;
+	margin-right: auto;
+	width:40%;
+}
+#home:hover{
+	
+	cursor: hand;
+	
+}
+
+.logo{
+	padding: 10px;
+	color:rgba(0,51,102,.85);
+	margin-top: 5%;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	font-family:"Helvetica Neue","Helvetica",sans;
+	font-size: 2em;
+	font-weight:100;
+	width: 40%;
+	text-align:center;
+}
+
+
+#name{
+	
+	font-size: 2em;
+	text-align:center;
+
+}
+.tabs{
+	
+	background-color:rgba(0,51,102,.85);
+	width: 100%;
+	list-style-type: none;
+    
+	margin-bottom: auto;
+	margin: 0;
+	padding: 0;
+	
+}
+
+.tabs li{
+	display:inline-block;
+	margin:0;
+	
+	width: 10%;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:10px;
+	
+}
+
+.buy
+{
+display: block;
+background: #F9FDFE;
+height: 50%;
+padding-top: 0;
+border: Blue solide;
+}
+.sell
+{
+height: 50%;
+background: #F9FDFE;
+padding-top: 0;
+border: Blue solide;
+}
+.left
+{
+float: left;
+display: block;
+width: 32%;
+background: #C6ECFC;
+margin: 3%;
+height: 83%;
+}
+.right
+{
+float: right;
+display: block;
+width: 56%;
+background: #C6ECFC;
+margin: 3%;
+height: 83%
+}
+.displaybook
+{
+float: left;
+}
+
+.titledash
+{
+font-size: 1.2em;
+text-align: center;
+}
