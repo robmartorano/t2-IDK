@@ -2,13 +2,19 @@ a {
 	color:white;
 	text-decoration: none;
 	text-align: center;
-}
+	}
+	
 body {
-	
 	margin: 0;
-	background-color:white;
+	background-color: white;
 	width:100%;
+	}
 	
+#background {
+	background-image: url("duke_blurred.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	backgorund-position: right top;
 }
 	
 .navigation{
@@ -18,12 +24,13 @@ body {
 	display:block;
 	width:100%;
     
-    text-align: right	;    
+    text-align: right;    
 	font-family:"Helvetica Neue","Helvetica",sans;
 	font-size: 1em;
 	font-weight:900;
 	color: white;
 }
+
 #home{
 	margin-left:auto;
 	margin-right: auto;
@@ -70,6 +77,7 @@ body {
 	height: 120px;
 	width: 120px;
 }
+
 input[type=text] {
 	
 	
@@ -93,20 +101,17 @@ input[type=submit] {
 
   -webkit-appearance: box;
 }
-input[type=submit]:hover {
-  cursor: hand;
-  
-  background-color:rgba(0,51,102,1);
 
-  
-}
+input[type=submit]:hover {
+	cursor: hand;
+	background-color:rgba(0,51,102,1);
+	}
 
 #name{
-	
 	font-size: 2em;
 	text-align:center;
-
-}
+	}
+	
 .tabs{
 	
 	background-color:rgba(0,51,102,.85);
@@ -118,6 +123,7 @@ input[type=submit]:hover {
 	padding: 0;
 	
 }
+
 li{
 	display:inline-block;
 	margin:0;
@@ -126,25 +132,22 @@ li{
 	text-align:center;
 	padding-top:10px;
 	padding-bottom:10px;
+	}
 	
-}
 #login:hover{
 	background-color:#52527A;
 	cursor: hand;
-	
-}
+	}
+
 #registration:hover{
 	background-color:#52527A;
 	cursor: hand;
-	
-}
+	}
 
 #facebook{
 	color:blue;
-	
 	text-decoration: underline;
-	
-}
+	}
 
 .hi{
 	display:block;
@@ -187,6 +190,7 @@ img{
 	margin-left: auto;
 	margin-right: auto;
 	}
+	
 #picdescript{
 	color:rgba(0,51,102,.85);
 	font-family:"Helvetica Neue","Helvetica",sans;
