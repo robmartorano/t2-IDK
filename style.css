@@ -10,25 +10,15 @@
 	font-family: "Estrangelo Edessa", "Helvetica";
 	text-align: center;
 }
-<<<<<<< HEAD
-.line_text{
-	padding-bottom: 0.6em;
-}
-=======
+
 
 .line_text{
 	padding-bottom: 0.6em;
 }
 
-/*
-.blur{
-	-webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
-}   
->>>>>>> 87a18d80738e05147398942366f9a938280c1b80
+
+   
+
 
 
 
@@ -36,7 +26,7 @@
 	width: 100%;
 	height: 95%;
 	z-index: 1
-} */
+} 
 
 
 
