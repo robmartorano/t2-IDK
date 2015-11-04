@@ -83,6 +83,17 @@ input[type=text] {
 
   -webkit-appearance: box;
 }
+input[type=password] {
+	
+	
+  margin-top: 2%;
+  border-radius: 0;
+  width: 40%;
+  height: 5%;
+  padding:0;
+
+  -webkit-appearance: box;
+}
 
 input[type=submit] {
   height: 7%;

@@ -89,6 +89,17 @@ input[type=text] {
 
   -webkit-appearance: box;
 }
+input[type=password] {
+	
+	
+  margin-top: 5%;
+  border-radius: 0;
+  width: 60%;
+  height: 10%;
+  padding:0;
+
+  -webkit-appearance: box;
+}
 
 input[type=submit] {
   height: 10%;

@@ -13,11 +13,11 @@
 
 <div class="forms">
 
-<form action="abc.php" method="post">
+<form action="def.php"  method="post">
 <img class="loginpic" src="login.png" alt="Login" ></img>
 
 <input type="text" name="NetID" placeholder="Duke E-mail"><br>
-<input type="text" name="password" placeholder="Password"><br>
+<input type="password" name="password" placeholder="Password"><br>
 
 
 
