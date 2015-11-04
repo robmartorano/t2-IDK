@@ -4,6 +4,7 @@
 		<link rel="stylesheet" href="resultspage.css">
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="stylehomepage.css">
+		<link rel="stylesheet" href="stylenav.css">
 	</head>
 
 
