@@ -1,15 +1,17 @@
 <DOCTYPE! HTML>
+<?php  session_start() ?>
 <html>
 	<head>
 		<link rel="stylesheet" href="stylehomepage.css">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="stylenav.css">
+		
 		<title>Duke Textbook Exchange</title>
 	</head>
 
 
 <body id="background">
 	<header>
-		<?php require_once 'nav.php';?>
+		<?php require_once('navcontrol.php'); ?>
 	</header>
 	
 	<!-- TEXT ON HOME PAGE -->
@@ -21,6 +23,7 @@
 
 	<!-- SEARCH BAR -->
 	<?php require_once 'searchbar.php';?>
+
 
 		
 </body>

@@ -11,29 +11,8 @@ body {
 	
 }
 	
-.navigation{
-	margin:0;
-	padding:0;
-	
-	display:block;
-	width:100%;
-    
-    text-align: right	;    
-	font-family:"Helvetica Neue","Helvetica",sans;
-	font-size: 1em;
-	font-weight:900;
-	color: white;
-}
-#home{
-	margin-left:auto;
-	margin-right: auto;
-	width:40%;
-}
-#home:hover{
-	
-	cursor: hand;
-	
-}
+
+
 
 .logo{
 	padding: 10px;
@@ -49,33 +28,22 @@ body {
 	text-align:center;
 }
 
-
-#name{
-	
-	font-size: 2em;
+#popup{
+	position: absolute;
+	z-index:1000;
+	padding: 5px;
+	margin-top: 2%;
+	color:rgba(0,51,102,.85);
+	background-color: #e0e4ed;
+	display:none;
+	margin-left:auto;
+	margin-right:auto;
+	font-family:"Helvetica Neue","Helvetica",sans;
+	font-size: 1em;
+	font-weight:900;
+	width: 20%;
+	height: 50%;
 	text-align:center;
-
-}
-.tabs{
-	
-	background-color:rgba(0,51,102,.85);
-	width: 100%;
-	list-style-type: none;
-    
-	margin-bottom: auto;
-	margin: 0;
-	padding: 0;
-	
-}
-
-.tabs li{
-	display:inline-block;
-	margin:0;
-	
-	width: 10%;
-	text-align:center;
-	padding-top:10px;
-	padding-bottom:10px;
 	
 }
 
