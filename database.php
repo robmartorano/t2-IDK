@@ -1,6 +1,7 @@
 <?php
+session_set_cookie_params(0);
 session_start();
-error_reporting(E_ALL);
+
 
 $dsn = 'mysql:host=cgi.cs.duke.edu;port=3306;dbname=qp7;';
 $username = 'qp7';
@@ -13,6 +14,6 @@ try {
 } catch(PDOException $e) {
     echo $e->getMessage();
     die();
-}
+}  	
 
 ?>

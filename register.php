@@ -1,3 +1,4 @@
+<?php session_set_cookie_params(0); session_start() ?>
 <html>
 	<head>
 <link rel="stylesheet" href="styleregister.css">
@@ -5,7 +6,7 @@
 
 <body>
 	<header>
-		<?php require_once 'nav.php';?>
+		<?php require_once('navcontrol.php'); ?>
 	</header>
 <div class="text">
 Register to buy textbooks from your classmates at an extremely low price. 

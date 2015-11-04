@@ -14,11 +14,11 @@ body {
 .navigation{
 	margin:0;
 	padding:0;
-	
+	background-color:rgba(0,51,102,.85);
 	display:block;
 	width:100%;
     
-    text-align: right	;    
+        
 	font-family:"Helvetica Neue","Helvetica",sans;
 	font-size: 1em;
 	font-weight:900;
@@ -57,25 +57,56 @@ body {
 
 }
 .tabs{
+	text-align: right	;
 	
-	background-color:rgba(0,51,102,.85);
-	width: 100%;
+	width: 20%;
 	list-style-type: none;
-    
+    display: block;
+	margin-bottom: auto;
+	margin: 0;
+	padding: 0;
+	
+}
+.home{
+	text-align: center;
+	margin-left:auto;
+	margin-right:auto;
+	width: 50%;
+	list-style-type: none;
+    display: block;
 	margin-bottom: auto;
 	margin: 0;
 	padding: 0;
 	
 }
 
+
 .tabs li{
 	display:inline-block;
 	margin:0;
-	
-	width: 10%;
+	margin-right:auto;
+	width: 50%;
 	text-align:center;
 	padding-top:10px;
 	padding-bottom:10px;
+	
+}
+#popup{
+	position: absolute;
+	z-index:1000;
+	padding: 5px;
+	margin-top: 2%;
+	color:rgba(0,51,102,.85);
+	background-color: #e0e4ed;
+	display:none;
+	margin-left:auto;
+	margin-right:auto;
+	font-family:"Helvetica Neue","Helvetica",sans;
+	font-size: 1em;
+	font-weight:900;
+	width: 20%;
+	height: 50%;
+	text-align:center;
 	
 }
 

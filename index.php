@@ -1,14 +1,16 @@
 <DOCTYPE! HTML>
+<?php  session_start() ?>
 <html>
 	<head>
 		<link rel="stylesheet" href="stylehomepage.css">
 		<link rel="stylesheet" href="style.css">
+		<title>Duke Textbook Exchange</title>
 	</head>
 
 
 <body>
 	<header>
-		<?php require_once 'nav.php';?>
+		<?php require_once('navcontrol.php'); ?>
 	</header>
 	
 	<!-- BLURRED BACKGROUND IMAGE -->
@@ -24,10 +26,7 @@
 		</div>
 
 	<!-- SEARCH BAR FORMATTING -->
-	<form class="searchbar">
-		<input id="typehere" type="text" placeholder="Enter book's name, author, ISBN, or the class name" required="">
-		<input id="button" type="button" value="Search">
-		</form>
+	<?php require_once 'searchbar.php';?>
 		
 </body>
 </html>

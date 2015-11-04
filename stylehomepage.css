@@ -10,6 +10,12 @@ body {
 	width:100%;
 	
 }
+#background {
+	background-image: url("duke_blurred.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	backgorund-position: right top;
+}
 	
 .navigation{
 	margin:0;

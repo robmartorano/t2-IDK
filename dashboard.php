@@ -3,7 +3,14 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="styledashboard.css">
-		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		$("#button").click(function(){
+        $("#popup").toggle();
+		});
+		});
+</script>
 	</head>
 
 <body>
@@ -12,6 +19,16 @@
 		<?php require_once 'navcontrol.php';?>
 		
 	</header>
+		<div id ="popup">
+		<form action="def.php"  method="post">
+
+
+<input type="text" name="NetID" placeholder="Textbook Name"><br>
+<input type="password" name="password" placeholder="Price"><br>
+
+
+<input type="submit">
+		</div>
 		<div class = "left">
     		<div class = "buy">
         		<h1 class = "titledash">Books that you want to buy</h1>
@@ -56,7 +73,7 @@
 			
 		
 				</script>
-				<li>
+				<li id="button">
 				add another listing
 				</li>
         			</ul>
