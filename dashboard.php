@@ -3,6 +3,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="styledashboard.css">
+		<link rel="stylesheet" href="stylenav.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script>
 		$(document).ready(function(){
@@ -33,7 +34,7 @@
     		<div class = "buy">
         		<h1 class = "titledash">Books that you want to buy</h1>
 				<ul id="what">
-				</ul>
+				
         			<script type= "text/javascript">
 		 
 		 for (i = 0; i < 5; i++) { 
@@ -52,6 +53,7 @@
 				<li>
 				
 				</li>
+				</ul>
 				
     		</div>
     

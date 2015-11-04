@@ -11,29 +11,8 @@ body {
 	
 }
 	
-.navigation{
-	margin:0;
-	padding:0;
-	background-color:rgba(0,51,102,.85);
-	display:block;
-	width:100%;
-    
-        
-	font-family:"Helvetica Neue","Helvetica",sans;
-	font-size: 1em;
-	font-weight:900;
-	color: white;
-}
-#home{
-	margin-left:auto;
-	margin-right: auto;
-	width:40%;
-}
-#home:hover{
-	
-	cursor: hand;
-	
-}
+
+
 
 .logo{
 	padding: 10px;
@@ -49,48 +28,6 @@ body {
 	text-align:center;
 }
 
-
-#name{
-	
-	font-size: 2em;
-	text-align:center;
-
-}
-.tabs{
-	text-align: right	;
-	
-	width: 20%;
-	list-style-type: none;
-    display: block;
-	margin-bottom: auto;
-	margin: 0;
-	padding: 0;
-	
-}
-.home{
-	text-align: center;
-	margin-left:auto;
-	margin-right:auto;
-	width: 50%;
-	list-style-type: none;
-    display: block;
-	margin-bottom: auto;
-	margin: 0;
-	padding: 0;
-	
-}
-
-
-.tabs li{
-	display:inline-block;
-	margin:0;
-	margin-right:auto;
-	width: 50%;
-	text-align:center;
-	padding-top:10px;
-	padding-bottom:10px;
-	
-}
 #popup{
 	position: absolute;
 	z-index:1000;

@@ -16,33 +16,48 @@ body {
 	background-size: 100% 100%;
 	backgorund-position: right top;
 }
-
-
-	
-.navigation{
-	margin:0;
-	padding:0;
-	
-	display:block;
-	width:100%;
-    
-    text-align: right;    
-	font-family:"Helvetica Neue","Helvetica",sans;
-	font-size: 1em;
-	font-weight:900;
-	color: white;
-}
-
-#home{
-	margin-left:auto;
+#intro_text{
+	margin-left: auto;
 	margin-right: auto;
-	width:40%;
+	margin-top: 3em;
+	padding: 0;
+	font-size: 2em;
+	font-weight: 600;
+	color: white;
+	font-family: "Estrangelo Edessa", "Helvetica";
+	text-align: center;
 }
-#home:hover{
-	
-	cursor: hand;
-	
+
+
+.line_text{
+	padding-bottom: 0.6em;
 }
+
+/*-------------------- SEARCH BAR -------------------*/
+
+form.searchbar {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5%;
+	display: block;
+	width: 60%;
+	height: 3em;
+}
+
+#typehere
+{
+	width: 80%;
+	height: 3em;
+	display: inline-block;
+}
+
+#button{
+	width: 18%;
+	display: inline-block;
+	height: 3em;
+}
+
+	
 
 .logo{
 	padding: 10px;
@@ -125,27 +140,7 @@ input[type=submit]:hover {
 	text-align:center;
 	}
 	
-.tabs{
-	
-	background-color:rgba(0,51,102,.85);
-	width: 100%;
-	list-style-type: none;
-    
-	margin-bottom: auto;
-	margin: 0;
-	padding: 0;
-	
-}
 
-li{
-	display:inline-block;
-	margin:0;
-	
-	width: 10%;
-	text-align:center;
-	padding-top:10px;
-	padding-bottom:10px;
-	}
 	
 #login:hover{
 	background-color:#52527A;

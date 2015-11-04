@@ -1,7 +1,8 @@
 <?php session_set_cookie_params(0); session_start() ?>
 <html>
 	<head>
-<link rel="stylesheet" href="styleregister.css">
+		<link rel="stylesheet" href="styleregister.css">
+		<link rel="stylesheet" href="stylenav.css">
 	</head>
 
 <body>

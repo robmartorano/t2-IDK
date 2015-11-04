@@ -3,7 +3,8 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="stylehomepage.css">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="stylenav.css">
+		
 		<title>Duke Textbook Exchange</title>
 	</head>
 
