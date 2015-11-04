@@ -1,31 +1,33 @@
+<DOCTYPE! HTML>
 <html>
-<head>
-<link rel="stylesheet" href="stylehomepage.css">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="normalize.css">
-</head>
-<header>
+	<head>
+		<link rel="stylesheet" href="stylehomepage.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
 
-<nav>
-<div class="navigation">
-		
-		
-		<ul class="tabs">
-		<li id="Login" onclick="location.href='aaa.html'">Login</li>
-		<li id="Registration" onclick="location.href='home.html'">Register</li>
-		
-		</ul>
-	</div>
-	<nav>
 
-</header>
 <body>
-<form class="searchbar">
-<input id="typehere" type="text" placeholder="Enter book's ISBN, name or the class name" required="">
-<input id="button" type="button" value="Search">
-</form>
+	<header>
+		<?php require_once 'nav.php';?>
+	</header>
+	
+	<!-- BLURRED BACKGROUND IMAGE -->
+	<div class="blur">
+		<img src="duke.jpg" id="backgroundpic">
+		</div>
+	
+	<!-- TEXT ON HOME PAGE -->
+	<div id="intro_text">
+		<p>Need a textbook for your class?</p>
+		<p>Can't afford the Campus Bookstore's crazy prices?</p>
+		<p>Welcome to the Duke Textbook Exchange.</p>
+		</div>
+
+	<!-- SEARCH BAR FORMATTING -->
+	<form class="searchbar">
+		<input id="typehere" type="text" placeholder="Enter book's name, author, ISBN, or the class name" required="">
+		<input id="button" type="button" value="Search">
+		</form>
 		
 </body>
 </html>
-
-<!-- this is Andy -->

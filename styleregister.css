@@ -35,48 +35,50 @@ body {
 	
 }
 
-.logo{
-	padding: 10px;
+.text{
+	
 	color:rgba(0,51,102,.85);
 	margin-top: 5%;
 	display:block;
-	margin-left:auto;
+	margin-left:10%;
+	float: left;
 	margin-right:auto;
 	font-family:"Helvetica Neue","Helvetica",sans;
 	font-size: 2em;
-	font-weight:100;
-	width: 40%;
+	font-weight:200;
+	width: 35%;
 	text-align:center;
 }
-.forms{
+
+.register{
+	float:right;
 	padding: 5px;
-	margin-top: 2%;
+	margin-top: 5%;
 	color:rgba(0,51,102,.85);
 	background-color: #e0e4ed;
 	display:block;
 	margin-left:auto;
-	margin-right:auto;
+	margin-right:10%;
 	font-family:"Helvetica Neue","Helvetica",sans;
 	font-size: 1em;
 	font-weight:900;
-	width: 20%;
-	height: 50%;
+	width: 30%;
+	height: 65%;
 	text-align:center;
 	
 }
-
 .loginpic{
 	padding:0;
-	height: 120px;
-	width: 120px;
+	height: 240px;
+	width: 240px;
 }
 input[type=text] {
 	
 	
-  margin-top: 5%;
+  margin-top: 2%;
   border-radius: 0;
-  width: 60%;
-  height: 10%;
+  width: 40%;
+  height: 5%;
   padding:0;
 
   -webkit-appearance: box;
@@ -84,20 +86,20 @@ input[type=text] {
 input[type=password] {
 	
 	
-  margin-top: 5%;
+  margin-top: 2%;
   border-radius: 0;
-  width: 60%;
-  height: 10%;
+  width: 40%;
+  height: 5%;
   padding:0;
 
   -webkit-appearance: box;
 }
 
 input[type=submit] {
-  height: 10%;
+  height: 7%;
   border-radius: 15px;
-  width: 60%;
-  margin-top: 5%;
+  width: 40%;
+  margin-top: 1%;
   padding: 5px;
   color:white;
   background-color:rgba(0,51,102,.85);
