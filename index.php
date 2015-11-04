@@ -8,25 +8,22 @@
 	</head>
 
 
-<body>
+<body id="background">
 	<header>
 		<?php require_once('navcontrol.php'); ?>
 	</header>
 	
-	<!-- BLURRED BACKGROUND IMAGE -->
-	<div class="blur">
-		<img src="duke.jpg" id="backgroundpic">
-		</div>
-	
 	<!-- TEXT ON HOME PAGE -->
 	<div id="intro_text">
-		<p>Need a textbook for your class?</p>
-		<p>Can't afford the Campus Bookstore's crazy prices?</p>
-		<p>Welcome to the Duke Textbook Exchange.</p>
-		</div>
+		<p class="line_text">Need a textbook for your class?</p>
+		<p class="line_text">Can't afford the Campus Bookstore's crazy prices?</p>
+		<p class="line_text">Welcome to the Duke Textbook Exchange.</p>
+	</div>
 
-	<!-- SEARCH BAR FORMATTING -->
+	<!-- SEARCH BAR -->
 	<?php require_once 'searchbar.php';?>
+
+
 		
 </body>
 </html>

@@ -1,11 +1,3 @@
-html{
-	width:100%;
-}
-
-#test {
-	margin-left: auto;
-	margin-right: auto;
-}
 
 #intro_text{
 	margin-left: auto;
@@ -18,16 +10,35 @@ html{
 	font-family: "Estrangelo Edessa", "Helvetica";
 	text-align: center;
 }
+<<<<<<< HEAD
 .line_text{
 	padding-bottom: 0.6em;
 }
+=======
+
+.line_text{
+	padding-bottom: 0.6em;
+}
+
+/*
+.blur{
+	-webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}   
+>>>>>>> 87a18d80738e05147398942366f9a938280c1b80
 
 
 
 #backgroundpic{
 	width: 100%;
 	height: 95%;
-}
+	z-index: 1
+} */
+
+
 
 /*-------------------- SEARCH BAR -------------------*/
 
@@ -43,7 +54,7 @@ form.searchbar {
 #typehere
 {
 	width: 80%;
-	height: 6em;
+	height: 3em;
 	display: inline-block;
 }
 
