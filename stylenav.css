@@ -21,14 +21,9 @@
 	cursor: hand;
 }
 
-.home{
-	background-color:rgba(0,0,0,.75);
-	width: 100%;
-	list-style-type: none;
-    
-	margin-bottom: auto;
-	margin: 0;
-	padding: 0;
+#name {
+	font-size: 1em;
+	font-weight: 900;
 }
 
 .tabs{
