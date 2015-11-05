@@ -21,11 +21,15 @@ lsdflasdfladsfjafda hi
 		
 	</header>
 		<div id ="popup">
-		<form action="def.php"  method="post">
+		<form action="putbook.php"  method="post">
 
 
-<input type="text" name="NetID" placeholder="Textbook Name"><br>
-<input type="password" name="password" placeholder="Price"><br>
+<input type="text" name="name" placeholder="Textbook Name"><br>
+<input type="text" name="price" placeholder="Price"><br>
+<input type="text" name="ISBN" placeholder="ISBN"><br>
+<input type="text" name="author" placeholder="author"><br>
+<input type="text" name="additional" placeholder="a few sentences to describe the book"><br>
+
 
 
 <input type="submit">
