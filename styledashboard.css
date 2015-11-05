@@ -27,7 +27,6 @@ body {
 	width: 40%;
 	text-align:center;
 }
-
 #popup{
 	position: absolute;
 	z-index:1000;
@@ -36,6 +35,8 @@ body {
 	color:rgba(0,51,102,.85);
 	background-color: #e0e4ed;
 	display:none;
+	
+	
 	margin-left:auto;
 	margin-right:auto;
 	font-family:"Helvetica Neue","Helvetica",sans;

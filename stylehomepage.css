@@ -1,8 +1,8 @@
-a {
+/*a {
 	color:white;
 	text-decoration: none;
 	text-align: center;
-	}
+	}*/
 	
 body {
 	margin: 0;
@@ -10,22 +10,54 @@ body {
 	width:100%;
 	}
 	
+#popup{
+	display:none;
+	position:fixed;
+	z-index:1000;
+	width:100%;
+	height:100%;
+	background-color: rgba(0,0,0,.65);
+	margin: 0;
+	padding: 0;
+}
+#popuplogin{
+	position: fixed;
+	
+	z-index:1000;
+	padding: 5px;
+	
+	color:rgba(0,51,102,.85);
+	background-color: #e0e4ed;
+	display:block;
+	left:37%;
+	top:20%;
+	font-family:"Helvetica Neue","Helvetica",sans;
+	font-size: 1em;
+	font-weight:900;
+	width: 20%;
+	height: 50%;
+	text-align:center;
+	
+}
+
 #background {
 	background-image: url("duke_blurred.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	backgorund-position: right top;
+	background-position: right top;
 }
 #intro_text{
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 3em;
 	padding: 0;
+	padding-top: 3em;
+	
 	font-size: 2em;
 	font-weight: 600;
 	color: white;
 	font-family: "Estrangelo Edessa", "Helvetica";
 	text-align: center;
+	
 }
 
 
@@ -57,7 +89,11 @@ form.searchbar {
 	height: 3em;
 }
 
-	
+
+
+
+/*-------------- LOGIN PAGE - TRANSFER TO DIFF CSS FILE ---------*/
+
 
 .logo{
 	padding: 10px;
@@ -142,15 +178,6 @@ input[type=submit]:hover {
 	
 
 	
-#login:hover{
-	background-color:#52527A;
-	cursor: hand;
-	}
-
-#registration:hover{
-	background-color:#52527A;
-	cursor: hand;
-	}
 
 #facebook{
 	color:blue;

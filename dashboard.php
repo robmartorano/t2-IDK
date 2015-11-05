@@ -23,12 +23,12 @@
 		<div id ="popup">
 		<form action="putbook.php"  method="post">
 
-
 <input type="text" name="name" placeholder="Textbook Name"><br>
 <input type="text" name="price" placeholder="Price"><br>
 <input type="text" name="ISBN" placeholder="ISBN"><br>
 <input type="text" name="author" placeholder="author"><br>
 <input type="text" name="additional" placeholder="a few sentences to describe the book"><br>
+
 
 
 
