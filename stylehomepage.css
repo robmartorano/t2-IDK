@@ -28,14 +28,15 @@ body {
 	color:rgba(0,51,102,.85);
 	background-color: #e0e4ed;
 	display:block;
-	left:45%;
-	top:45%;
+	left:37%;
+	top:20%;
 	font-family:"Helvetica Neue","Helvetica",sans;
 	font-size: 1em;
 	font-weight:900;
-	width: 300px;
+	width: 20%;
 	height: 50%;
 	text-align:center;
+	
 }
 
 #background {
@@ -44,9 +45,6 @@ body {
 	background-size: 100% 100%;
 	background-position: right top;
 }
-
-/* ------------------ TEXT ON HOME PAGE ------------------- */
-
 #intro_text{
 	margin-left: auto;
 	margin-right: auto;
@@ -68,7 +66,7 @@ body {
 
 /*-------------------- SEARCH BAR -------------------*/
 
-.searchbar {
+form.searchbar {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 5%;
@@ -90,8 +88,7 @@ body {
 	height: 3em;
 }
 
-
-/*-------------------- LOGIN PAGE ---------------------*/
+	
 
 .logo{
 	padding: 10px;
@@ -176,15 +173,6 @@ input[type=submit]:hover {
 	
 
 	
-#login:hover{
-	background-color:#52527A;
-	cursor: hand;
-	}
-
-#registration:hover{
-	background-color:#52527A;
-	cursor: hand;
-	}
 
 #facebook{
 	color:blue;
