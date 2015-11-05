@@ -1,24 +1,52 @@
 #whole_page{
 	box-sizing: border-box;
-	padding-left: 4%;
-	padding-right: 4%;
-	width: 92%;
-	margin: 0 0 0 0;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+#sidebar{
+
+	background-color: #E4E4E4;
+	width: 15%;
+	height: 50em;
+	padding-left: 5%;
+	padding-right: 1%;
+	/*display: inline-block;*/
+	float: left;
+}
+
+#sidebar_text{
+	padding-left:0.5em;
+}
+
+#sidebar_text li {
+	width: 100%;
+	padding-bottom: 0.3em;
+}
+
+.indent1{padding-left: 0;}
+.indent2{padding-left: 1em;}
+
+#searchresults{
+	width: 75%;
+	height: auto;
+	margin-left: 1.5%;
+	margin-right: auto;
+	position: relative;
+	float: right;
+	display: inline-block;
 }
 
 .one_result {
-	width: 60%;
+	width: 100%;
 	height: auto; /*but I don't want each box to be diff height...?*/
 	display: inline-block;
 	position: relative;
-	float: left;
-	margin-left: 1em;
-	margin-right: 1em;
-	margin-top: auto;
-	margin-bottom: auto;
-	border-style: solid;
-	border-color: black;
-	border-width: 2px;
+	margin: 0;
+	border-top-style: solid;
+	border-top-color: gray;
+	border-width: 1px;
 }
 
 .textbook_image{
@@ -30,32 +58,79 @@
 }
 
 .textbook_image img{
-	width: 170px;
-	height: 230px;
+	width: 130px;
+	height: 180px;
 	vertical-align: middle;
 	padding-left: 1em;
 	padding-right: 1em;
-	padding-top: 2em;
-	padding-bottom: 2em;
+	padding-top: 1em;
+	padding-bottom: 1em;
 	margin: 0;
 }
 
-.text_box{
-	display: inline-block;
+/*div*/.text_box{
+	width: 70%;
 	position: relative;
-	float: middle;
+	float: left;
+	display: inline-block;
 	margin-left: 1em;
 	margin-right: auto;
+	margin-top: 0.7em;
+	padding: 0;
 	height: 100%;
-	vertical-align: center;
-	}
-
-.text{
-	font-family: "Helvetica Noue", "Helvetica"
+	vertical-align: middle;
 }
-	
-.title{font-size: 1.5em;}
-.seller {font-size: 1em;}
-.type{font-size: 1em;}
-.price{font-size: 1em;}
-.notes{font-size: 1em;}
+
+/*ul*/.text{
+	font-family: "Helvetica Noue", "Helvetica";
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+}
+
+.text li{
+	width: 100%;
+}
+
+/*------------- INFORMATION THAT IS DISPLAYED --------------*/
+
+.title{
+	font-size: 1.2em;
+	padding: 0;
+}
+.author{
+	font-size: 0.8em;
+}
+
+.price{
+	font-size: 1em; 
+	font-weight: 900;
+	color: red;
+	padding-top: 0.8em;
+	padding-bottom: 0.5em;
+}
+
+.seller {
+	font-size: 0.8em;
+	padding-bottom: 0.3em;
+}
+
+.type{
+	font-size: 0.8em;
+	padding-bottom: 0.35em;
+}
+
+.notes{
+	font-size: 0.8em;
+	padding-bottom: 0.5em;
+}
+
+.purchase{
+	font-size: 0.8em;
+	padding-bottom: 0.8em;
+}
+
+.hyperlink{
+	color: blue;
+	text-decoration: underline;
+}

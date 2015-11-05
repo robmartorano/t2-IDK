@@ -1,14 +1,15 @@
-a {
+/*a {
 	color:white;
 	text-decoration: none;
 	text-align: center;
-	}
+	}*/
 	
 body {
 	margin: 0;
 	background-color: white;
 	width:100%;
 	}
+	
 #popup{
 	display:none;
 	position:fixed;
@@ -88,7 +89,11 @@ form.searchbar {
 	height: 3em;
 }
 
-	
+
+
+
+/*-------------- LOGIN PAGE - TRANSFER TO DIFF CSS FILE ---------*/
+
 
 .logo{
 	padding: 10px;
