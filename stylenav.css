@@ -23,7 +23,7 @@
 	
 }
 .home{
-		background-color:rgba(0,51,102,.85);
+		background-color:rgba(0,0,0,.75);
 	width: 100%;
 	list-style-type: none;
     
@@ -33,7 +33,7 @@
 }
 .tabs{
 	
-	background-color:rgba(0,51,102,.85);
+	background-color:rgba(0,0,0,.75);
 	width: 100%;
 	list-style-type: none;
     

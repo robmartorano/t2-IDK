@@ -4,7 +4,14 @@
 	<head>
 		<link rel="stylesheet" href="stylehomepage.css">
 		<link rel="stylesheet" href="stylenav.css">
-		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		$("#button").click(function(){
+        $("#popup").toggle();
+		});
+		});
+		</script>
 		<title>Duke Textbook Exchange</title>
 	</head>
 
