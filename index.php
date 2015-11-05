@@ -22,15 +22,17 @@
 		<?php require_once('navcontrol.php'); ?>
 	</header>
 	<div id ="popup">
-		<form action="putbook.php"  method="post">
+		<div id="popuplogin">
+		<form action="def.php"  method="post">
+<img class="loginpic" src="login.png" alt="Login" ></img>
 
-		<input type="text" name="Email" placeholder="Email"><br>
-		<input type="text" name="Password" placeholder="Password"><br>
+<input type="text" name="NetID" placeholder="Duke E-mail"><br>
+<input type="password" name="password" placeholder="Password"><br>
 
 
-
-
-			<input type="submit">
+<input type="submit">
+</form>
+			</div>
 		</div>
 	<!-- TEXT ON HOME PAGE -->
 	<div id="intro_text">

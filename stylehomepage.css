@@ -1,22 +1,35 @@
-
+a {
+	color:white;
+	text-decoration: none;
+	text-align: center;
+	}
+	
 body {
-	margin: 0; /*if margin is not 0, navbar kinda "floats"*/
+	margin: 0;
 	background-color: white;
 	width:100%;
-}
-
+	}
 #popup{
-	position: absolute;
+	display:none;
+	position:fixed;
+	z-index:1000;
+	width:100%;
+	height:100%;
+	background-color: rgba(0,0,0,.65);
+	margin: 0;
+	padding: 0;
+}
+#popuplogin{
+	position: fixed;
+	
 	z-index:1000;
 	padding: 5px;
-	margin-top: 2%;
+	
 	color:rgba(0,51,102,.85);
 	background-color: #e0e4ed;
-	display:none;
-
-	
-	margin-left:auto;
-	margin-right:auto;
+	display:block;
+	left:45%;
+	top:45%;
 	font-family:"Helvetica Neue","Helvetica",sans;
 	font-size: 1em;
 	font-weight:900;
@@ -25,25 +38,27 @@ body {
 	text-align:center;
 	
 }
+
 #background {
 	background-image: url("duke_blurred.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
+	background-position: right top;
 }
-
-/* ------------------  ------------------- */
-
 #intro_text{
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 3em;
 	padding: 0;
+	padding-top: 3em;
+	
 	font-size: 2em;
 	font-weight: 600;
 	color: white;
 	font-family: "Estrangelo Edessa", "Helvetica";
 	text-align: center;
+	
 }
+
 
 .line_text{
 	padding-bottom: 0.6em;
@@ -60,7 +75,8 @@ form.searchbar {
 	height: 3em;
 }
 
-#typehere{
+#typehere
+{
 	width: 80%;
 	height: 3em;
 	display: inline-block;
@@ -72,31 +88,32 @@ form.searchbar {
 	height: 3em;
 }
 
+	
+
 .logo{
 	padding: 10px;
-	color: rgba(0,51,102,.85);
+	color:rgba(0,51,102,.85);
 	margin-top: 5%;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	font-family: "Helvetica Neue","Helvetica",sans;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	font-family:"Helvetica Neue","Helvetica",sans;
 	font-size: 2em;
-	font-weight: 100;
+	font-weight:100;
 	width: 40%;
-	text-align: center;
+	text-align:center;
 }
-
 .forms{
 	padding: 5px;
 	margin-top: 2%;
-	color: rgba(0,51,102,.85);
+	color:rgba(0,51,102,.85);
 	background-color: #e0e4ed;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	font-family: "Helvetica Neue","Helvetica",sans;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	font-family:"Helvetica Neue","Helvetica",sans;
 	font-size: 1em;
-	font-weight: 900;
+	font-weight:900;
 	width: 20%;
 	height: 50%;
 	text-align:center;
@@ -120,7 +137,6 @@ input[type=text] {
 
   -webkit-appearance: box;
 }
-
 input[type=password] {
 	
 	
@@ -251,10 +267,9 @@ img{
 		width:50%;
 		font-size:1.5em;
 	}
-	
 	img{
 		width:640px;
 		height:360px;
-	}
+		}
 
 }
