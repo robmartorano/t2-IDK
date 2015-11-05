@@ -25,52 +25,40 @@ $additional = $_POST["additional"];
 
 
 //Verifcation 
-if (empty($firstname) || empty($lastname) || empty($email) || empty($password) || empty($password1)){
+if (empty($name) || empty($price) || empty($isbn) || empty($author) || empty($additional)){
     $error = "Complete all fields";
 }
 
-// Password match
-if ($password != $password1){
-    $error = "Passwords don't match";
-}
-
-// Email validation
-
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
-    $error = "Enter a  valid email";
-}
-
-// Password length
-if (strlen($password) <= 6){
-    $error = "Choose a password longer then 6 character";
-}
 
 if(!isset($error)){
-//no error
-$sthandler = $db->prepare("SELECT * FROM Users WHERE email = :email");
-$sthandler->bindParam(':email', $email);
-$sthandler->execute();
 
-if($sthandler->rowCount() > 0){
-    echo "exists! cannot insert";
-} else {
+
     
-    $sql = 'INSERT INTO Users (firstname ,lastname, email, password, ip) VALUES (:firstname,:lastname,:email,:password,:ip)';    
+    $sql = 'INSERT INTO Books (BookName ,Price, ISBN, author, addition) VALUES (:BookName,:Price,:ISBN,:author,:addition)';    
     $query = $db->prepare($sql);
-    $password_check = password_hash($password, PASSWORD_DEFAULT);
     $query->execute(array(
 
-    ':firstname' => $firstname,
-    ':lastname' => $lastname,
-    ':email' => $email,
-    ':password' => $password_check,
-    ':ip' => $ip
+    ':BookName' => $name,
+    ':Price' => $price,
+    ':ISBN' => $isbn,
+    ':author' => $author,
+    ':addition' => $additional
 
     ));
-    echo "success";
-    require_once('login.php');
+    $sthandler = $db->prepare("SELECT * FROM Books ");
+	$sthandler->execute();
+	$result = $sthandler->fetchAll();
+	$arr = array();
+	for($i = 0; $i <= 5; $i++)
+	{
+	$arr[$i] = $result[$i]['BookName'];
+	}
+	$_SESSION['bookname'] = $arr;
+	header("Location: dashboard.php");
+
     }
-}else{
+    
+else{
     echo "error occured: ".$error;
     require_once('register.php');
     exit();

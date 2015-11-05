@@ -38,15 +38,18 @@
     		<div class = "buy">
         		<h1 class = "titledash">Books that you want to buy</h1>
 				<ul id="what">
-				
+				<?php $length = count($_SESSION['bookname']);
+				echo $length ?>
         			<script type= "text/javascript">
+		 var count = "<?php echo $length ?>";
+		 <?php $counter = 0;?>
+		 for (i = 0; i < count; i++) { 
 		 
-		 for (i = 0; i < 5; i++) { 
-			var tr='';
+			var tr= '';
     // create a new textInputBox  
-           var textInputBox = 'hi';  
+    
+           var textInputBox = "<?php echo $_SESSION['bookname'][$counter] ; $counter++ ?>";  
         // create a new Label Text
-            
             tr += '<li>' + textInputBox + '</li>';  
 			document.write(tr);
 }
@@ -65,7 +68,7 @@
     			<h1 class = "titledash">Books that you want to sell</h1>
     				<ul>
         			<script type= "text/javascript">
-		 
+		 var num = "<?php Print($Se); ?>";
 		 for (i = 0; i < 5; i++) { 
 			var tr='';
     // create a new textInputBox  
