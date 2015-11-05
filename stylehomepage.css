@@ -9,7 +9,26 @@ body {
 	background-color: white;
 	width:100%;
 	}
+#popup{
+	position: absolute;
+	z-index:1000;
+	padding: 5px;
+	margin-top: 2%;
+	color:rgba(0,51,102,.85);
+	background-color: #e0e4ed;
+	display:none;
 	
+	
+	margin-left:auto;
+	margin-right:auto;
+	font-family:"Helvetica Neue","Helvetica",sans;
+	font-size: 1em;
+	font-weight:900;
+	width: 20%;
+	height: 50%;
+	text-align:center;
+	
+}
 #background {
 	background-image: url("duke_blurred.jpg");
 	background-repeat: no-repeat;

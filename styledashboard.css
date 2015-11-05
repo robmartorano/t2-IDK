@@ -29,10 +29,11 @@ body {
 }
 
 #popup{
-	position: absolute;
+	position: fixed;
+	
 	z-index:1000;
 	padding: 5px;
-	margin-top: 2%;
+	
 	color:rgba(0,51,102,.85);
 	background-color: #e0e4ed;
 	display:none;
