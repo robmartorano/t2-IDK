@@ -5,16 +5,33 @@ $abc = "%";
 $needtosearch = $abc.$needtosearch.$abc;
 
 session_start();
-function getresult($BookName, $Price, $ISBN, $author)
-{
-
-return "<div>
-  <p>$BookName</p>
-  <p>$Price</p>
-  <p>$ISBN</p>
-  <p>$author</p>
-  </div>"
-;
+function getresult($BookName, $Price, $ISBN, $author) {
+	return 
+	"<div class='one_result'>
+		<div class='textbook_image'>
+			<img src='textbook_example.jpg' alt='Organic Chemistry, 5th Edition'>
+		</div>
+		<div class='text_box'>
+			<ul class='text'>
+				<li class='title'>$BookName</li>
+				<li class='author''>$author</li>
+				<li class='price'>$Price</li>
+				<li class='ISBN'>ISBN #: $ISBN</li>
+				<li class='type'>Item: Hardcover Textbook</li>
+				<li class='notes'>Notes: Has some minor highlighting, writing...</li>
+				<li class='purchase hyperlink'>Purchase now</li>
+			</ul>
+		</div>
+	</div>";
+	// still need valid image, seller (with a link to contact),  
+	// type, notes, and purchase hyperlink
+	
+	// <div>
+	//	<p>$BookName</p>
+	//	<p>$Price</p>
+	//	<p>$ISBN</p>
+	//	<p>$author</p>
+	//	</div>";
 }
 
 $dsn = 'mysql:host=cgi.cs.duke.edu;port=3306;dbname=qp7;';
@@ -42,19 +59,47 @@ while($row = $sqlQ -> fetch(PDO::FETCH_ASSOC)){
       $result[$counter] = getresult($row['BookName'], $row['Price'], $row['ISBN'], $row['author']);
       $counter = $counter +1;
 }
-
 $finalHTML = "";
 
 foreach ($result as $value){
   $finalHTML .= $value;
 }
-echo $finalHTML;
-$_SESSION['returnstring'] = $finalHTML;
+
 ?>
 
-<head>
-  <body>
-      <?php echo $_SESSION['returnstring']; ?>
+	<head>
+		<link rel="stylesheet" href="resultspage.css">
+		<link rel="stylesheet" href="stylehomepage.css">
+		<link rel="stylesheet" href="stylenav.css">
+	</head>
+
+<body>
+	<header>
+		<?php require_once 'nav.php';?>
+	</header>
+	
+	<?php require_once 'searchbar.php';?>
+      
+	<div id="whole_page">
+		<div id="sidebar">
+			<ul id="sidebar_text">
+				<li class="indent1">Browse by Category</li>
+				<li class="indent2">Mathematics</li>
+				<li class="indent2">Economics</li>
+				<li class="indent2">Computer Science</li>
+			<!--	<li class="indent1">Browse by Course</li>
+				<li class="indent2">Chemistry 201/202</li>
+				<li class="indent2">Economics 101</li> -->
+			</ul>
+		</div>
+	  
+	<div id="searchresults">  
+		<?php echo $finalHTML; ?>
+	</div>
+	
+	<!-- Do we want to include the date when selling started? -->
+
+	
   </body>
 </head>
 </html>
