@@ -42,19 +42,17 @@ while($row = $sqlQ -> fetch(PDO::FETCH_ASSOC)){
       $result[$counter] = getresult($row['BookName'], $row['Price'], $row['ISBN'], $row['author']);
       $counter = $counter +1;
 }
-
 $finalHTML = "";
 
 foreach ($result as $value){
   $finalHTML .= $value;
 }
-echo $finalHTML;
-$_SESSION['returnstring'] = $finalHTML;
+
 ?>
 
 <head>
   <body>
-      <?php echo $_SESSION['returnstring']; ?>
+      <?php echo $finalHTML; ?>
   </body>
 </head>
 </html>
