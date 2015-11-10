@@ -39,7 +39,7 @@
 
 .one_result {
 	width: 100%;
-	height: 35%; /*why doesn't auto work?*/
+	height: auto; /*the child elements need to have auto height?? */
 	display: inline-block;
 	position: relative;
 	margin: 0;
@@ -53,7 +53,7 @@
 	display: inline-block;
 	position: relative;
 	float: left;
-	height: 100%;
+	height: auto;
 }
 
 .textbook_image img{
@@ -76,7 +76,7 @@
 	margin-right: auto;
 	margin-top: 0.7em;
 	padding: 0;
-	height: 100%;
+	height: auto;
 	vertical-align: middle;
 }
 
