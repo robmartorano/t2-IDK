@@ -6,7 +6,6 @@
 }
 
 #sidebar{
-
 	background-color: #E4E4E4;
 	width: 15%;
 	height: 50em;
@@ -40,7 +39,7 @@
 
 .one_result {
 	width: 100%;
-	height: auto; /*but I don't want each box to be diff height...?*/
+	height: 35%; /*why doesn't auto work?*/
 	display: inline-block;
 	position: relative;
 	margin: 0;

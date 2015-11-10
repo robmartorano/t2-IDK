@@ -23,7 +23,7 @@ function getresult($BookName, $Price, $ISBN, $author) {
 			</ul>
 		</div>
 	</div>";
-	// still need valid image, seller (with a link to contact),  
+	// still need valid image, edition, seller (with a link to contact),  
 	// type, notes, and purchase hyperlink
 	
 	// <div>
