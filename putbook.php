@@ -45,14 +45,15 @@ if(!isset($error)){
     ':addition' => $additional
 
     ));
-    $sthandler = $db->prepare("SELECT * FROM Books ");
+       $sthandler = $db->prepare("SELECT BookName FROM Books ");
 	$sthandler->execute();
-	$result = $sthandler->fetchAll();
 	$arr = array();
-	for($i = 0; $i <= 5; $i++)
-	{
-	$arr[$i] = $result[$i]['BookName'];
+	$counter = 0;
+	while($row = $sthandler -> fetch(PDO::FETCH_ASSOC)){
+		$arr[$counter] = $row;
+		$counter = $counter +1;	
 	}
+	
 	$_SESSION['bookname'] = $arr;
 	header("Location: dashboard.php");
 
