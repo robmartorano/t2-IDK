@@ -75,7 +75,7 @@ foreach ($result as $value){
 
 <body>
 	<header>
-		<?php require_once 'nav.php';?>
+		<?php require_once 'navcontrol.php';?>
 	</header>
 	
 	<?php require_once 'searchbar.php';?>

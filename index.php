@@ -6,12 +6,17 @@
 		<link rel="stylesheet" href="stylenav.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script>
+		
+		
+		//$(document).ready(function(){$("#line1").hide().fadeIn("slow",function(){$("#line2").hide().fadeIn("slow",function(){$("#line3").hide().fadeIn("slow");});});});
+		
+		
 		$(document).ready(function(){
 		$("#Login").click(function(){
         $("#popup").toggle();
 		});
 		});
-		/**$(document).ready(function(){
+		$(document).ready(function(){
 		$("#popup").click(function(e){
 			if(e.target != this){
             
@@ -19,7 +24,7 @@
         }
         $("#popup").hide();
 		});
-		});**/
+		});
 		</script>
 		<title>Duke Textbook Exchange</title>
 	</head>
@@ -43,9 +48,9 @@
 	</div>
 	<!-- TEXT ON HOME PAGE -->
 	<div id="intro_text">
-		<p class="line_text">Need a textbook for your class?</p>
-		<p class="line_text">Can't afford the Campus Bookstore's crazy prices?</p>
-		<p class="line_text">Welcome to the Duke Textbook Exchange.</p>
+		<p class="line_text" id="line1">Need a textbook for your class?</p>
+		<p class="line_text" id="line2">Can't afford the Campus Bookstore's crazy prices?</p>
+		<p class="line_text"id="line3">Welcome to the Duke Textbook Exchange.</p>
 	</div>
 
 	<!-- SEARCH BAR -->
