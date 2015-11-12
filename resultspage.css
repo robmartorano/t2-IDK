@@ -23,7 +23,17 @@
 	width: 100%;
 	padding-bottom: 0.3em;
 }
-
+.purchasehyperlink{
+	text-decoration: underline;
+	color: blue;
+}
+#email{
+	left:50%;
+	display:none;
+	position:absolute;
+	z-index: 1000;
+	background-color: gray;
+}
 .indent1{padding-left: 0;}
 .indent2{padding-left: 1em;}
 
