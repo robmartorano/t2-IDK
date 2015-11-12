@@ -60,19 +60,15 @@ while($row = $sqlQ -> fetch(PDO::FETCH_ASSOC)){
 	  $sqlQ1 = $db->prepare('SELECT * FROM ownedBooks WHERE book_id = :bookid ');
 	  
 	  $sqlQ1->bindValue(':bookid', $row['id'], PDO::PARAM_INT);
-	  echo $row['id'];
 	  $sqlQ1->execute();
-	  echo"check1";
 	  $userid;
 	  while($row1 = $sqlQ1 -> fetch(PDO::FETCH_ASSOC))
 	  {
 	  $userid = $row1['user_id'] ;
 	  }
-	  echo  $userid;
 	  $sqlQ2 = $db->prepare('SELECT * FROM Users WHERE userid = :id ');
 	  $sqlQ2->bindValue(':id', $userid, PDO::PARAM_INT);
 	  $sqlQ2->execute();
-	  echo"check2";
 	  $uemail; 
 	  while($row2 = $sqlQ2 -> fetch(PDO::FETCH_ASSOC))
 	  {
