@@ -31,16 +31,18 @@ exit;
 else
 {
 $return = false;
+
 header("Location: logout.php");
 }
 return $return;
 }
 $emailx = $_POST['NetID'];
+$emailx = mysql_real_escape_string($emailx);
 $passwordx = $_POST['password'];
+$passwordx = mysql_real_escape_string($passwordx);
 if(userLogin($emailx, $passwordx, $db) != true)
 {
 	$errors[] = 'Username/password mismatch';
 }
-
 
 ?>

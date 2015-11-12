@@ -17,10 +17,15 @@ try {
 
 
 $firstname = $_POST["firstname"]; 
+$firstname = mysql_real_escape_string($firstname);
 $lastname = $_POST["lastname"]; 
+$lastname = mysql_real_escape_string($lastname);
 $email = $_POST["NetID"];   
+$email = mysql_real_escape_string($email);
 $password = $_POST["password"]; 
+$password = mysql_real_escape_string($password);
 $password1 = $_POST["confirmpassword"];
+$password1 = mysql_real_escape_string($password1);
 $ip = $_SERVER["REMOTE_ADDR"];
 
 
