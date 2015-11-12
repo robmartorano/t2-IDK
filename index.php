@@ -15,16 +15,16 @@
 		$("#Login").click(function(){
         $("#popup").toggle();
 		});
-		});
-		$(document).ready(function(){
-		$("#popup").click(function(e){
-			if(e.target != this){
-            
-            return false;
-        }
-        $("#popup").hide();
-		});
-		});
+	});
+		// $(document).ready(function(){
+// 		$("#popup").click(function(e){
+// 			if(e.target != this){
+//             
+//             return false;
+//         }
+//         $("#popup").hide();
+// 		});
+// 		});
 		</script>
 		<title>Duke Textbook Exchange</title>
 	</head>
