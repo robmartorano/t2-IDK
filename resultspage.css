@@ -23,11 +23,13 @@
 	width: 100%;
 	padding-bottom: 0.3em;
 }
-.purchasehyperlink{
+.wth{
 	text-decoration: underline;
 	color: blue;
 }
+
 #email{
+	text-align:center;
 	left:50%;
 	display:none;
 	position:absolute;

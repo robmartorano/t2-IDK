@@ -7,8 +7,8 @@
 session_start();
   // Change this to YOUR address
   $recipient = $_SESSION['sending'];
-  $email = $_POST['email'];
-  
+  $email = $_SESSION['email'];
+  $realName = $_SESSION['name'];
   $subject = $_POST['subject'];
   $body = $_POST['body'];
   # We'll make a list of error messages in an array
@@ -48,8 +48,9 @@ mail($recipient,
       $body,
       "From: $realName <$email>\r\n" .
       "Reply-To: $realName <$email>\r\n"); 
-    echo("<p>Your message has been sent. Thank you!</p>\n" + $_SESSION['sending']);
+    echo("<p>Your message has been sent. Thank you!</p>\n" );
   }
 ?>
+<a href='Searchresult.php'>return to previous page</a>
 </body>
 </html>

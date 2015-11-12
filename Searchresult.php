@@ -19,7 +19,7 @@ function getresult($BookName, $Price, $ISBN, $author, $email) {
 				<li class='ISBN'>ISBN #: $ISBN</li>
 				<li class='type'>Item: Hardcover Textbook</li>
 				<li class='notes'>Notes: Has some minor highlighting, writing...</li>
-				<li class='purchasehyperlink'>Contact User</li>
+				<li class='purchasehyperlink'>Contact User:</li>
 				<li class='wth' id='$email'  >Email: $email</li>
 				
 			</ul>
@@ -106,7 +106,7 @@ foreach ($result as $value){
   url: "some.php",
   data: { name: email }
 }).done(function( msg ) {
-  alert( "Data Saved: " + msg );
+ 
 });  
 		
         $("#email").toggle();
@@ -132,19 +132,16 @@ foreach ($result as $value){
 	
 	<form action="takeform.php" method="POST">
 	<p>
-	<input
-	name="email"
-	size="64"
-	maxlength="64"/>
-	<b>Your</b> Email Address
+	<?php if(isset($_SESSION['email'])){echo $_SESSION['email'];}else{echo 'Need to Login!';} ?> 
 	</p>
 	
 	<p>
+	Subject Of Your Message<br>
 	<input
 	name="subject"
 	size="64"
 	maxlength="64"/>
-	Subject Of Your Message
+	
 	</p>
 	<p>
 	<i>Please enter the text of your message in the field that follows.</i>
