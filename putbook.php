@@ -45,6 +45,31 @@ if(!isset($error)){
     ':addition' => $additional
 
     ));
+  
+    $sqls = 'SELECT * FROM Books WHERE BookName = :BookName AND Price = :Price AND ISBN = :ISBN AND author = :author AND addition = :addition';    
+    $query1 = $db->prepare($sqls);
+    $query1->execute(array(
+
+    ':BookName' => $name,
+    ':Price' => $price,
+    ':ISBN' => $isbn,
+    ':author' => $author,
+    ':addition' => $additional
+
+    ));
+    $idd;
+	while($row = $query1 -> fetch(PDO::FETCH_ASSOC)){
+		$idd = $row['id'];
+	}
+    
+	$sql2 = 'INSERT INTO ownedBooks (user_id , book_id) VALUES (:userid,:bookid)';    
+    $query = $db->prepare($sql2);
+    $query->execute(array(
+
+    ':userid' => $_SESSION['userid'],
+    ':bookid' => $idd
+    ));
+    
        $sthandler = $db->prepare("SELECT BookName FROM Books ");
 	$sthandler->execute();
 	$arr = array();

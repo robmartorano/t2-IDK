@@ -5,7 +5,7 @@ $abc = "%";
 $needtosearch = $abc.$needtosearch.$abc;
 
 session_start();
-function getresult($BookName, $Price, $ISBN, $author) {
+function getresult($BookName, $Price, $ISBN, $author, $email) {
 	return 
 	"<div class='one_result'>
 		<div class='textbook_image'>
@@ -20,6 +20,7 @@ function getresult($BookName, $Price, $ISBN, $author) {
 				<li class='type'>Item: Hardcover Textbook</li>
 				<li class='notes'>Notes: Has some minor highlighting, writing...</li>
 				<li class='purchase hyperlink'>Purchase now</li>
+				<li class='wth'>Email: $email</li>
 			</ul>
 		</div>
 	</div>";
@@ -56,7 +57,25 @@ $sqlQ->bindValue(':ISBN', $needtosearch, PDO::PARAM_INT);
 $sqlQ->execute();
 $result = array();
 while($row = $sqlQ -> fetch(PDO::FETCH_ASSOC)){
-      $result[$counter] = getresult($row['BookName'], $row['Price'], $row['ISBN'], $row['author']);
+	  $sqlQ1 = $db->prepare('SELECT * FROM ownedBooks WHERE book_id = :bookid ');
+	  
+	  $sqlQ1->bindValue(':bookid', $row['id'], PDO::PARAM_INT);
+	  $sqlQ1->execute();
+	  $userid;
+	  while($row1 = $sqlQ1 -> fetch(PDO::FETCH_ASSOC))
+	  {
+	  $userid = $row1['user_id'] ;
+	  }
+	  $sqlQ2 = $db->prepare('SELECT * FROM Users WHERE userid = :id ');
+	  $sqlQ2->bindValue(':id', $userid, PDO::PARAM_INT);
+	  $sqlQ2->execute();
+	  $uemail; 
+	  while($row2 = $sqlQ2 -> fetch(PDO::FETCH_ASSOC))
+	  {
+	  $uemail = $row2['email'] ;
+	  }
+	  
+      $result[$counter] = getresult($row['BookName'], $row['Price'], $row['ISBN'], $row['author'], $uemail);
       $counter = $counter +1;
 }
 $finalHTML = "";
