@@ -22,7 +22,7 @@ if (password_verify($passwords, $hash))
 $_SESSION['logged_in'] = true;
 $return = true;
 $_SESSION['name']=$result['firstname'];
-S_SESSION['email']=$result['email'];
+$_SESSION['email']=$result['email'];
 $_SESSION['userid']=$result['userid'];
 header("Location: dashboard.php");
 exit;
@@ -31,7 +31,6 @@ exit;
 else
 {
 $return = false;
-
 header("Location: logout.php");
 }
 return $return;
@@ -42,5 +41,6 @@ if(userLogin($emailx, $passwordx, $db) != true)
 {
 	$errors[] = 'Username/password mismatch';
 }
+
 
 ?>

@@ -16,7 +16,7 @@
         $("#popup").toggle();
 		});
 		});
-		$(document).ready(function(){
+		/**$(document).ready(function(){
 		$("#popup").click(function(e){
 			if(e.target != this){
             
@@ -24,7 +24,7 @@
         }
         $("#popup").hide();
 		});
-		});
+		}); **/
 		</script>
 		<title>Duke Textbook Exchange</title>
 	</head>
