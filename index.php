@@ -15,6 +15,7 @@
 		$("#Login").click(function(){
         $("#popup").toggle();
 		});
+<<<<<<< HEAD
 	});
 		// $(document).ready(function(){
 // 		$("#popup").click(function(e){
@@ -25,6 +26,18 @@
 //         $("#popup").hide();
 // 		});
 // 		});
+=======
+		});
+		/**$(document).ready(function(){
+		$("#popup").click(function(e){
+			if(e.target != this){
+            
+            return false;
+        }
+        $("#popup").hide();
+		});
+		}); **/
+>>>>>>> 1b747fa91afe82a56812202cfa1fda58bd7d8326
 		</script>
 		<title>Duke Textbook Exchange</title>
 	</head>

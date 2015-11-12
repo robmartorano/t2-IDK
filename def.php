@@ -31,7 +31,6 @@ exit;
 else
 {
 $return = false;
-
 header("Location: logout.php");
 }
 return $return;
@@ -42,5 +41,6 @@ if(userLogin($emailx, $passwordx, $db) != true)
 {
 	$errors[] = 'Username/password mismatch';
 }
+
 
 ?>
