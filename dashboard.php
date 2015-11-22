@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 $dsn = 'mysql:host=cgi.cs.duke.edu;port=3306;dbname=qp7;';
 $username = 'qp7';
@@ -9,9 +9,7 @@ try {
     die('Could not connect to the database:<br/>' . $e);
 }
 
-$sqlQ = $db->prepare('SELECT * FROM ownedBooks WHERE user_id = :user_id');
-$sqlQ->bindValue(':user_id', $_SESSION['userid'], PDO::PARAM_STR);
-$sqlQ->execute();
+
 
 
 function getresult($BookName) {
@@ -23,37 +21,31 @@ function getresult($BookName) {
 			</ul>
 		</div>
 	</div>";
-	// still need valid image, edition, seller (with a link to contact),
-	// type, notes, and purchase hyperlink
-
-	// <div>
-	//	<p>$BookName</p>
-	//	<p>$Price</p>
-	//	<p>$ISBN</p>
-	//	<p>$author</p>
-	//	</div>";
 }
-
+$counter = 0;
+$result = array();
+$sqlQ = $db->prepare('SELECT * FROM ownedBooks WHERE user_id = :user_id');
+$sqlQ->bindValue(':user_id', $_SESSION['userid'], PDO::PARAM_STR);
+$sqlQ->execute();
  while($row = $sqlQ -> fetch(PDO::FETCH_ASSOC))
 	  {
 	  $bookid = $row['book_id'] ;
-	  }
-
-$sqlQ1 = $db->prepare('SELECT * FROM Books WHERE id = :id ');
+	  echo $bookid;
+	  $sqlQ1 = $db->prepare('SELECT * FROM Books WHERE id = :id ');
 	  $sqlQ1->bindValue(':id', $bookid, PDO::PARAM_INT);
 	  $sqlQ1->execute();
-
-$result = "";
-
- while($row1 = $sqlQ1 -> fetch(PDO::FETCH_ASSOC))
-	  {
-
-	  $result = $result  + getresult($row1['book_id']) ;
+    while($row1 = $sqlQ1 -> fetch(PDO::FETCH_ASSOC))
+       {
+       echo $row1['BookName'];
+       $result[$counter] = getresult($row1['BookName']) ;
+       $counter = $counter +1;
+       }
 	  }
+$finalHTML = "";
 
-
-
-
+foreach ($result as $value){
+  $finalHTML .= $value;
+}
 
 ?>
 
@@ -123,22 +115,9 @@ $result = "";
 
     		<div class = "sell">
     			<h1 class = "titledash">Books that you want to sell</h1>
+    			<?php echo $finalHTML; ?>
     				<ul>
-        			<script type= "text/javascript">
-		 var num = "<?php Print($Se); ?>";
-		 for (i = 0; i < 5; i++) {
-			var tr='';
-    // create a new textInputBox
-           var textInputBox = 'hi';
-        // create a new Label Text
-
-            tr += '<li>' + textInputBox + '</li>';
-			document.write(tr);
-}
-
-
-
-				</script>
+				
 				<li id="button">
 				add another listing
 				</li>
