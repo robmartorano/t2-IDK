@@ -44,6 +44,10 @@ if ($password != $password1){
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
     $error = "Enter a  valid email";
 }
+if ($(".email")[(strlen($(".email")) - 8):(strlen($(".email")) - 1)] != "duke.edu") {
+	echo "That's not a Duke email"
+}	
+
 
 // Password length
 if (strlen($password) <= 6){
