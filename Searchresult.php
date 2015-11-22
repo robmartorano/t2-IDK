@@ -16,7 +16,7 @@ function getresult($BookName, $Price, $ISBN, $author, $email) {
 			<ul class='text'>
 				<li class='title'>$BookName</li>
 				<li class='author''>$author</li>
-				<li class='price'>$Price</li>
+				<li class='price'>$$Price</li>
 				<li class='ISBN'>ISBN #: $ISBN</li>
 				<li class='type'>Item: Hardcover Textbook</li>
 				<li class='notes'>Notes: Has some minor highlighting, writing...</li>
@@ -126,7 +126,7 @@ foreach ($result as $value){
 <body>
 	
 	<header>
-		<?php require_once 'navcontrol.php';?>
+		<?php require_once 'nav.php';?>
 	</header>
 	
 	<div id="email">

@@ -12,11 +12,11 @@
 		
 		
 		$(document).ready(function(){
-		$("#Login").click(function(){
-        $("#popup").toggle();
+			$("#Login").click(function(){
+				$("#popup").toggle();
+			});
 		});
-
-	});
+		
 		// $(document).ready(function(){
 // 		$("#popup").click(function(e){
 // 			if(e.target != this){
@@ -53,7 +53,7 @@
 	<div id="intro_text">
 		<p class="line_text" id="line1">Need a textbook for your class?</p>
 		<p class="line_text" id="line2">Can't afford the Campus Bookstore's crazy prices?</p>
-		<p class="line_text"id="line3">Welcome to the Duke Textbook Exchange.</p>
+		<p class="line_text" id="line3">Welcome to the Duke Textbook Exchange.</p>
 	</div>
 
 	<!-- SEARCH BAR -->
