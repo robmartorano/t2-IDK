@@ -1,6 +1,7 @@
 <html>
 <?php
 $needtosearch = $_POST["wtf"];
+$needtosearch = mysql_real_escape_string($needtosearch);
 $abc = "%";
 $needtosearch = $abc.$needtosearch.$abc;
 
