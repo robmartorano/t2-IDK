@@ -27,9 +27,6 @@ Register to buy textbooks from your classmates at an extremely low price.
 	</form>
 
 </div>
-<?php
-	if ($(".email")[(strlen($(".email")) - 8):(strlen($(".email")) - 1)] != "duke.edu") {
-		echo "That's not a Duke email"
-	}	?>
+
 </body>
 </html>
