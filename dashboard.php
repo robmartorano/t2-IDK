@@ -1,4 +1,60 @@
-<?php session_start() ?>
+<?php session_start() 
+$dsn = 'mysql:host=cgi.cs.duke.edu;port=3306;dbname=qp7;';
+$username = 'qp7';
+$password = 'qnDM4.fo6sX_';
+try {
+    $db = new PDO($dsn, $username, $password);
+} catch(PDOException $e) {
+    die('Could not connect to the database:<br/>' . $e);
+}
+
+$sqlQ = $db->prepare('SELECT * FROM ownedBooks WHERE user_id = :user_id');
+$sqlQ->bindValue(':user_id', $_SESSION['userid'], PDO::PARAM_STR);
+$sqlQ->execute();
+
+
+function getresult($BookName) {
+	return 
+	"<div class='one_result'>
+		<div class='text_box'>
+			<ul class='text'>
+				<li class='title'>$BookName</li>
+			</ul>
+		</div>
+	</div>";
+	// still need valid image, edition, seller (with a link to contact),  
+	// type, notes, and purchase hyperlink
+	
+	// <div>
+	//	<p>$BookName</p>
+	//	<p>$Price</p>
+	//	<p>$ISBN</p>
+	//	<p>$author</p>
+	//	</div>";
+}
+
+ while($row = $sqlQ -> fetch(PDO::FETCH_ASSOC))
+	  {
+	  $bookid = $row['book_id'] ;
+	  }
+	  
+$sqlQ1 = $db->prepare('SELECT * FROM Books WHERE id = :id ');
+	  $sqlQ1->bindValue(':id', $bookid, PDO::PARAM_INT);
+	  $sqlQ1->execute();
+
+$result = "";
+
+ while($row1 = $sqlQ1 -> fetch(PDO::FETCH_ASSOC))
+	  {
+	  
+	  $result = $result  + getresult($row1['book_id']) ;
+	  }
+
+
+
+
+
+?>
 
 <html>
 	<head>
