@@ -8,7 +8,26 @@ try {
 } catch(PDOException $e) {
     die('Could not connect to the database:<br/>' . $e);
 }
-
+$ct = 0;
+$idid = array();
+$namename = array();
+$pp = array();
+$isis = array();
+$adad = array();
+$aa = array();
+$sqlQ5 = $db->prepare('SELECT * FROM Books');
+$sqlQ5->execute();
+ while($row = $sqlQ5 -> fetch(PDO::FETCH_ASSOC))
+	  {
+	  $idid[$ct] = $row['id'];
+	  $namename[$ct] = $row['BookName'];
+	  $pp[$ct] = $row['Price'];
+	  $isis[$ct] = $row['ISBN'];
+	  $adad[$ct] = $row['addition'];
+	  $aa[$ct] = $row['author'];
+	  $ct = $ct + 1;
+	  //echo $bookid;
+	  }
 
 
 
@@ -17,7 +36,7 @@ function getresult($BookName, $Count) {
 	"<div class='one_result'>
 		<div class='text_box'>
 			<ul class='text'>
-				<li class='title' id = $Count onClick= reply_click(this.id)>$BookName</li>
+				<li class='title' id = $Count onClick=reply_click(this.id)>$BookName</li>
 			</ul>
 		</div>
 	</div>";
@@ -48,8 +67,7 @@ $finalHTML = "";
 foreach ($result as $value){
   $finalHTML .= $value;
 }
-$gg = "<script>document.write(abc)</script>";
-	echo $gg;
+
 ?>
 
 <html>
@@ -58,12 +76,39 @@ $gg = "<script>document.write(abc)</script>";
 		<link rel="stylesheet" href="stylenav.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script>
+		
 		function reply_click(clicked_id)
 			{
-			var abc = clicked_id;
-			
-			    document.getElementById("lol").innerHTML = <p>clicked_id</p>;//"<p>23333</p>";
-			};
+ 			var idid= <?php echo json_encode($idid); ?>;
+ 			var namename= <?php echo json_encode($namename); ?>;
+ 			var pp= <?php echo json_encode($pp); ?>;
+ 			var isis= <?php echo json_encode($isis); ?>;
+ 			var adad= <?php echo json_encode($adad); ?>;
+ 			var aa= <?php echo json_encode($aa); ?>;
+ 			var track = 0;
+            for(var i=0;i<idid.length;i++)
+            {
+         	    if(idid[i] == clicked_id)
+         	    {
+         	   		track = i;
+         	    }
+         	}  
+         	var wtfa = "<p>" + "book name: " + namename[track] + "</p>" + "\n" + 
+         	"<p>" + "price: " + pp[track] + "</p>" + "\n"+
+         	"<p>" + "ISBN: " + isis[track] + "</p>" + "\n"+
+         	"<p>" + "author: " + aa[track] + "</p>" + "\n";
+
+         	
+         	document.getElementById("lol").innerHTML = wtfa;
+
+//			document.getElementById("lol").innerHTML = "book name: " + namename[track];
+//			document.getElementById("lol").innerHTML = "price: " + pp[track];
+//			document.getElementById("lol").innerHTML = "ISBN: " + isis[track];
+//			document.getElementById("lol").innerHTML = "book name: " + namename[track];
+//			document.getElementById("lol").innerHTML = "author: " + namename[track];
+//			document.getElementById("lol").innerHTML = "book name: " + aa[track];
+			}
+
 			
 		$(document).ready(function(){
 		$("#button").click(function(){
