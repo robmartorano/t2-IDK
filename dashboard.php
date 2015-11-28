@@ -12,17 +12,18 @@ try {
 
 
 
-function getresult($BookName) {
+function getresult($BookName, $Count) {
 	return
 	"<div class='one_result'>
 		<div class='text_box'>
 			<ul class='text'>
-				<li class='title'>$BookName</li>
+				<li class='title' id = $Count onClick= reply_click(this.id)>$BookName</li>
 			</ul>
 		</div>
 	</div>";
 }
 $counter = 0;
+$abc = 1000;
 $result = array();
 $sqlQ = $db->prepare('SELECT * FROM ownedBooks WHERE user_id = :user_id');
 $sqlQ->bindValue(':user_id', $_SESSION['userid'], PDO::PARAM_STR);
@@ -30,14 +31,15 @@ $sqlQ->execute();
  while($row = $sqlQ -> fetch(PDO::FETCH_ASSOC))
 	  {
 	  $bookid = $row['book_id'] ;
-	  echo $bookid;
+	  //echo $bookid;
 	  $sqlQ1 = $db->prepare('SELECT * FROM Books WHERE id = :id ');
 	  $sqlQ1->bindValue(':id', $bookid, PDO::PARAM_INT);
 	  $sqlQ1->execute();
     while($row1 = $sqlQ1 -> fetch(PDO::FETCH_ASSOC))
        {
-       echo $row1['BookName'];
-       $result[$counter] = getresult($row1['BookName']) ;
+       //echo $row1['BookName'];
+       
+       $result[$counter] = getresult($row1['BookName'], $row1['id']) ;
        $counter = $counter +1;
        }
 	  }
@@ -46,7 +48,8 @@ $finalHTML = "";
 foreach ($result as $value){
   $finalHTML .= $value;
 }
-
+$gg = "<script>document.write(abc)</script>";
+	echo $gg;
 ?>
 
 <html>
@@ -55,6 +58,13 @@ foreach ($result as $value){
 		<link rel="stylesheet" href="stylenav.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script>
+		function reply_click(clicked_id)
+			{
+			var abc = clicked_id;
+			
+			    document.getElementById("lol").innerHTML = <p>clicked_id</p>;//"<p>23333</p>";
+			};
+			
 		$(document).ready(function(){
 		$("#button").click(function(){
         $("#popup").toggle();
@@ -62,12 +72,13 @@ foreach ($result as $value){
 		});
 </script>
 	</head>
-
 <body>
 
 	<header>
 		<?php require_once 'navcontrol.php';?>
-
+		<script type="text/javascript">
+			
+		</script>
 	</header>
 		<div id ="popup">
 		<form action="putbook.php"  method="post">
@@ -84,40 +95,12 @@ foreach ($result as $value){
 <input type="submit">
 		</div>
 		<div class = "left">
-    		<div class = "buy">
-        		<h1 class = "titledash">Books that you want to buy</h1>
-				<ul id="what">
-				<?php $length = count($_SESSION['bookname']);
-				echo $length ?>
-        			<script type= "text/javascript">
-		 var count = "<?php echo $length ?>";
-		 <?php $counter = 0;?>
-		 for (i = 0; i < count; i++) {
-
-			var tr= '';
-    // create a new textInputBox
-
-           var textInputBox = "<?php echo $_SESSION['bookname'][$counter] ; $counter++ ?>";
-        // create a new Label Text
-            tr += '<li>' + textInputBox + '</li>';
-			document.write(tr);
-}
-
-
-
-				</script>
-				<li>
-
-				</li>
-				</ul>
-
-    		</div>
-
+    		
     		<div class = "sell">
     			<h1 class = "titledash">Books that you want to sell</h1>
     			<?php echo $finalHTML; ?>
     				<ul>
-				
+
 				<li id="button">
 				add another listing
 				</li>
@@ -126,7 +109,8 @@ foreach ($result as $value){
     	</div>
     	<div class = "right">
 
-    		<div class = "displaybook">
+    		<div class = "displaybook" id = "lol">
+
     			<h1 class = "titledash">What is thisssss</h1>
     		</div>
     	</div>
