@@ -10,8 +10,6 @@ body {
 	width:100%;
 	
 }
-	
-
 
 .text{
 	
@@ -92,6 +90,9 @@ input[type=submit]:hover {
   
 }
 
+#registerButton{
+	border-style: none;
+}
 
 #login:hover{
 	background-color:#52527A;

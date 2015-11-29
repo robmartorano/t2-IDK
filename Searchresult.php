@@ -21,7 +21,7 @@ function getresult($BookName, $Price, $ISBN, $author, $email) {
 				<li class='type'>Item: Hardcover Textbook</li>
 				<li class='notes'>Notes: Has some minor highlighting, writing...</li>
 				<li class='purchasehyperlink'>Contact User:</li>
-				<li class='wth' id='$email'  >Email: $email</li>
+				<li class='wth' id='receiving_email'  >Email: $email</li>
 				
 			</ul>
 		</div>
@@ -126,37 +126,31 @@ foreach ($result as $value){
 <body>
 	
 	<header>
-		<?php require_once 'nav.php';?>
+		<?php require_once 'navcontrol.php';?>
 	</header>
 	
 	<div id="email">
-	
-	<form action="takeform.php" method="POST">
-	<p>
-	<?php if(isset($_SESSION['email'])){echo $_SESSION['email'];}else{echo 'Need to Login!';} ?> 
-	</p>
-	
-	<p>
-	Subject Of Your Message<br>
-	<input
-	name="subject"
-	size="64"
-	maxlength="64"/>
-	
-	</p>
-	<p>
-	<i>Please enter the text of your message in the field that follows.</i>
-	</p>
-	<textarea
-	name="body"
-	rows="10"
-	cols="60">
-	</textarea>
-	<p>
-	<input type="submit" name="send" value="Send Your Message"/>
-	</p>
-	</form>
+		<form action="takeform.php" method="POST">
+			<p class="topfield">
+				<?php 
+				if(isset($_SESSION['email'])){
+					echo $_SESSION['email'];
+					}
+				else{
+					echo 'You need to login first';
+					} ?> 
+			</p>
+		
+			<p class="bold">Subject: 
+				<input id="subject" name="subject" size="64" maxlength="64"/>
+			</p>
+			
+			<p id="message"><i>Please enter the text of your message in the field that follows.</i></p>
+			<textarea name="body" rows="10" cols="60"></textarea>
+			<input id="emailButton" type="submit" name="send" value="Send Your Message"/>
+		</form>
 	</div>
+	
 	<?php require_once 'searchbar.php';?>
       
 	<div id="whole_page">

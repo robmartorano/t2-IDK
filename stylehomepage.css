@@ -11,33 +11,32 @@ body {
 	}
 	
 #popup{
-	display:none;
-	position:fixed;
-	z-index:1000;
+	display: none;
+	position: fixed;
+	z-index: 1000;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0,0,0,.65);
+	background-color: rgba(0,0,0,.75);
 	margin: 0;
 	padding: 0;
 }
 #popuplogin{
 	position: fixed;
-	z-index:1000;
+	z-index: 1000;
 	padding: 5px;
 	color: rgba(0,51,102,.85);
 	background-color: #e0e4ed;
 	display: block;
-	left: 37%;
+	left: 40%;
 	top: 20%;
 	/*margin-left: auto;
 	margin-right: auto;*/
 	font-family: "Helvetica Neue","Helvetica",sans;
 	font-size: 1em;
-	font-weight:900;
+	font-weight: 900;
 	width: 20%;
 	height: 50%;
-	text-align: center;
-	
+	text-align: center;	
 }
 
 #background {
@@ -76,24 +75,84 @@ body {
 	border-radius: 5px;
 }
 
-#typehere
-{
+#typehere{
 	width: 80%;
 	height: 3em;
 	display: inline-block;
+	padding-left: 1em;
+	font-size: 1em;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
-/* search button */
+/* search button 
 #button{
 	width: 18%;
 	display: inline-block;
 	height: 3em;
-	border-radius: 5px;
-	background-color: #3333ff
+	border-radius: 0;
+	background-color: #bfbfbf;
+	border-style: none;
+	border-radius: 1px;
+	color: #808080;
+	font-weight: 700;
 }
 
+#button:hover{
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	color: #000000;
+} */
 
+#button{
+	width: 18%;
+	display: inline-block;
+	height: 3.8em;
+	border-radius: 0;
+	/*background-color: #4d79ff;*/
+	background-color: #4b0099;
+	border-style: none;
+	border-radius: 1px;
+	font-weight: 700;
+	color: white;
+}
 
+#button:hover{
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	color: #000000;
+}
+
+::-webkit-input-placeholder {
+	color: #8c8c8c;
+	font-size: 1em;
+	line-height: normal;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+:-moz-placeholder { /* older Firefox*/
+	color: #8c8c8c;
+	font-size: 1em;
+	line-height: normal;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+::-moz-placeholder { /* Firefox 19+*/ 
+	color: #8c8c8c;
+	font-size: 1em;
+	line-height: normal;
+	padding-top: 0;
+	padding-bottom: 0;
+} 
+:-ms-input-placeholder { 
+	color: #8c8c8c;
+	font-size: 1em;
+	line-height: normal;
+	padding-top: 0;
+	padding-bottom: 0;
+}
 
 /*-------------- LOGIN PAGE - TRANSFER TO DIFF CSS FILE ---------*/
 

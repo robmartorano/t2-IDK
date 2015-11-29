@@ -18,7 +18,7 @@
 <div class="text">
 Register to buy textbooks from your classmates at an extremely low price. 
 <br>
-<img class="loginpic" src="dukelogo.jpg" alt="Login" ></img>
+<img class="loginpic" src="dukelogo.jpg" alt="Login"></img>
 </div>	
 <div class="register">
 	<form action="abc.php" method="post">
@@ -28,7 +28,7 @@ Register to buy textbooks from your classmates at an extremely low price.
 		Password:<br> <input class='pw' type="password"  name="password"><br>
 		Re-type Password:<br> <input class='rpw' type="password"  name="confirmpassword"><br>
 		Duke E-mail:<br> <input class='email' type="text" name="NetID"><br><br>
-		<input type="submit">
+		<input id="registerButton" type="submit" value="Sign Up">
 
 	</form>
 
