@@ -7,7 +7,11 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script>
 		
-		
+		function checkTextField(field) {
+    if (field.value == '') {
+        alert("Field is empty");
+    }
+}
 		//$(document).ready(function(){$("#line1").hide().fadeIn("slow",function(){$("#line2").hide().fadeIn("slow",function(){$("#line3").hide().fadeIn("slow");});});});
 		
 		
