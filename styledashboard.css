@@ -1,0 +1,99 @@
+a {
+	color:white;
+	text-decoration: none;
+	text-align: center;
+}
+body {
+	
+	margin: 0;
+	background-color:white;
+	width:100%;
+	
+}
+#button{
+	display: block;
+	list-style: none;
+	color:blue;
+	text-decoration: underline;
+}
+
+
+
+.logo{
+	padding: 10px;
+	color:rgba(0,51,102,.85);
+	margin-top: 5%;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	font-family:"Helvetica Neue","Helvetica",sans;
+	font-size: 2em;
+	font-weight:100;
+	width: 40%;
+	text-align:center;
+}
+#popup{
+	position: absolute;
+	z-index:1000;
+	padding: 5px;
+	margin-top: 2%;
+	color:rgba(0,51,102,.85);
+	background-color: #e0e4ed;
+	display:none;
+	left: 40%;
+	top: 10%;
+	
+	margin-left:auto;
+	margin-right:auto;
+	font-family:"Helvetica Neue","Helvetica",sans;
+	font-size: 1em;
+	font-weight:900;
+	width: 20%;
+	height: 50%;
+	text-align:center;
+	
+}
+
+.buy
+{
+display: block;
+background: #F9FDFE;
+height: 50%;
+padding-top: 0;
+border: Blue solide;
+}
+.sell
+{
+height: 50%;
+background: #F9FDFE;
+padding-top: 0;
+border: Blue solide;
+}
+.left
+{
+float: left;
+display: block;
+width: 32%;
+background: #C6ECFC;
+margin: 3%;
+height: 83%;
+}
+.right
+{
+float: right;
+display: block;
+width: 56%;
+background: #C6ECFC;
+margin: 3%;
+height: 83%
+}
+.displaybook
+{
+float: left;
+}
+
+.titledash
+{
+font-size: 1.2em;
+text-align: center;
+}

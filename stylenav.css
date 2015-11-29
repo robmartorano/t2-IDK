@@ -1,0 +1,68 @@
+.navigation{
+	margin: 0;
+	padding: 0;
+	
+	width: 100%;
+    
+	font-family:"Helvetica Neue","Helvetica",sans;
+	font-size: 1em;
+	font-weight: 900;
+	color: white;
+}
+
+.tabs{
+	background-color: rgba(0,0,0,.75);
+	list-style-type: none;
+    
+	margin: 0;
+	padding: 0;
+}
+
+.filler{
+	display:inline-block;
+	margin: 0;
+	padding: 0;
+	
+	width: 9%;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#home{
+	text-align: center;
+	width: 62.5%;
+}
+
+#name {
+	font-size: 1em;
+	font-weight: 900;
+}
+
+
+
+/* ------- HOVER EFFECTS -------- */
+
+#home:hover{
+	cursor: hand;
+}
+	
+#login:hover{
+	background-color:black;
+	cursor: hand;
+	}
+
+#registration:hover{
+	background-color:black;
+	cursor: hand;
+	}
+	
+#name:hover{
+	background-color:black;
+	cursor: hand;
+	}
+
+#logout:hover{
+	background-color:black;
+	cursor: hand;
+	}

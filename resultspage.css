@@ -1,0 +1,152 @@
+#whole_page{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+#sidebar{
+	background-color: #E4E4E4;
+	width: 15%;
+	height: 50em;
+	padding-left: 5%;
+	padding-right: 1%;
+	/*display: inline-block;*/
+	float: left;
+}
+
+#sidebar_text{
+	padding-left:0.5em;
+}
+
+#sidebar_text li {
+	width: 100%;
+	padding-bottom: 0.3em;
+}
+.wth{
+	text-decoration: underline;
+	color: blue;
+}
+
+#email{
+	text-align:center;
+	left:50%;
+	display:none;
+	position:absolute;
+	z-index: 1000;
+	background-color: gray;
+}
+.indent1{padding-left: 0;}
+.indent2{padding-left: 1em;}
+
+#searchresults{
+	width: 75%;
+	height: auto;
+	margin-left: 1.5%;
+	margin-right: auto;
+	position: relative;
+	float: right;
+	display: inline-block;
+}
+
+.one_result {
+	width: 100%;
+	height: auto; /*the child elements need to have auto height?? */
+	display: inline-block;
+	position: relative;
+	margin: 0;
+	border-top-style: solid;
+	border-top-color: gray;
+	border-width: 1px;
+}
+
+.textbook_image{
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+	float: left;
+	height: auto;
+}
+
+.textbook_image img{
+	width: 130px;
+	height: 180px;
+	vertical-align: middle;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	margin: 0;
+}
+
+/*div*/.text_box{
+	width: 70%;
+	position: relative;
+	float: left;
+	display: inline-block;
+	margin-left: 1em;
+	margin-right: auto;
+	margin-top: 0.7em;
+	padding: 0;
+	height: auto;
+	vertical-align: middle;
+}
+
+/*ul*/.text{
+	font-family: "Helvetica Noue", "Helvetica";
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+}
+
+.text li{
+	width: 100%;
+}
+
+/*------------- INFORMATION THAT IS DISPLAYED --------------*/
+
+.title{
+	font-size: 1.2em;
+	padding: 0;
+}
+.author{
+	font-size: 0.8em;
+}
+
+.price{
+	font-size: 1em; 
+	font-weight: 900;
+	color: red;
+	padding-top: 0.8em;
+	padding-bottom: 0.5em;
+}
+
+.seller {
+	font-size: 0.8em;
+	padding-bottom: 0.3em;
+}
+
+.type{
+	font-size: 0.8em;
+	padding-bottom: 0.35em;
+}
+
+.ISBN{
+	font-size: 0.8em;
+	padding-bottom: 0.35em;
+}
+
+.notes{
+	font-size: 0.8em;
+	padding-bottom: 0.5em;
+}
+
+.purchase{
+	font-size: 0.8em;
+	padding-bottom: 0.8em;
+}
+
+.hyperlink{
+	color: blue;
+	text-decoration: underline;
+}
