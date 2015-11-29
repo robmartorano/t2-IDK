@@ -17,7 +17,11 @@ body {
 	text-decoration: underline;
 }
 
-
+#close{
+	text-align:right;
+	text-decoration:underline;
+	color: blue;
+}
 
 .logo{
 	padding: 10px;

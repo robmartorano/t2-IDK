@@ -26,8 +26,9 @@ function userLogin($emails, $passwords, $dbs) {
 		exit;
 	}
 	else {
-		$return = false;
-		header("Location: logout.php");
+		$_SESSION["Login.Error"] = 'Invalid Login/Password';
+		header("Location: login.php");
+		exit();
 	}
 	return $return;
 	}

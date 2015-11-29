@@ -57,7 +57,12 @@ foreach ($result as $value){
 		<script>
 		$(document).ready(function(){
 		$("#button").click(function(){
-        $("#popup").toggle();
+        $("#popup").show();
+		});
+		});
+		$(document).ready(function(){
+		$("#close").click(function(){
+        $("#popup").hide();
 		});
 		});
 </script>
@@ -70,13 +75,16 @@ foreach ($result as $value){
 
 	</header>
 		<div id ="popup">
-		<form action="putbook.php"  method="post">
+		<div id ="close">
+		close
+		</div>
+		<form action="isbndb.php"  method="post">
+		Enter the ISBN Number, Price, and Any additional information about the book.
 
-<input type="text" name="name" placeholder="Textbook Name"><br>
-<input type="text" name="price" placeholder="Price"><br>
-<input type="text" name="ISBN" placeholder="ISBN"><br>
-<input type="text" name="author" placeholder="author"><br>
-<input type="text" name="additional" placeholder="a few sentences to describe the book"><br>
+
+		<input type="number" name="ISBN" placeholder="ISBN"><br>
+		<input type="text" name="price" placeholder="Price"><br>
+		<input type="text" name="additional" placeholder="a few sentences to describe the book"><br>
 
 
 

@@ -14,8 +14,8 @@
 				echo "<li class=\"filler\" id=\"logout\" onclick=\"location.href='logout.php'\">Logout</li>";
 			} 
 			else {
-				echo "<li class=\"filler\" id=\"Login\">Login</li>";
-				echo "<li class=\"filler\" id=\"Registration\" onclick=\"location.href='register.php'\">Sign Up</li>";
+				echo "<li class=\"filler\" id=\"Login\"onclick=\"location.href='login.php'\">Login</li><li class=\"filler\" id=\"Registration\" onclick=\"location.href='register.php'\">Sign Up</li>";
+				
 			}
 			?>
 		</ul>

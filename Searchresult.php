@@ -110,13 +110,17 @@ foreach ($result as $value){
  
 });  
 		
-        $("#email").toggle();
+        $("#email").show();
 		
 		
 		});
 
 	});
-	
+	$(document).ready(function(){
+		$("#close").click(function(){
+        $("#email").hide();
+		});
+		});
 
 
 		</script>
@@ -130,7 +134,9 @@ foreach ($result as $value){
 	</header>
 	
 	<div id="email">
-	
+	<div id ="close">
+		close
+		</div>
 	<form action="takeform.php" method="POST">
 	<p>
 	<?php if(isset($_SESSION['email'])){echo $_SESSION['email'];}else{echo 'Need to Login!';} ?> 
