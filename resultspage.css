@@ -5,7 +5,7 @@
 	width: 100%;
 }
 
-/* -------------- SIDEBAR -------------- */
+/* -------------- SIDEBAR --------------
 
 #sidebar{
 	background-color: #E4E4E4;
@@ -13,7 +13,7 @@
 	height: 50em;
 	padding-left: 5%;
 	padding-right: 1%;
-	/*display: inline-block;*/
+	/*display: inline-block;
 	float: left;
 }
 
@@ -79,12 +79,11 @@
 /* ------------- STYLING SEARCH RESULTS ----------- */
 
 #searchresults{
-	width: 75%;
-	height: auto;
-	margin-left: 1.5%;
-	margin-right: auto;
+	width: 80%;
+	height: auto;	
 	position: relative;
-	float: right;
+	left: 15%;
+	/*float: right;*/
 	display: inline-block;
 }
 

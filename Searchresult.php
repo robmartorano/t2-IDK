@@ -153,7 +153,7 @@ foreach ($result as $value){
 	
 	<?php require_once 'searchbar.php';?>
       
-	<div id="whole_page">
+	<!--<div id="whole_page">
 		<div id="sidebar">
 			<ul id="sidebar_text">
 				<li class="indent1">Browse by Category</li>
@@ -162,9 +162,9 @@ foreach ($result as $value){
 				<li class="indent2">Computer Science</li>
 			<!--	<li class="indent1">Browse by Course</li>
 				<li class="indent2">Chemistry 201/202</li>
-				<li class="indent2">Economics 101</li> -->
+				<li class="indent2">Economics 101</li> 
 			</ul>
-		</div>
+		</div>-->
 	  
 	<div id="searchresults">  
 		<?php echo $finalHTML; ?>
