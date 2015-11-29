@@ -3,6 +3,12 @@
 	<head>
 		<link rel="stylesheet" href="styleregister.css">
 		<link rel="stylesheet" href="stylenav.css">
+		<script>
+		function checkTextField(field) {
+    if (field.value == '') {
+        alert("Field is empty");
+    }
+		</script>
 	</head>
 
 <body>
@@ -17,7 +23,7 @@ Register to buy textbooks from your classmates at an extremely low price.
 <div class="register">
 	<form action="abc.php" method="post">
 		<br><br>
-		First Name:<br> <input class="fname" type="text" name="firstname"><br>
+		First Name:<br> <input class="fname" type="text" name="firstname" onblur="checkTextField(this);"><br>
 		Last Name:<br> <input class='lname'type="text" name="lastname"><br>
 		Password:<br> <input class='pw' type="password"  name="password"><br>
 		Re-type Password:<br> <input class='rpw' type="password"  name="confirmpassword"><br>
