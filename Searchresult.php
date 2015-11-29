@@ -21,7 +21,7 @@ function getresult($BookName, $Price, $ISBN, $author, $email) {
 				<li class='type'>Item: Hardcover Textbook</li>
 				<li class='notes'>Notes: Has some minor highlighting, writing...</li>
 				<li class='purchasehyperlink'>Contact User:</li>
-				<li class='wth' id='$email'  >Email: $email</li>
+				<li class='wth' id='receiving_email'  >Email: $email</li>
 				
 			</ul>
 		</div>
@@ -130,10 +130,11 @@ foreach ($result as $value){
 <body>
 	
 	<header>
-		<?php require_once 'nav.php';?>
+		<?php require_once 'navcontrol.php';?>
 	</header>
 	
 	<div id="email">
+
 	<div id ="close">
 		close
 		</div>
@@ -162,10 +163,12 @@ foreach ($result as $value){
 	<input type="submit" name="send" value="Send Your Message"/>
 	</p>
 	</form>
+
 	</div>
+	
 	<?php require_once 'searchbar.php';?>
       
-	<div id="whole_page">
+	<!--<div id="whole_page">
 		<div id="sidebar">
 			<ul id="sidebar_text">
 				<li class="indent1">Browse by Category</li>
@@ -174,9 +177,9 @@ foreach ($result as $value){
 				<li class="indent2">Computer Science</li>
 			<!--	<li class="indent1">Browse by Course</li>
 				<li class="indent2">Chemistry 201/202</li>
-				<li class="indent2">Economics 101</li> -->
+				<li class="indent2">Economics 101</li> 
 			</ul>
-		</div>
+		</div>-->
 	  
 	<div id="searchresults">  
 		<?php echo $finalHTML; ?>

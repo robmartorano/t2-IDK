@@ -1,11 +1,12 @@
 <!doctype html>
 <html>
+<div class="nav-large">
 <nav>
-	<div class="navigation">
+	<!-- <div class="navigation"> -->
 		<ul class="tabs">
 			<li class="filler"></li>
 			<li class="filler"></li>
-			<li id="home" onclick="location.href='index.php'">Duke Textbook Exchange</li>
+			<li id="home"><a href="index.php" id="home_link">Duke Textbook Exchange</a></li>
 			<?php
 			if (isset($_SESSION['name'])) {
 				echo "<li class=\"filler\" id=\"name\" onclick=\"location.href='dashboard.php'\">";
@@ -19,6 +20,7 @@
 			}
 			?>
 		</ul>
-	</div>
+	<!-- </div> -->
 </nav>
+</div>
 </html>

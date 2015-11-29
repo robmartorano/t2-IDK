@@ -5,13 +5,15 @@
 	width: 100%;
 }
 
+/* -------------- SIDEBAR --------------
+
 #sidebar{
 	background-color: #E4E4E4;
 	width: 15%;
 	height: 50em;
 	padding-left: 5%;
 	padding-right: 1%;
-	/*display: inline-block;*/
+	/*display: inline-block;
 	float: left;
 }
 
@@ -23,29 +25,65 @@
 	width: 100%;
 	padding-bottom: 0.3em;
 }
+
+.indent1{padding-left: 0;}
+.indent2{padding-left: 1em;}
+
+
+/* ------------- EMAIL ----------- */
+
 .wth{
 	text-decoration: underline;
 	color: blue;
 }
 
-#email{
-	text-align:center;
-	left:50%;
-	display:none;
-	position:absolute;
-	z-index: 1000;
-	background-color: gray;
+.topfield{
+	position: relative;
+	top: 0.75em;
+	margin-bottom: 0.75em;
 }
-.indent1{padding-left: 0;}
-.indent2{padding-left: 1em;}
+
+#email{
+	position: absolute;
+	width: 40%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	display: none;
+	z-index: 2000;
+	background-color: #cccccc;
+	font-family: "Helvetica Neue","Helvetica",sans;
+}
+
+.bold{
+	font-weight: 700;
+}
+
+#subject{
+	width: 60%;
+	margin-top: 0.6em;
+	margin-bottom: 0.9em;
+}
+
+#message{
+	margin-bottom: 0.4em;
+}
+
+#emailButton{
+	height: 3.5em;
+	margin-bottom: 1.6em;
+	border-style: none;
+}
+
+/* ------------- STYLING SEARCH RESULTS ----------- */
 
 #searchresults{
-	width: 75%;
-	height: auto;
-	margin-left: 1.5%;
-	margin-right: auto;
+	width: 80%;
+	height: auto;	
 	position: relative;
-	float: right;
+	left: 15%;
+	/*float: right;*/
 	display: inline-block;
 }
 

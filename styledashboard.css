@@ -13,9 +13,10 @@ body {
 #button{
 	display: block;
 	list-style: none;
-	color:blue;
+	color: blue;
 	text-decoration: underline;
 }
+
 
 #close{
 	text-align:right;
@@ -23,39 +24,49 @@ body {
 	color: blue;
 }
 
+
 .logo{
 	padding: 10px;
-	color:rgba(0,51,102,.85);
+	color: rgba(0,51,102,.85);
 	margin-top: 5%;
-	display:block;
-	margin-left:auto;
-	margin-right:auto;
-	font-family:"Helvetica Neue","Helvetica",sans;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: "Helvetica Neue","Helvetica",sans;
 	font-size: 2em;
-	font-weight:100;
+	font-weight: 100;
 	width: 40%;
-	text-align:center;
+	text-align: center;
 }
+
 #popup{
 	position: absolute;
-	z-index:1000;
+	z-index: 1000;
 	padding: 5px;
 	margin-top: 2%;
-	color:rgba(0,51,102,.85);
+	color: rgba(0,51,102,.85);
 	background-color: #e0e4ed;
-	display:none;
-	left: 40%;
-	top: 10%;
+	display: none;
+	/*left: 30%;
+	top: 10%;*/
 	
-	margin-left:auto;
-	margin-right:auto;
-	font-family:"Helvetica Neue","Helvetica",sans;
-	font-size: 1em;
-	font-weight:900;
-	width: 20%;
-	height: 50%;
-	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	height: auto;
+	text-align: center; /*centers the input boxes*/
 	
+}
+
+#popup form{
+	vertical-align: middle;
+}
+.box {
+	font-family: "Helvetica Neue","Helvetica",sans;
+	font-size: 1.5em;
+	margin-top: 0.8em;
+	margin-bottom: 0.8em;
+	width: 80%;
 }
 
 .buy
