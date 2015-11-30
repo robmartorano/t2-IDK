@@ -30,11 +30,11 @@ $additional = $_POST["additional"];
 
 
 
-if(!isset($error)){
+
 
 
     
-    $sql = 'INSERT INTO Books (BookName ,Price, ISBN10,ISBN13, author, addition) VALUES (:BookName,:Price,:ISBN10,:ISBN13,:author,:addition)';    
+    $sql = 'INSERT INTO Books (BookName ,Price, ISBN10,ISBN13, author, addition,img) VALUES (:BookName,:Price,:ISBN10,:ISBN13,:author,:addition,:img)';    
     $query = $db->prepare($sql);
     $query->execute(array(
 
@@ -43,8 +43,8 @@ if(!isset($error)){
     ':ISBN10' => $isbn10,
 	':ISBN13' => $isbn13,
     ':author' => $author,
-    ':addition' => $additional
-	
+    ':addition' => $additional,
+	':img' => $img
 
     ));
   
@@ -84,11 +84,7 @@ if(!isset($error)){
 	$_SESSION['bookname'] = $arr;
 	header("Location: dashboard.php");
 
-    }
     
-else{
-    echo "error occured: ".$error;
-    require_once('register.php');
-    exit();
-}
+    
+
 ?>
