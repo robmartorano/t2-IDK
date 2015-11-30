@@ -53,16 +53,17 @@ echo $additional;
 
     ));
   
-    $sqls = 'SELECT * FROM Books WHERE BookName = :BookName AND ISBN10 = :ISBN10 AND ISBN13 = :ISBN13 AND author = :author ';    
+    $sqls = 'SELECT * FROM Books WHERE BookName = :BookName AND ISBN10 = :ISBN10 AND ISBN13 = :ISBN13 AND author = :author AND Price = :Price AND addition = :add AND img = :img';    
     $query1 = $db->prepare($sqls);
     $query1->execute(array(
 
     ':BookName' => $name,
-
+	':Price' => $price,
     ':ISBN10' => $isbn10,
     ':ISBN13' => $isbn13,
     ':author' => $author,
-
+	':add' => $additional,
+	':img' => $img
 
     ));
     $idd;
