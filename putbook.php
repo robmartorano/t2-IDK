@@ -16,33 +16,35 @@ try {
 
 
 
-$name = $_POST["name"]; 
+$name = $_SESSION["booktitle"]; 
 $price = $_POST["price"]; 
-$isbn = $_POST["ISBN"];   
-$author = $_POST["author"]; 
+$isbn10 = $_SESSION["isbn10"];   
+$isbn13 = $_SESSION["isbn13"];  
+$author = $_SESSION["author"]; 
+$img = $_SESSION["imglink"]; 
 $additional = $_POST["additional"];
 
 
 
 //Verifcation 
-if (empty($name) || empty($price) || empty($isbn) || empty($author) || empty($additional)){
-    $error = "Complete all fields";
-}
+
 
 
 if(!isset($error)){
 
 
     
-    $sql = 'INSERT INTO Books (BookName ,Price, ISBN, author, addition) VALUES (:BookName,:Price,:ISBN,:author,:addition)';    
+    $sql = 'INSERT INTO Books (BookName ,Price, ISBN10,ISBN13, author, addition) VALUES (:BookName,:Price,:ISBN10,:ISBN13,:author,:addition)';    
     $query = $db->prepare($sql);
     $query->execute(array(
 
     ':BookName' => $name,
     ':Price' => $price,
-    ':ISBN' => $isbn,
+    ':ISBN10' => $isbn10,
+	':ISBN13' => $isbn13,
     ':author' => $author,
     ':addition' => $additional
+	
 
     ));
   

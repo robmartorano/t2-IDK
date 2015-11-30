@@ -112,7 +112,7 @@ foreach ($result as $value){
 //			document.getElementById("lol").innerHTML = "book name: " + aa[track];
 			}
 
-				
+
 											
 		$(document).ready(function(){
 		$("#button").click(function(){
@@ -134,26 +134,11 @@ foreach ($result as $value){
 		<?php require_once 'navcontrol.php';?>
 	</header>
 
-		<div id ="popup">
-		<div id ="close">
-		close
-		</div>
-		<form action="isbndb.php"  method="post">
-		Enter the ISBN Number, Price, and Any additional information about the book.
-
-
-		<input type="number" name="ISBN" placeholder="ISBN"><br>
-		<input type="text" name="price" placeholder="Price"><br>
-		<input type="text" name="additional" placeholder="a few sentences to describe the book"><br>
-
-
-
-
-<input type="submit">
-		</div>
+		
 
 		<div class = "left">
-    		
+    		<?php if(isset($_SESSION['results'])){ require_once('popup.php');
+			unset($_SESSION['results']); } ?>
     		<div class = "sell">
     			<h1 class = "titledash">Books that you want to sell</h1>
     			<?php echo $finalHTML; ?>
@@ -164,12 +149,23 @@ foreach ($result as $value){
 				</li>
         			</ul>
     		</div>
+			<div class = "add">
+			<form action="isbndb.php"  method="post">
+		Enter the ISBN Number, Price, and Any additional information about the book.
+
+
+		<input type="number" name="ISBN" placeholder="ISBN"><br>
+		<input type="text" name="price" placeholder="Price"><br>
+		<input type="text" name="additional" placeholder="a few sentences to describe the book"><br>
+		
+<input type="submit">
+		</div>
     	</div>
     	<div class = "right">
 
     		<div class = "displaybook" id = "lol">
 
-    			<h1 class = "titledash">What is thisssss</h1>
+    			<h1 class = "titledash">Click a textbook to view more details</h1>
     		</div>
     	</div>
 
