@@ -1,5 +1,7 @@
 <?php
 session_start();
+if(isset($_SESSION['logged_in'])){
+	
 
 $dsn = 'mysql:host=cgi.cs.duke.edu;port=3306;dbname=qp7;';
 $username = 'qp7';
@@ -69,7 +71,10 @@ $finalHTML = "";
 foreach ($result as $value){
   $finalHTML .= $value;
 }
-
+}else{
+	header("Location: login.php");
+	exit();
+}
 ?>
 
 <html>
@@ -162,7 +167,7 @@ foreach ($result as $value){
 
 
 		<input type="number" name="ISBN" placeholder="ISBN"><br>
-		<input type="text" name="price" placeholder="Price"><br>
+		<input type="number" name="price" placeholder="Price"><br>
 		<input type="text" name="additional" placeholder="a few sentences to describe the book"><br>
 		
 		<input type="submit">
