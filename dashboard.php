@@ -140,8 +140,10 @@ foreach ($result as $value){
 		
 
 		<div class = "left">
-    		<?php if(isset($_SESSION['results'])){ require_once('popup.php');
-			unset($_SESSION['results']); } ?>
+    		<?php if(($_SESSION['results'])==true){ require_once('popup.php');
+			unset($_SESSION['results']); }else{
+				echo "no books found";
+			} ?>
     		<div class = "sell">
     			<h1 class = "titledash">Books that you want to sell</h1>
     			<?php echo $finalHTML; ?>
@@ -161,7 +163,8 @@ foreach ($result as $value){
 		<input type="text" name="price" placeholder="Price"><br>
 		<input type="text" name="additional" placeholder="a few sentences to describe the book"><br>
 		
-<input type="submit">
+		<input type="submit">
+		</form>
 		</div>
     	</div>
     	<div class = "right">
