@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 $dsn = 'mysql:host=cgi.cs.duke.edu;port=3306;dbname=qp7;';
 $username = 'qp7';
 $password = 'qnDM4.fo6sX_';
@@ -140,10 +141,11 @@ foreach ($result as $value){
 		
 
 		<div class = "left">
-    		<?php if(($_SESSION['results'])==true){ require_once('popup.php');
+    		<?php if(isset($_SESSION['results'])){if(($_SESSION['results'])==true){ require_once('popup.php');
 			unset($_SESSION['results']); }else{
 				echo "no books found";
-			} ?>
+				unset($_SESSION['results']);
+			}} ?>
     		<div class = "sell">
     			<h1 class = "titledash">Books that you want to sell</h1>
     			<?php echo $finalHTML; ?>
