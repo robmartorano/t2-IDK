@@ -6,18 +6,19 @@ $abc = "%";
 $needtosearch = $abc.$needtosearch.$abc;
 
 session_start();
-function getresult($BookName, $Price, $ISBN, $author, $email) {
+function getresult($BookName, $Price, $ISBN10, $ISBN13, $author, $img, $email) {
 	return 
 	"<div class='one_result'>
 		<div class='textbook_image'>
-			<img src='textbook_example.jpg' alt='Organic Chemistry, 5th Edition'>
+			<img src= $img alt='Organic Chemistry, 5th Edition'>
 		</div>
 		<div class='text_box'>
 			<ul class='text'>
 				<li class='title'>$BookName</li>
 				<li class='author''>$author</li>
 				<li class='price'>$$Price</li>
-				<li class='ISBN'>ISBN #: $ISBN</li>
+				<li class='ISBN'>ISBN10 #: $ISBN10</li>
+				<li class='ISBN'>ISBN13 #: $ISBN13</li>
 				<li class='type'>Item: Hardcover Textbook</li>
 				<li class='notes'>Notes: Has some minor highlighting, writing...</li>
 				<li class='purchasehyperlink'>Contact User:</li>
@@ -49,10 +50,11 @@ try {
 //between two %% should be userinput
 //for example "econ" should be a variable posted in
 $counter = 0;
-$sqlQ = $db->prepare('SELECT * FROM Books WHERE author LIKE :author or BookName LIKE :BookName or ISBN LIKE :ISBN ');
+$sqlQ = $db->prepare('SELECT * FROM Books WHERE author LIKE :author or BookName LIKE :BookName or ISBN10 LIKE :ISBN10 or ISBN13 LIKE :ISBN13 ');
 $sqlQ->bindValue(':author', $needtosearch, PDO::PARAM_STR);
 $sqlQ->bindValue(':BookName', $needtosearch, PDO::PARAM_STR);
-$sqlQ->bindValue(':ISBN', $needtosearch, PDO::PARAM_INT);
+$sqlQ->bindValue(':ISBN10', $needtosearch, PDO::PARAM_INT);
+$sqlQ->bindValue(':ISBN13', $needtosearch, PDO::PARAM_INT);
 
 
 
@@ -77,7 +79,7 @@ while($row = $sqlQ -> fetch(PDO::FETCH_ASSOC)){
 	  $uemail = $row2['email'] ;
 	  }
 	  
-      $result[$counter] = getresult($row['BookName'], $row['Price'], $row['ISBN'], $row['author'], $uemail);
+      $result[$counter] = getresult($row['BookName'], $row['Price'], $row['ISBN10'], $row['ISBN13'], $row['author'], $row['img'],$uemail);
       $counter = $counter +1;
 }
 $finalHTML = "";

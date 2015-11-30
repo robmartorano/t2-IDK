@@ -24,7 +24,8 @@ $author = $_SESSION["author"];
 $img = $_SESSION["imglink"]; 
 $additional = $_POST["additional"];
 
-
+echo $price;
+echo $additional;
 
 //Verifcation 
 
@@ -34,7 +35,7 @@ if(!isset($error)){
 
 
     
-    $sql = 'INSERT INTO Books (BookName ,Price, ISBN10,ISBN13, author, addition) VALUES (:BookName,:Price,:ISBN10,:ISBN13,:author,:addition)';    
+    $sql = 'INSERT INTO Books (BookName ,Price, ISBN10,ISBN13, author, addition, img) VALUES (:BookName,:Price,:ISBN10,:ISBN13,:author,:addition, :img)';    
     $query = $db->prepare($sql);
     $query->execute(array(
 
@@ -43,20 +44,22 @@ if(!isset($error)){
     ':ISBN10' => $isbn10,
 	':ISBN13' => $isbn13,
     ':author' => $author,
+    ':img' => $img,
     ':addition' => $additional
 	
 
     ));
   
-    $sqls = 'SELECT * FROM Books WHERE BookName = :BookName AND Price = :Price AND ISBN = :ISBN AND author = :author AND addition = :addition';    
+    $sqls = 'SELECT * FROM Books WHERE BookName = :BookName AND ISBN10 = :ISBN10 AND ISBN13 = :ISBN13 AND author = :author ';    
     $query1 = $db->prepare($sqls);
     $query1->execute(array(
 
     ':BookName' => $name,
-    ':Price' => $price,
-    ':ISBN' => $isbn,
+
+    ':ISBN10' => $isbn10,
+    ':ISBN13' => $isbn13,
     ':author' => $author,
-    ':addition' => $additional
+
 
     ));
     $idd;
