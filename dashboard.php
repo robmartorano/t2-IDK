@@ -22,7 +22,8 @@ $sqlQ5->execute();
 	  $idid[$ct] = $row['id'];
 	  $namename[$ct] = $row['BookName'];
 	  $pp[$ct] = $row['Price'];
-	  $isis[$ct] = $row['ISBN'];
+	  $isisi[$ct] = $row['ISBN10'];
+	  $isiss[$ct] = $row['ISBN13'];
 	  $adad[$ct] = $row['addition'];
 	  $aa[$ct] = $row['author'];
 	  $ct = $ct + 1;
@@ -77,12 +78,14 @@ foreach ($result as $value){
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script>
 		
+
 		function reply_click(clicked_id)
 			{
  			var idid= <?php echo json_encode($idid); ?>;
  			var namename= <?php echo json_encode($namename); ?>;
  			var pp= <?php echo json_encode($pp); ?>;
- 			var isis= <?php echo json_encode($isis); ?>;
+ 			var isisi= <?php echo json_encode($isisi); ?>;
+ 			var isiss= <?php echo json_encode($isiss); ?>;
  			var adad= <?php echo json_encode($adad); ?>;
  			var aa= <?php echo json_encode($aa); ?>;
  			var track = 0;
@@ -95,12 +98,15 @@ foreach ($result as $value){
          	}  
          	var wtfa = "<p>" + "book name: " + namename[track] + "</p>" + "\n" + 
          	"<p>" + "price: " + pp[track] + "</p>" + "\n"+
-         	"<p>" + "ISBN: " + isis[track] + "</p>" + "\n"+
-         	"<p>" + "author: " + aa[track] + "</p>" + "\n";
+         	"<p>" + "ISBN10: " + isisi[track] + "</p>" + "\n"+
+         	"<p>" + "ISBN13: " + isiss[track] + "</p>" + "\n"+
+         	"<p>" + "book ID: " + idid[track] + "</p>" + "\n" + 
+         	"<p>" + "author: " + aa[track] + "</p>" + "\n" +"<form action=delete.php method=Post>"
+         	 + "<button type=submit  name=mybutton value =" + idid[track] + ">delete</button>" + "</form>" + "\n";
 
          	
          	document.getElementById("lol").innerHTML = wtfa;
-
+//			document.getElementById("aaa").innerHTML = "lololo";
 //			document.getElementById("lol").innerHTML = "book name: " + namename[track];
 //			document.getElementById("lol").innerHTML = "price: " + pp[track];
 //			document.getElementById("lol").innerHTML = "ISBN: " + isis[track];
@@ -109,16 +115,26 @@ foreach ($result as $value){
 //			document.getElementById("lol").innerHTML = "book name: " + aa[track];
 			}
 
+
+											
+		$(document).ready(function(){
+		$("#button").click(function(){
+        $("#popup").show();
+		});
+		});
+		$(document).ready(function(){
+		$("#close").click(function(){
+        $("#popup").hide();
+		});
+		});
 		
+
 </script>
 	</head>
 <body>
 
 	<header>
 		<?php require_once 'navcontrol.php';?>
-		<script type="text/javascript">
-			
-		</script>
 	</header>
 
 		
