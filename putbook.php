@@ -17,12 +17,12 @@ try {
 
 
 $name = $_SESSION["booktitle"]; 
-$price = $_POST["price"]; 
+$price = $_SESSION['price']
 $isbn10 = $_SESSION["isbn10"];   
 $isbn13 = $_SESSION["isbn13"];  
 $author = $_SESSION["author"]; 
 $img = $_SESSION["imglink"]; 
-$additional = $_POST["additional"];
+$additional = $_SESSION['additional'];
 
 echo $price;
 echo $additional;
