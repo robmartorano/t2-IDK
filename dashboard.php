@@ -77,6 +77,7 @@ foreach ($result as $value){
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script>
 		
+
 		function reply_click(clicked_id)
 			{
  			var idid= <?php echo json_encode($idid); ?>;
@@ -96,11 +97,13 @@ foreach ($result as $value){
          	var wtfa = "<p>" + "book name: " + namename[track] + "</p>" + "\n" + 
          	"<p>" + "price: " + pp[track] + "</p>" + "\n"+
          	"<p>" + "ISBN: " + isis[track] + "</p>" + "\n"+
-         	"<p>" + "author: " + aa[track] + "</p>" + "\n";
+         	"<p>" + "book ID: " + idid[track] + "</p>" + "\n" + 
+         	"<p>" + "author: " + aa[track] + "</p>" + "\n" +"<form action=delete.php method=Post>"
+         	 + "<button type=submit  name=mybutton value =" + idid[track] + ">delete</button>" + "</form>" + "\n";
 
          	
          	document.getElementById("lol").innerHTML = wtfa;
-
+//			document.getElementById("aaa").innerHTML = "lololo";
 //			document.getElementById("lol").innerHTML = "book name: " + namename[track];
 //			document.getElementById("lol").innerHTML = "price: " + pp[track];
 //			document.getElementById("lol").innerHTML = "ISBN: " + isis[track];
@@ -109,7 +112,8 @@ foreach ($result as $value){
 //			document.getElementById("lol").innerHTML = "book name: " + aa[track];
 			}
 
-			
+				
+											
 		$(document).ready(function(){
 		$("#button").click(function(){
         $("#popup").show();
@@ -120,15 +124,14 @@ foreach ($result as $value){
         $("#popup").hide();
 		});
 		});
+		
+
 </script>
 	</head>
 <body>
 
 	<header>
 		<?php require_once 'navcontrol.php';?>
-		<script type="text/javascript">
-			
-		</script>
 	</header>
 
 		<div id ="popup">
