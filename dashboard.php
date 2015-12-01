@@ -112,7 +112,6 @@ foreach ($result as $value){
 			"<p id='gah'>Be sure to delete this book when it is sold <br> or if you decide not to sell it.</p>" +
 			"<form action=delete.php method=Post>"
 			+ "<button id='deleteButton' type='submit' name='mybutton' value=" + idid[track] + ">Delete Textbook</button>" + "</form>" + "\n";
-
          	
         document.getElementById("lol").innerHTML = wtfa;
 //		document.getElementById("aaa").innerHTML = "lololo";
@@ -190,7 +189,7 @@ foreach ($result as $value){
     </div>
     <div class = "right">
    		<div class="displaybook">
-   			<h1 class="titledash"><u>Click a textbook (to the left) to view more details</u></h1>
+   			<h1 class="titledash" id="details"><u>Click a textbook (to the left) to view more details</u></h1>
 			<div id="lol"></div>
    		</div>
    	</div>

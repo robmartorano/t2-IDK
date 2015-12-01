@@ -6,14 +6,7 @@ body {
 	background-size: cover;
 	font-family: "Helvetica Neue","Helvetica",sans;
 }
-#textbookpic{
-	float:left;
-	height:150px;
-	width:128px;
-	padding:10px;
-	padding-left:20px;
-	margin-bottom:10px;
-}
+
 #close{
 	position: relative;
 	float: right;
@@ -160,6 +153,10 @@ body {
 	margin-top: 0;
 }
 
+#details{
+	text-align: left;
+}
+
 .selling{
 	height: auto;
 	background: #C6ECFC;
@@ -266,8 +263,9 @@ body {
 
 .displaybook{
 	float: left;
-	padding-top: 1.5em;
-	padding-left: 2em;
+	padding-top: 2em;
+	padding-left: 2.5em;
+	width: 80%;
 }
 
 .displaybook h1{
@@ -275,14 +273,27 @@ body {
 }
 
 #lol{
-	font-size: 0.95em;
+	font-size: 1em;
+}
+
+#textbookpic{
+	float: left;
+	height: 170px;
+	width: 128px;
+	padding: 0;
+	padding-right: 2em;
+	margin-bottom: 1em;
+}
+
+#title{
+	margin-top: 0;
 }
 
 .floatleft{
-	
 	width: 5em;
 	display: inline-block;
 	margin: 0;
+	padding-bottom: 0.2em;
 }
 
 .floatright{
