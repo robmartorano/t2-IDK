@@ -67,7 +67,7 @@ body {
 	border-style: solid;
 	border-color: black;
 	border-width: 1px;
-	border-radius: 5px;
+	border-radius: 10px;
 }
 
 #close{
@@ -177,6 +177,7 @@ body {
 	padding: 0;
 	margin: 0;
 	vertical-align: middle;
+	padding-left: 1.5em;
 }
 
 .text li{
@@ -189,6 +190,7 @@ body {
 .title{
 	font-size: 1.2em;
 	padding: 0;
+	padding-bottom: 0.2em;
 }
 .author{
 	font-size: 0.8em;
@@ -198,35 +200,26 @@ body {
 	font-size: 1em; 
 	font-weight: 900;
 	color: rgb(177, 39, 4);
-	padding-top:5px;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
 }
 
-.seller {
+.item {
 	font-size: 0.8em;
+	padding-bottom: 0.4em;
 }
 
-.type{
-	font-size: 0.8em;
-}
-
-.ISBN{
-	font-size: 0.8em;
-}
-
-.notes{
-	font-size: 0.8em;
-}
-
-.purchase{
-	font-size: 0.8em;
-}
-
-.hyperlink{
-	color: blue;
+#class{
 	text-decoration: underline;
-	padding-bottom: 5px;
+}
+
+.contact{
+	font-size: 0.9em;
+	padding-bottom: 0.4em;
 }
 
 .wth{
-	padding-bottom: 5px;
+	padding-bottom: 0.8em;
 }
+
+

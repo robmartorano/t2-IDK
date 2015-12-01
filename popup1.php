@@ -1,12 +1,12 @@
 
-<div id ="popup">
+<div id="popup">
 	<div id ="close">
 		Close
 	</div>
 	
 	<form action="process.php"  method="post">
-		<p><span class="inputtitle">We're sorry, we cannot find your book.</span><br> 
-		<span class="bold">Please enter rest of the information manually:</span></p>
+		<p id="help"><span class="inputtitle">We're sorry, we cannot find your book.</span><br> 
+		<span class="inputtitle">Please enter rest of the information manually:</span></p>
 		<p class="bookInputBorders"><input class="bookInput" type="text" name="Title" placeholder="Title"></p>
 		<p class="bookInputBorders"><input class="bookInput" type="number" name="ISBN10" placeholder="ISBN10"></p>
 		<p class="bookInputBorders"><input class="bookInput" type="number" name="ISBN13" placeholder="ISBN13"></p>

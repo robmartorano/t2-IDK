@@ -77,7 +77,6 @@ foreach ($result as $value){
 <head>
 	<link rel="stylesheet" href="styledashboard.css">
 	<link rel="stylesheet" href="stylenav.css">
-	<link rel="stylesheet" href="stylesearchbar.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script>
 	function reply_click(clicked_id){
@@ -95,13 +94,21 @@ foreach ($result as $value){
          	}
         }  
         
-		var wtfa = "<p>" + "book name: " + namename[track] + "</p>" + "\n" + 
-         "<p>" + "price: " + pp[track] + "</p>" + "\n"+
-         "<p>" + "ISBN10: " + isisi[track] + "</p>" + "\n"+
-         "<p>" + "ISBN13: " + isiss[track] + "</p>" + "\n"+
-         "<p>" + "book ID: " + idid[track] + "</p>" + "\n" + 
-         "<p>" + "author: " + aa[track] + "</p>" + "\n" +"<form action=delete.php method=Post>"
-          + "<button type=submit  name=mybutton value =" + idid[track] + ">delete</button>" + "</form>" + "\n";
+		var wtfa = 
+			"<p>" + "<div class='floatleft'><strong>Title: </strong></div>" + 
+				"<div class='floatright'>" + namename[track] + "</div></p>" + "\n" + 
+			"<p>" + "<div class='floatleft'><strong>Author: </strong></div>" + 
+				"<div class='floatright'>" + aa[track] + "</div></p>" + "\n" + 
+			"<p>" + "<div class='floatleft'><strong>Price: </strong></div>" + 
+				"<div class='floatright'>$" + pp[track] + "</div></p>" + "\n" +
+			"<p>" + "<div class='floatleft'><strong>ISBN10: </strong></div>" + 
+				"<div class='floatright'>" + isisi[track] + "</div></p>" + "\n"+
+			"<p>" + "<div class='floatleft'><strong>ISBN13: </strong></div>" + 
+				"<div class='floatright'>" + isiss[track] + "</div></p>" + "\n"+
+			//"<p>" + "book ID: " + idid[track] + "</p>" + "\n" + 
+			"<p id='gah'>Be sure to delete this book when it is sold <br> or if you decide not to sell it.</p>" +
+			"<form action=delete.php method=Post>"
+			+ "<button id='deleteButton' type='submit' name='mybutton' value=" + idid[track] + ">Delete Textbook</button>" + "</form>" + "\n";
 
          	
         document.getElementById("lol").innerHTML = wtfa;
@@ -132,11 +139,11 @@ foreach ($result as $value){
 </head>
 
 <body>
-
 	<header>
 		<?php require_once 'navcontrol.php';?>
 	</header>
 
+	
 	<?php require_once 'searchbar.php';?>
 	
 	<?php if(isset($_SESSION['results'])){
@@ -152,7 +159,7 @@ foreach ($result as $value){
 	<div class = "left">
     	
     	
-		<div class = "sell">
+		<div class = "selling">
     		<h1 class = "titledash">Books that you're currently selling:</h1>
 			
 			<div id='text_box'>
@@ -165,9 +172,10 @@ foreach ($result as $value){
 		
 		<div class = "addNewBook">
 			<form action="isbndb.php"  method="post">
-				<p class="inputtitle">
-					Enter ISBN number, price, and any notes about
+				<p class="inputtitle" id="underline">Got a book you want to sell?</p>
+				<p class="inputtitle">Enter the book's ISBN number, your price, and any notes about
 					the book or its condition.</p>
+					
 				<p class="bookInputBorders"><input class="bookInput" type="number" name="ISBN" placeholder="ISBN"></p>
 				<p class="bookInputBorders"><input class="bookInput" type="number" name="price" placeholder="Price"></p>
 				<p class="bookInputBorders"><input class="bookInput" type="text" name="class" placeholder="What class is this book used in"></p>
@@ -176,14 +184,12 @@ foreach ($result as $value){
 			</form>
 		</div>
     </div>
-    	<div class = "right">
-
-    		<div class = "displaybook" id = "lol">
-
-    			<h1 class = "titledash">Click a textbook (to the left) to view more details</h1>
-    		</div>
-    	</div>
-
+    <div class = "right">
+   		<div class="displaybook">
+   			<h1 class="titledash"><u>Click a textbook (to the left) to view more details</u></h1>
+			<div id="lol"></div>
+   		</div>
+   	</div>
 
 
 

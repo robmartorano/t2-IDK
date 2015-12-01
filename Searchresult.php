@@ -24,15 +24,14 @@ function getresult($BookName, $Price, $ISBN10, $ISBN13, $author, $img, $email, $
 		<div class='text_box'>
 			<ul class='text'>
 				<li class='title'>$BookName</li>
-				<li class='author''>$author</li>
+				<li class='author''>by $author</li>
 				<li class='price'>$$Price</li>
-				<li class='ISBN'>ISBN10 #: $ISBN10</li>
-				<li class='ISBN'>ISBN13 #: $ISBN13</li>
-				<li class='notes'>Class Used: $class</li>
-				<li class='notes'>Notes: $add</li>
-				<li class='purchasehyperlink'>Contact User:</li>
+				<li class='item ISBN'>ISBN10 #: $ISBN10</li>
+				<li class='item ISBN'>ISBN13 #: $ISBN13</li>
+				<li class='item class'><span id='class'>Class(es)</span>: $class</li>
+				<li class='item notes'>Notes: $add</li>
+				<li class='item contact'>Contact Seller:</li>
 				<li class='wth' id=$email  >Email: $email</li>
-				
 			</ul>
 		</div>
 	</div>";
@@ -98,16 +97,15 @@ $finalHTML = "";
 foreach ($result as $value){
   $finalHTML .= $value;
 }
-
 ?>
 
-	<head>
-		<link rel="stylesheet" href="resultspage.css">
-		<!-- <link rel="stylesheet" href="stylehomepage.css"> -->
-		<link rel="stylesheet" href="stylenav.css">
-		<link rel="stylesheet" href="stylesearchbar.css">
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script>	
+<head>
+	<link rel="stylesheet" href="resultspage.css">
+	<!-- <link rel="stylesheet" href="stylehomepage.css"> -->
+	<link rel="stylesheet" href="stylenav.css">
+	<link rel="stylesheet" href="stylesearchbar.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>	
 		$(document).ready(function(){
 		$(".wth").click(function(){
 		var email = jQuery(this).attr("id");
@@ -132,9 +130,9 @@ foreach ($result as $value){
 		});
 
 
-		</script>
+	</script>
 
-	</head>
+</head>
 
 <body>
 	
@@ -143,8 +141,6 @@ foreach ($result as $value){
 	</header>
 	
 	<div id="email">
-		
-	
 		<form action="takeform.php" method="POST">
 			<div id ="close">
 				Close
@@ -154,7 +150,7 @@ foreach ($result as $value){
 	
 			<p class="bold" id="subject">Subject: <input id="subjectinput" name="subject" size="64" maxlength="64"/> </p>
 	
-			<p><i>Please enter the text of your message in the field that follows.</i></p>
+			<p class="bold"><i>Please enter the text of your message in the field that follows.</i></p>
 			<textarea id="message" name="body" rows="10"	cols="60">	</textarea>
 	
 			<div id="emailButtonWrapper"> <input type="submit" name="send" value="Send Your Message"/> </div>
@@ -163,19 +159,6 @@ foreach ($result as $value){
 	</div>
 	
 	<?php require_once 'searchbar.php';?>
-      
-	<!--<div id="whole_page">
-		<div id="sidebar">
-			<ul id="sidebar_text">
-				<li class="indent1">Browse by Category</li>
-				<li class="indent2">Mathematics</li>
-				<li class="indent2">Economics</li>
-				<li class="indent2">Computer Science</li>
-			<!--	<li class="indent1">Browse by Course</li>
-				<li class="indent2">Chemistry 201/202</li>
-				<li class="indent2">Economics 101</li> 
-			</ul>
-		</div>-->
 	  
 	<div id="searchresults">  
 		<?php echo $finalHTML; ?>
