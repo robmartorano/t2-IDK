@@ -106,7 +106,7 @@ foreach ($result as $value){
 		<!-- <link rel="stylesheet" href="stylehomepage.css"> -->
 		<link rel="stylesheet" href="stylenav.css">
 		<link rel="stylesheet" href="stylesearchbar.css">
-				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script>	
 		$(document).ready(function(){
 		$(".wth").click(function(){
@@ -150,14 +150,14 @@ foreach ($result as $value){
 				Close
 			</div>
 			
-			<?php if(isset($_SESSION['email'])){echo $_SESSION['email'];}else{echo 'Need to Login!';} ?>
+			<div id="usersemail"><?php if(isset($_SESSION['email'])){echo $_SESSION['email'];}else{echo 'Need to Login!';} ?></div>
 	
 			<p class="bold" id="subject">Subject: <input id="subjectinput" name="subject" size="64" maxlength="64"/> </p>
 	
 			<p><i>Please enter the text of your message in the field that follows.</i></p>
 			<textarea id="message" name="body" rows="10"	cols="60">	</textarea>
 	
-			<p>	<input type="submit" name="send" value="Send Your Message"/> </p>
+			<div id="emailButtonWrapper"> <input type="submit" name="send" value="Send Your Message"/> </div>
 		</form>
 
 	</div>

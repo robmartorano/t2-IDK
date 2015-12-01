@@ -50,25 +50,30 @@ body {
 }
 
 #email{
-	position: relative;
-	width: 35em;
+	position: fixed;
+	top: 23%;
+	right: 10%;
+	width: auto;
 	height: auto;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
 	display: none;
 	z-index: 2000;
-	background-color: #cccccc;
+	background-color: #d9d9d9;
 	font-family: "Helvetica Neue","Helvetica",sans;
+	font-size: 0.9em;
 	padding-top: 0.6em;
-	padding-left: 0.8em;
-	padding-right: 0.8em;
+	padding-left: 2.5em;
+	padding-right: 2.5em;
 	padding-bottom: 1em;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	border-radius: 5px;
 }
 
 #close{
 	color: blue;
 	text-align: right;
+	margin-right: -1.7em;
 }
 
 #close:hover{
@@ -76,12 +81,21 @@ body {
 	cursor: hand;
 }
 
+#usersemamil{
+	width: auto;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .bold{
 	font-weight: 700;
+	text-align: left;
 }
 
 #subject{
-	margin-top: 0.3em;
+	margin-top: 0.6em;
+	text-align: left;
 }
 
 #subjectinput{
@@ -93,12 +107,15 @@ body {
 
 #message{
 	margin-bottom: 0.4em;
+	text-align: left;
 }
 
-#emailButton{
-	height: 3.5em;
-	margin-bottom: 1.6em;
+#emailButtonWrapper{
+	margin-top: 1em;
 	border-style: none;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* ------------- STYLING SEARCH RESULTS ----------- */
