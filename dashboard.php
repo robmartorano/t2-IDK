@@ -116,12 +116,7 @@ foreach ($result as $value){
 
 
 											
-	$(document).ready(function(){
-		$("#button").click(function(){
-			$("#popup").show();
-		});
-	});
-		
+	
 	$(document).ready(function(){
 		$("#close").click(function(){
 			$("#popup").hide();
