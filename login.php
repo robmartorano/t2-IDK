@@ -25,7 +25,12 @@
 	<div class="forms">
 		<?php if(isset($_SESSION['Login.Error'])){
 			echo $_SESSION['Login.Error'];
-			unset($_SESSION['Login.Error']); } ?>
+			unset($_SESSION['Login.Error']); } 
+			if(isset($_SESSION['rsuccess']))
+			{
+			echo $_SESSION['rsuccess'];
+			unset($_SESSION['rsuccess']);
+			}?>
 
 		<form action="def.php"  method="post">
 			<img class="loginpic" src="login.png" alt="Login"/>

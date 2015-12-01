@@ -27,6 +27,8 @@ $password = mysql_real_escape_string($password);
 $password1 = $_POST["confirmpassword"];
 $password1 = mysql_real_escape_string($password1);
 $ip = $_SERVER["REMOTE_ADDR"];
+$email = strtolower($email) ;
+$jk = "duke";
 
 
 //Verifcation 
@@ -42,12 +44,14 @@ if ($password != $password1){
 // Email validation
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
-    $error = "Enter a  valid email";
+    $error = "Enter a valid email";
 }
-if ($(".email")[(strlen($(".email")) - 8):(strlen($(".email")) - 1)] != "duke.edu") {
-	echo "That's not a Duke email"
-}	
 
+
+if(!strpos($email, $jk))
+{
+	$error = "Enter a duke email";
+}
 
 // Password length
 if (strlen($password) <= 6){
@@ -76,12 +80,12 @@ if($sthandler->rowCount() > 0){
     ':ip' => $ip
 
     ));
-    echo "success";
-    require_once('login.php');
+    $_SESSION['rsuccess'] = "Success";
+    header('Location: login.php');
     }
 }else{
-    echo "error occured: ".$error;
-    require_once('register.php');
+	$_SESSION['rsuccess'] = $error;
+    header('Location: register.php');
     exit();
 }
 ?>

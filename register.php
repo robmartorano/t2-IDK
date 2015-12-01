@@ -31,6 +31,11 @@
 	</div>	
 	
 	<div class="register">
+	<?php if(isset($_SESSION['rsuccess']))
+			{
+			echo $_SESSION['rsuccess'];
+			unset($_SESSION['rsuccess']);
+			}?>
 		<form action="abc.php" method="post">
 			<br><br>
 			<div class="entry">
@@ -58,7 +63,7 @@
 				<input class="typehere" id="email" type="text" name="NetID"><br><br>
 				</div>
 				
-			<input id="registerButton" type="submit" value="Sign Up">
+			<input id="registerButton" type="submit" value="Sign Up" onclick = checkTextField(entry)>
 		</form>
 	</div>
 	</div>
