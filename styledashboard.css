@@ -93,6 +93,18 @@ body {
 	border-radius: 5px;
 }
 
+#textbox{
+	width: auto;
+}
+
+#text{
+	width: auto;
+}
+
+.booktitle{
+	width: auto;
+}
+
 .add{
 	background-color: #C6ECFC;
 	margin-top: 2em;
