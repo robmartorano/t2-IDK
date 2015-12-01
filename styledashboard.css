@@ -12,7 +12,7 @@ body {
 	width:128px;
 	padding:10px;
 	padding-left:20px;
-	margin-bottom:20px;
+	margin-bottom:10px;
 }
 #close{
 	position: relative;
@@ -279,6 +279,7 @@ body {
 }
 
 .floatleft{
+	
 	width: 5em;
 	display: inline-block;
 	margin: 0;

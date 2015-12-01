@@ -97,7 +97,7 @@ foreach ($result as $value){
          	}
         }  
         
-		var wtfa =  "<img id='textbookpic' src=" + img[track] +" alt='No image of textbook'>" + "<p>" + "Book name: " + namename[track] + "</p>" + "\n" +
+		var wtfa =  "<img id='textbookpic' src=" + img[track] +" alt='No image of textbook'>" +
 			"<p>" + "<div class='floatleft'><strong>Title: </strong></div>" + 
 				"<div class='floatright'>" + namename[track] + "</div></p>" + "\n" + 
 			"<p>" + "<div class='floatleft'><strong>Author: </strong></div>" + 
