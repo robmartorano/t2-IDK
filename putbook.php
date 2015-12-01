@@ -23,7 +23,13 @@ $isbn13 = $_SESSION["isbn13"];
 $author = $_SESSION["author"]; 
 $img = $_SESSION["imglink"]; 
 $additional = $_SESSION['additional'];
-
+unset($_SESSION["booktitle"]);
+unset($_SESSION["price"]);
+unset($_SESSION["isbn10"]);
+unset($_SESSION["isbn13"]);
+unset($_SESSION["author"]);
+unset($_SESSION["imglink"]);
+unset($_SESSION["additional"]);
 echo $price;
 echo $additional;
 

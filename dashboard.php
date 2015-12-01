@@ -146,6 +146,7 @@ foreach ($result as $value){
 				unset($_SESSION['results']);}
 			else{
 				echo "no books found";
+				require_once('popup1.php');
 				unset($_SESSION['results']);
 			}} ?>
     	

@@ -1,7 +1,7 @@
 <div id="searchwrapper">
 <form class="searchbar" action = "Searchresult.php" method="post">
 	<input id="typehere" type="text" 
-		placeholder="Enter book's name, author, ISBN, or the class name"
+		placeholder="Enter book's name, author or ISBN"
 		 required="" name = "wtf">
 	<input id="button" type="submit" value="Search" 
 		 onclick="checkTextField('typehere');" onclick="location.href='Searchresult.php'">

@@ -9,6 +9,7 @@ $content = file_get_contents($url);
 $json = json_decode($content,true);
 if($json['totalItems']!=1){
 	$_SESSION['results']=false;
+	
 	header("Location: dashboard.php");
 	exit();
 }else{
