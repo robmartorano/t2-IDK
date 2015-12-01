@@ -5,12 +5,12 @@ body {
 	font-family: "Helvetica Neue","Helvetica",sans;
 }
 
-#button{
+/*#button{
 	display: block;
 	list-style: none;
 	color: blue;
 	text-decoration: underline;
-}
+}*/
 
 #close{
 	text-align:right;

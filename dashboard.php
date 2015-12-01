@@ -145,32 +145,28 @@ foreach ($result as $value){
 
 		
 
-		<div class = "left">
-    		<?php if(isset($_SESSION['results'])){if(($_SESSION['results'])==true){ require_once('popup.php');
-			unset($_SESSION['results']); }else{
+	<div class = "left">
+    	<?php if(isset($_SESSION['results'])){
+			if(($_SESSION['results'])==true){
+				require_once('popup.php');
+				unset($_SESSION['results']);}
+			else{
 				echo "no books found";
 				unset($_SESSION['results']);
 			}} ?>
-    		<div class = "sell">
-    			<h1 class = "titledash">Books that you want to sell</h1>
-    			<?php echo $finalHTML; ?>
-    				<ul>
-
-				<li id="button">
-				add another listing
-				</li>
-        			</ul>
-    		</div>
-			<div class = "add">
-			<form action="isbndb.php"  method="post">
-		Enter the ISBN Number, Price, and Any additional information about the book.
-
-
-		<input type="number" name="ISBN" placeholder="ISBN"><br>
-		<input type="number" name="price" placeholder="Price"><br>
-		<input type="text" name="additional" placeholder="a few sentences to describe the book"><br>
+    	
+		<div class = "sell">
+    		<h1 class = "titledash">Books that you're currently selling:</h1>
+    			<?php echo $finalHTML; ?>	
+    	</div>
 		
-		<input type="submit">
+		<div class = "add">
+			<form action="isbndb.php"  method="post">
+				<p><span id="inputtitle">Enter the ISBN Number, Price, and any notes about the book or its condition.<span></p>
+				<p><input type="number" name="ISBN" placeholder="ISBN"></p>
+				<p><input type="number" name="price" placeholder="Price"></p>
+				<p><input type="text" name="additional" placeholder="a few sentences to describe the book"></p>
+				<input type="submit">
 		</form>
 		</div>
     	</div>
@@ -178,7 +174,7 @@ foreach ($result as $value){
 
     		<div class = "displaybook" id = "lol">
 
-    			<h1 class = "titledash">Click a textbook to view more details</h1>
+    			<h1 class = "titledash">Click a textbook (to the left) to view more details</h1>
     		</div>
     	</div>
 
