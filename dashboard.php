@@ -17,7 +17,9 @@ $namename = array();
 $pp = array();
 $isis = array();
 $adad = array();
+$img = array();
 $aa = array();
+$class = array();
 $sqlQ5 = $db->prepare('SELECT * FROM Books');
 $sqlQ5->execute();
  while($row = $sqlQ5 -> fetch(PDO::FETCH_ASSOC))
@@ -29,6 +31,8 @@ $sqlQ5->execute();
 	  $isiss[$ct] = $row['ISBN13'];
 	  $adad[$ct] = $row['addition'];
 	  $aa[$ct] = $row['author'];
+	  $img[$ct] = $row['img'];
+	  $class[$ct] = $row['class'];
 	  $ct = $ct + 1;
 	  //echo $bookid;
 	  }
@@ -88,6 +92,8 @@ foreach ($result as $value){
  		var isiss= <?php echo json_encode($isiss); ?>;
  		var adad= <?php echo json_encode($adad); ?>;
  		var aa= <?php echo json_encode($aa); ?>;
+ 		var img= <?php echo json_encode($img); ?>;
+ 		var classs= <?php echo json_encode($class); ?>;
  		var track = 0;
         for(var i=0;i<idid.length;i++){
          	if(idid[i] == clicked_id){
@@ -95,12 +101,12 @@ foreach ($result as $value){
          	}
         }  
         
-		var wtfa = "<p>" + "book name: " + namename[track] + "</p>" + "\n" + 
-         "<p>" + "price: " + pp[track] + "</p>" + "\n"+
+		var wtfa = "<img src=" + img[track] +" alt='No image of textbook'>" + "<p>" + "Book name: " + namename[track] + "</p>" + "\n" + 
+         "<p>" + "Price: " + pp[track] + "</p>" + "\n"+
          "<p>" + "ISBN10: " + isisi[track] + "</p>" + "\n"+
          "<p>" + "ISBN13: " + isiss[track] + "</p>" + "\n"+
-         "<p>" + "book ID: " + idid[track] + "</p>" + "\n" + 
-         "<p>" + "author: " + aa[track] + "</p>" + "\n" +"<form action=delete.php method=Post>"
+         "<p>" + "Class Used: " + classs[track] + "</p>" + "\n"+
+         "<p>" + "Author: " + aa[track] + "</p>" + "\n" +"<form action=delete.php method=Post>"
           + "<button type=submit  name=mybutton value =" + idid[track] + ">delete</button>" + "</form>" + "\n";
 
          	
@@ -168,7 +174,9 @@ foreach ($result as $value){
 					the book or its condition.</p>
 				<p><input class="bookInput" type="number" name="ISBN" placeholder="ISBN"></p>
 				<p><input class="bookInput" type="number" name="price" placeholder="Price"></p>
+				<p><input class="bookInput" type="text" name="class" placeholder="What class is this book used in"></p>
 				<p><input class="bookInput" type="text" name="additional" placeholder="Notes about the book, condition, etc."></p>
+				
 				<input id="addButton" type="submit" value="Add Textbook">
 			</form>
 		</div>

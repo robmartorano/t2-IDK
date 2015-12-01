@@ -1,8 +1,6 @@
 
 <div id ="popup">
-		<div id ="close">
-		close
-		</div>
+		
 		Is this the book you want? <br>
 		Title: <?php echo $_SESSION['booktitle']; ?><br>
 		Author: <?php echo $_SESSION['author']; ?><br>

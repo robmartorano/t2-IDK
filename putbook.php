@@ -22,7 +22,8 @@ $isbn10 = $_SESSION["isbn10"];
 $isbn13 = $_SESSION["isbn13"];  
 $author = $_SESSION["author"]; 
 $img = $_SESSION["imglink"]; 
-$additional = $_SESSION['additional'];
+$additional = $_SESSION["additional"];
+$class = $_SESSION['class'];
 unset($_SESSION["booktitle"]);
 unset($_SESSION["price"]);
 unset($_SESSION["isbn10"]);
@@ -30,8 +31,7 @@ unset($_SESSION["isbn13"]);
 unset($_SESSION["author"]);
 unset($_SESSION["imglink"]);
 unset($_SESSION["additional"]);
-echo $price;
-echo $additional;
+unset($_SESSION["class"]);
 
 //Verifcation 
 
@@ -42,7 +42,7 @@ echo $additional;
 
     
 
-    $sql = 'INSERT INTO Books (BookName ,Price, ISBN10,ISBN13, author, addition,img) VALUES (:BookName,:Price,:ISBN10,:ISBN13,:author,:addition,:img)';    
+    $sql = 'INSERT INTO Books (BookName ,Price, ISBN10,ISBN13, author, addition,img, class) VALUES (:BookName,:Price,:ISBN10,:ISBN13,:author,:addition,:img, :class)';    
 
     $query = $db->prepare($sql);
     $query->execute(array(
@@ -52,7 +52,7 @@ echo $additional;
     ':ISBN10' => $isbn10,
 	':ISBN13' => $isbn13,
     ':author' => $author,
-
+	':class' => $class,
     ':addition' => $additional,
 	':img' => $img
 
@@ -96,6 +96,7 @@ echo $additional;
 	
 	$_SESSION['bookname'] = $arr;
 	header("Location: dashboard.php");
+	exit();
 
     
     
