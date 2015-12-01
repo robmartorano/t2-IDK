@@ -131,6 +131,7 @@ body {
 	background-color: #C6ECFC;
 	margin-top: 2em;
 	padding: 1em;
+	padding-top: 1.5em;
 	border-radius: 5px;
 	text-align: center;
 }
@@ -145,6 +146,8 @@ body {
 	text-align: center;
 	margin-top: 0.1em;
 	margin-bottom: 2em;
+	margin-left: 1.5em;
+	margin-right: 1.5em;
 }
 
 .right{
