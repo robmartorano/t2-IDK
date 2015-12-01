@@ -26,8 +26,8 @@ function getresult($BookName, $Price, $ISBN10, $ISBN13, $author, $img, $email, $
 				<li class='title'>$BookName</li>
 				<li class='author''>by $author</li>
 				<li class='price'>$$Price</li>
-				<li class='item ISBN'>ISBN10 #: $ISBN10</li>
-				<li class='item ISBN'>ISBN13 #: $ISBN13</li>
+				<li class='item ISBN'>ISBN-10: $ISBN10</li>
+				<li class='item ISBN'>ISBN-13: $ISBN13</li>
 				<li class='item class'><span id='class'>Class(es)</span>: $class</li>
 				<li class='item notes'>Notes: $add</li>
 				<li class='item contact'>Contact Seller:</li>
