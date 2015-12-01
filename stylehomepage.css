@@ -8,7 +8,7 @@ body {
 	margin: 0;
 	background-color: white;
 	width:100%;
-	}
+}
 	
 #popup{
 	display: none;
@@ -20,6 +20,7 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
 #popuplogin{
 	position: fixed;
 	z-index: 1000;
@@ -45,6 +46,7 @@ body {
 	background-size: 100% 100%;
 	background-position: right top;
 }
+
 #intro_text{
 	margin-left: auto;
 	margin-right: auto;
@@ -56,7 +58,6 @@ body {
 	color: white;
 	font-family: "Estrangelo Edessa", "Helvetica";
 	text-align: center;
-	
 }
 
 .line_text{
@@ -152,182 +153,4 @@ body {
 	line-height: normal;
 	padding-top: 0;
 	padding-bottom: 0;
-}
-
-/*-------------- LOGIN PAGE - TRANSFER TO DIFF CSS FILE ---------*/
-
-
-.logo{
-	padding: 10px;
-	color:rgba(0,51,102,.85);
-	margin-top: 5%;
-	display:block;
-	margin-left:auto;
-	margin-right:auto;
-	font-family:"Helvetica Neue","Helvetica",sans;
-	font-size: 2em;
-	font-weight:100;
-	width: 40%;
-	text-align:center;
-}
-.forms{
-	padding: 5px;
-	margin-top: 2%;
-	color:rgba(0,51,102,.85);
-	background-color: #e0e4ed;
-	display:block;
-	margin-left:auto;
-	margin-right:auto;
-	font-family:"Helvetica Neue","Helvetica",sans;
-	font-size: 1em;
-	font-weight:900;
-	width: 20%;
-	height: 50%;
-	text-align:center;
-	
-}
-
-.loginpic{
-	padding:0;
-	height: 120px;
-	width: 120px;
-}
-
-input[type=text] {
-	
-	
-  margin-top: 5%;
-  border-radius: 0;
-  width: 60%;
-  height: 10%;
-  padding:0;
-
-  -webkit-appearance: box;
-}
-input[type=password] {
-	
-	
-  margin-top: 5%;
-  border-radius: 0;
-  width: 60%;
-  height: 10%;
-  padding:0;
-
-  -webkit-appearance: box;
-}
-
-input[type=submit] {
-  height: 10%;
-  border-radius: 15px;
-  width: 60%;
-  margin-top: 5%;
-  padding: 5px;
-  color:white;
-  background-color:rgba(0,51,102,.85);
-
-  -webkit-appearance: box;
-}
-
-input[type=submit]:hover {
-	cursor: hand;
-	background-color:rgba(0,51,102,1);
-	}
-
-#name{
-	font-size: 2em;
-	text-align:center;
-	}
-	
-
-	
-
-#facebook{
-	color:blue;
-	text-decoration: underline;
-	}
-
-.hi{
-	display:block;
-	padding:75px;
-	margin-left:auto;
-	margin-right:auto;
-	width:50%;
-	
-	text-align:left;
-	background-color:white;
-	font-family:"Times New Roman",Times,sans;
-	font-size: 1.25em
-}
-
-.about{
-	margin-top: 3%;
-	border-radius:5%;
-	
-	padding:25px;
-	display:block;
-	margin-left:auto;
-	margin-right:auto;
-	background-color:white;
-	font-family:"Times New Roman",Times,serif;
-	margin-bottom: 1%;
-}
-#Description{
-	font-family:"Helvetica Neue","Helvetica",sans;
-	color:rgba(0,51,102,.85);
-	text-align: center;
-	font-weight: bold;
-	font-size:1.2em;
-	padding: 5px;
-}
-img{
-	
-	display:block;
-	margin-top:50px;
-	
-	margin-left: auto;
-	margin-right: auto;
-	}
-	
-#picdescript{
-	color:rgba(0,51,102,.85);
-	font-family:"Helvetica Neue","Helvetica",sans;
-	text-align: center;
-	font-size: 1.2em;
-	font-weight: 600;
-}
-
-	
-@media screen and (min-width: 1em){
-	li{
-		display:block;
-		margin-left:auto;
-		margin-right:auto;
-	}
-	.about{
-		width:70%;
-		font-size:1em;
-	}
-
-	img{
-		width:360px;
-		height:240px;
-	
-		}
-}
-
-
-@media screen and (min-width: 40em){
-	li{
-		display:inline-block;
-	}
-
-	.about{
-		width:50%;
-		font-size:1.5em;
-	}
-	img{
-		width:640px;
-		height:360px;
-		}
-
 }

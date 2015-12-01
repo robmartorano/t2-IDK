@@ -29,9 +29,6 @@ $sqlQ5->execute();
 	  $ct = $ct + 1;
 	  //echo $bookid;
 	  }
-
-
-
 function getresult($BookName, $Count) {
 	return
 	"<div class='one_result'>
@@ -64,11 +61,9 @@ $sqlQ->execute();
        }
 	  }
 $finalHTML = "";
-
 foreach ($result as $value){
   $finalHTML .= $value;
 }
-
 ?>
 
 <html>
@@ -78,7 +73,6 @@ foreach ($result as $value){
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script>
 		
-
 		function reply_click(clicked_id)
 			{
  			var idid= <?php echo json_encode($idid); ?>;
@@ -103,7 +97,6 @@ foreach ($result as $value){
          	"<p>" + "book ID: " + idid[track] + "</p>" + "\n" + 
          	"<p>" + "author: " + aa[track] + "</p>" + "\n" +"<form action=delete.php method=Post>"
          	 + "<button type=submit  name=mybutton value =" + idid[track] + ">delete</button>" + "</form>" + "\n";
-
          	
          	document.getElementById("lol").innerHTML = wtfa;
 //			document.getElementById("aaa").innerHTML = "lololo";
@@ -114,22 +107,20 @@ foreach ($result as $value){
 //			document.getElementById("lol").innerHTML = "author: " + namename[track];
 //			document.getElementById("lol").innerHTML = "book name: " + aa[track];
 			}
-
-
 											
 		$(document).ready(function(){
-		$("#button").click(function(){
-        $("#popup").show();
-		});
-		});
-		$(document).ready(function(){
-		$("#close").click(function(){
-        $("#popup").hide();
-		});
+			$("#button").click(function(){
+				$("#popup").show();
+			});
 		});
 		
-
-</script>
+		$(document).ready(function(){
+			$("#close").click(function(){
+				$("#popup").hide();
+			});
+		});
+		
+		</script>
 	</head>
 <body>
 
@@ -137,46 +128,36 @@ foreach ($result as $value){
 		<?php require_once 'navcontrol.php';?>
 	</header>
 
-		
-
-		<div class = "left">
-    		<?php if(($_SESSION['results'])==true){ require_once('popup.php');
-			unset($_SESSION['results']); }else{
-				echo "no books found";
-			} ?>
-    		<div class = "sell">
-    			<h1 class = "titledash">Books that you want to sell</h1>
-    			<?php echo $finalHTML; ?>
-    				<ul>
-
-				<li id="button">
-				add another listing
-				</li>
-        			</ul>
-    		</div>
-			<div class = "add">
-			<form action="isbndb.php"  method="post">
-		Enter the ISBN Number, Price, and Any additional information about the book.
-
-
-		<input type="number" name="ISBN" placeholder="ISBN"><br>
-		<input type="text" name="price" placeholder="Price"><br>
-		<input type="text" name="additional" placeholder="a few sentences to describe the book"><br>
-		
-		<input type="submit">
-		</form>
+	<div class = "left">
+		<?php //if(($_SESSION['results'])==true){
+			//require_once('popup.php');
+			//unset($_SESSION['results']);
+		//}
+			//else{
+			//	echo "no books found";
+		//	} ?>
+		<div class = "sell">
+			<h1 class = "titledash">Books that you're currently selling:</h1>
+				<?php echo $finalHTML; ?>		
 		</div>
-    	</div>
+	
+		<div class = "add">
+			<form action="isbndb.php"  method="post">
+			<p><span id="inputtitle">Enter the ISBN Number, Price, and any notes about the book.<span> </p>
+			<p><input type="number" name="ISBN" placeholder="ISBN"></p>
+			<p><input type="text" name="price" placeholder="Price"></p>
+			<p><input type="text" name="additional" placeholder="Notes about condition, etc."></p>
+			<p><input type="submit" value="Add Textbook">
+			</form>
+		</div>
+    </div>
+	
     	<div class = "right">
-
     		<div class = "displaybook" id = "lol">
-
-    			<h1 class = "titledash">Click a textbook to view more details</h1>
+    			<h1 class = "titledash">
+					Click a textbook (on the left) to view more details</h1>
     		</div>
     	</div>
-
-
-
 
 </body>
 </html>

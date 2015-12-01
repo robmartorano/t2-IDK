@@ -1,15 +1,10 @@
-a {
-	color:white;
-	text-decoration: none;
-	text-align: center;
-}
 body {
-	
 	margin: 0;
 	background-color:white;
 	width:100%;
-	
+	font-family: "Helvetica Neue","Helvetica",sans;
 }
+
 #button{
 	display: block;
 	list-style: none;
@@ -17,13 +12,11 @@ body {
 	text-decoration: underline;
 }
 
-
 #close{
 	text-align:right;
 	text-decoration:underline;
 	color: blue;
 }
-
 
 .logo{
 	padding: 10px;
@@ -55,12 +48,12 @@ body {
 	width: 40%;
 	height: auto;
 	text-align: center; /*centers the input boxes*/
-	
 }
 
 #popup form{
 	vertical-align: middle;
 }
+
 .box {
 	font-family: "Helvetica Neue","Helvetica",sans;
 	font-size: 1.5em;
@@ -69,46 +62,80 @@ body {
 	width: 80%;
 }
 
-.buy
-{
-display: block;
-background: #F9FDFE;
-height: 50%;
-padding-top: 0;
-border: Blue solide;
-}
-.sell
-{
-height: 50%;
-background: #F9FDFE;
-padding-top: 0;
-border: Blue solide;
-}
-.left
-{
-float: left;
-display: block;
-width: 32%;
-background: #C6ECFC;
-margin: 3%;
-height: 83%;
-}
-.right
-{
-float: right;
-display: block;
-width: 56%;
-background: #C6ECFC;
-margin: 3%;
-height: 83%
-}
-.displaybook
-{
-float: left;
+/*.buy{
+	display: block;
+	background: #F9FDFE;
+	height: 50%;
+	padding-top: 0;
+	border: Blue solide;
+}*/
+
+.left{
+	float: left;
+	display: block;
+	width: 32%;
+	margin: 3%;
+	height: 30em;
 }
 
-.titledash
-{
-font-size: 1.2em;
-text-align: center;
+.titledash{
+	font-size: 1.2em;
+	text-align: center;
+	margin-top: 0;
 }
+
+.sell{
+	height: auto;
+	background: #F9FDFE;
+	padding-top: 1em;
+	margin-top: 0;
+	border: Blue solide;
+	border-radius: 5px;
+}
+
+.add{
+	background-color: #C6ECFC;
+	margin-top: 2em;
+	padding-top: 0.7em;
+	padding-bottom: 1em;
+	border-radius: 5px;
+	text-align: center;
+}
+
+#inputtitle{
+	text-align: center;
+}
+
+.right{
+	float: right;
+	display: block;
+	width: 56%;
+	background: #C6ECFC;
+	margin: 3%;
+	height: 30em;
+}
+
+.displaybook{
+	float: left;
+	padding-top: 1.5em;
+	padding-left: 2em;
+}
+
+input[type=submit] {
+	height: 2.5em;
+	border-radius: 2px;
+	width: 60%;
+	margin-top: 1.5em;
+	color: white;
+	font-weight: 700;
+	background-color: #3365ff;
+	border-style: none;
+	-webkit-appearance: box;
+}
+
+input[type=submit]:hover {
+	cursor: hand;
+	background-color:rgba(0,51,102,1);
+}
+
+

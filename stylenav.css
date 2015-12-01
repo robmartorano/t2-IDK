@@ -1,6 +1,7 @@
 .nav-large{
 	display: block;
 	background-color: rgba(0,0,0,.75);
+	width: 100%;
 	
 }
 
@@ -21,11 +22,8 @@
 .tabs{
 	list-style-type: none;
 	width: 90%;
-	/*margin-right: auto;
-	margin-left: auto;*/
-    
 	position: relative;
-	left: 6%;
+	left: 5%;
 	
 	padding: 0;
 	margin: 0;
@@ -38,16 +36,15 @@
 }
 
 .tabs li{
-	display: table-cell;
+	display: inline-block;
 }
 
 .filler{
-	display: inline-block;
 	margin: 0;
 	padding-left: 0;
 	padding-right: 0;
 	
-	width: 8em;
+	width: 9%;
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -68,16 +65,11 @@
 	color: white;
 }
 
-#name {
-	font-size: 1em;
-	font-weight: 900;
-}
-
 
 
 /* ------- HOVER EFFECTS -------- */
 
-#home:hover{
+#home a:hover{
 	cursor: hand;
 }
 	

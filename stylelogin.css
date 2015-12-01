@@ -1,0 +1,99 @@
+/*-------------- LOGIN PAGE -------------*/
+
+body{
+	margin: 0;
+}
+
+#backgroundlogin{
+	background-image: url("loginbackground.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: right top;
+}
+
+#blackfilter{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.6);
+	/*animation-name: fade-in;
+	animation-delay: 2s;
+	animation-duration: 2s;*/
+}
+
+/*------------- FADE IN ANIMATION ----------- 
+
+@keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}*/
+
+.welcometext{
+	font-family: "Helvetica Neue","Helvetica",sans;
+	font-size: 2em;
+	font-weight: 100;
+	color: white;
+	display: block;
+	text-align: center;
+	padding-top: 2.2em;
+}
+
+.forms{
+	/*color: rgba(0,51,102,.85);*/
+	background-color: #e0e4ed;
+	
+	margin-top: 2.5em;
+	display: block;
+	width: 20%;
+	height: 55%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	border-radius: 8px;
+}
+
+.loginpic{
+	padding:0;
+	height: 120px;
+	width: 120px;
+	padding-top: 2.5em;
+	margin-bottom: 1em;
+	
+	display: block;
+	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.typehere{
+	font-family: "Helvetica Neue","Helvetica",sans;
+	font-size: 1em;
+	margin-top: 5%;
+	border-radius: 0;
+	width: 60%;
+	height: 2em;
+	padding-left: 0.4em;
+
+	-webkit-appearance: box;
+}
+
+/*input[type=text] {}
+
+input[type=password] {}*/
+
+input[type=submit] {
+	height: 2.5em;
+	border-radius: 2px;
+	width: 60%;
+	margin-top: 1.5em;
+	color: white;
+	font-weight: 700;
+	background-color: #3365ff;
+	border-style: none;
+	-webkit-appearance: box;
+}
+
+input[type=submit]:hover {
+	cursor: hand;
+	background-color:rgba(0,51,102,1);
+}
+
