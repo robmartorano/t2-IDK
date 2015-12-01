@@ -132,6 +132,7 @@ foreach ($result as $value){
 	$(document).ready(function(){
 		$("#close").click(function(){
 			$("#popup").hide();
+			$("#blackfilter").hide();
 		});
 	});
 		

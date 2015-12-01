@@ -1,4 +1,6 @@
 
+
+<div id="blackfilter">
 <div id="popupcorrect">
 		
 	<p id="prompt">Is this the book you want to sell? </p>
@@ -25,5 +27,5 @@
 			<input id="noButton" type="submit" name="check" value="No"/>
 		</form>
 </div>
-		
+</div>
 		

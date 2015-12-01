@@ -146,7 +146,7 @@ foreach ($result as $value){
 				Close
 			</div>
 			
-			<div id="usersemail"><?php if(isset($_SESSION['email'])){echo $_SESSION['email'];}else{echo 'Need to Login!';} ?></div>
+			<div id="usersemail"><?php if(isset($_SESSION['email'])){echo $_SESSION['email'];}else{echo 'You need to login first!';} ?></div>
 	
 			<p class="bold" id="subject">Subject: <input id="subjectinput" name="subject" size="64" maxlength="64"/> </p>
 	

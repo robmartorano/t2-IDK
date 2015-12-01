@@ -1,7 +1,9 @@
 body {
 	margin: 0;
-	background-color: #f2f2f2;
 	width: 100%;
+	background-image: url("registerbackground.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 	font-family: "Helvetica Neue","Helvetica",sans;
 }
 
@@ -31,12 +33,24 @@ body {
 	text-align: center;
 }
 
+#blackfilter{
+	position: fixed;
+	z-index: 2000;
+	width: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,.6);
+}
+
 #popup{
 	z-index: 3000;
 	position: fixed;
 	float: middle;
 	left: 50%;
+	top: 50%;
 	margin-left: -15em;
+	margin-top: -13em;
 	padding: 1em;
 	color: rgba(0,51,102,.85);
 	background-color: #e0e4ed;
@@ -148,7 +162,7 @@ body {
 	border-style: solid;
 	border-color: none;
 	border-width: 0;
-	border-radius: 5px;
+	border-radius: 8px;
 	box-sizing: border-box;
 }
 
@@ -196,7 +210,7 @@ body {
 	background-color: #C6ECFC;
 	margin-top: 2em;
 	padding: 1em;
-	border-radius: 5px;
+	border-radius: 8px;
 	text-align: center;
 }
 
@@ -311,7 +325,7 @@ input[type=submit]:hover {
 	background-color:rgba(0,51,102,1);
 }
 
-.selling:hover{
+/*.selling:hover{
 	border-style: solid;
 	border-color: black;
 	border-width: 1px;
@@ -327,7 +341,7 @@ input[type=submit]:hover {
 	border-style: solid;
 	border-color: black;
 	border-width: 1px;
-}
+}/*
 
 /*-------------------- SEARCH BAR -------------------*/
 #searchwrapper{

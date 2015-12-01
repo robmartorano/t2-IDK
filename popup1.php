@@ -1,4 +1,5 @@
 
+<div id="blackfilter">
 <div id="popup">
 	<div id ="close">
 		Close
@@ -15,6 +16,7 @@
 		<input id="addButton" type="submit" value="Add Textbook">
 	</form>
 
+</div>
 </div>
 		
 		
