@@ -63,3 +63,91 @@ body {
 .line_text{
 	/*padding-bottom: 0.3em;*/
 }
+
+/*-------------------- SEARCH BAR -------------------*/
+#searchwrapper{
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1.5em;
+	margin-bottom: 2.5em;
+}
+
+#typehere{
+	width: 80%;
+	height: 3em;
+	display: inline-block;
+	padding-left: 1em;
+	font-size: 1em;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+#button{
+	width: 18%;
+	height: 3em;
+	display: inline-block;
+	font-size: 1em;
+	font-weight: 700;
+	background-color: #e6e6e6;
+	border-style: none;
+	border-radius: 5px;
+
+	color: #666666;
+}
+
+/* search button 
+#button{
+	width: 18%;
+	display: inline-block;
+	height: 3em;
+	border-radius: 0;
+	background-color: #bfbfbf;
+	border-style: none;
+	border-radius: 1px;
+	color: #808080;
+	font-weight: 700;
+}
+
+#button:hover{
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	color: #000000;
+} */
+
+#button:hover{
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	color: #000000;
+}
+
+::-webkit-input-placeholder {
+	color: #8c8c8c;
+	font-size: 1em;
+	line-height: normal;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+:-moz-placeholder { /* older Firefox*/
+	color: #8c8c8c;
+	font-size: 1em;
+	line-height: normal;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+::-moz-placeholder { /* Firefox 19+*/ 
+	color: #8c8c8c;
+	font-size: 1em;
+	line-height: normal;
+	padding-top: 0;
+	padding-bottom: 0;
+} 
+:-ms-input-placeholder { 
+	color: #8c8c8c;
+	font-size: 1em;
+	line-height: normal;
+	padding-top: 0;
+	padding-bottom: 0;
+}

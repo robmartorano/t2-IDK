@@ -1,11 +1,20 @@
 <html>
 <?php
-$needtosearch = $_POST["wtf"];
+session_start();
+if(isset($_POST["wtf"])){
+$_SESSION['temp']=$_POST["wtf"];
+
+}else{
+	$_SESSION['temp']="jfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfsadkfa1290dslfjaksdlfjalsdfka";
+	/* pls don't judge */
+}
+$needtosearch = $_SESSION['temp'];
+unset($_SESSION['temp']);
 $needtosearch = mysql_real_escape_string($needtosearch);
 $abc = "%";
 $needtosearch = $abc.$needtosearch.$abc;
 
-session_start();
+
 function getresult($BookName, $Price, $ISBN10, $ISBN13, $author, $img, $email) {
 	return 
 	"<div class='one_result'>
@@ -22,7 +31,7 @@ function getresult($BookName, $Price, $ISBN10, $ISBN13, $author, $img, $email) {
 				<li class='type'>Item: Hardcover Textbook</li>
 				<li class='notes'>Notes: Has some minor highlighting, writing...</li>
 				<li class='purchasehyperlink'>Contact User:</li>
-				<li class='wth' id='receiving_email'  >Email: $email</li>
+				<li class='wth' id=$email  >Email: $email</li>
 				
 			</ul>
 		</div>
@@ -82,6 +91,7 @@ while($row = $sqlQ -> fetch(PDO::FETCH_ASSOC)){
       $result[$counter] = getresult($row['BookName'], $row['Price'], $row['ISBN10'], $row['ISBN13'], $row['author'], $row['img'],$uemail);
       $counter = $counter +1;
 }
+
 $finalHTML = "";
 
 foreach ($result as $value){
@@ -92,7 +102,7 @@ foreach ($result as $value){
 
 	<head>
 		<link rel="stylesheet" href="resultspage.css">
-		<link rel="stylesheet" href="stylehomepage.css">
+		<!-- <link rel="stylesheet" href="stylehomepage.css"> -->
 		<link rel="stylesheet" href="stylenav.css">
 		<link rel="stylesheet" href="stylesearchbar.css">
 				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

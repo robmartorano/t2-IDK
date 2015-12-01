@@ -145,7 +145,7 @@ foreach ($result as $value){
 				require_once('popup.php');
 				unset($_SESSION['results']);}
 			else{
-				echo "no books found";
+				
 				require_once('popup1.php');
 				unset($_SESSION['results']);
 			}} ?>
@@ -163,13 +163,13 @@ foreach ($result as $value){
 		
 		<div class = "addNewBook">
 			<form action="isbndb.php"  method="post">
-				<p><span id="inputtitle">
-					Enter the ISBN Number, Price, and any notes about
-					the book or its condition.<span></p>
-				<p><input type="number" name="ISBN" placeholder="ISBN"></p>
-				<p><input type="number" name="price" placeholder="Price"></p>
-				<p><input type="text" name="additional" placeholder="Notes about the book, condition, etc."></p>
-				<input type="submit">
+				<p id="inputtitle">
+					Enter ISBN number, price, and any notes about
+					the book or its condition.</p>
+				<p><input class="bookInput" type="number" name="ISBN" placeholder="ISBN"></p>
+				<p><input class="bookInput" type="number" name="price" placeholder="Price"></p>
+				<p><input class="bookInput" type="text" name="additional" placeholder="Notes about the book, condition, etc."></p>
+				<input id="addButton" type="submit" value="Add Textbook">
 			</form>
 		</div>
     </div>

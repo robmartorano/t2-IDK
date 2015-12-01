@@ -1,5 +1,8 @@
 
 <div id ="popup">
+<div id ="close">
+		close
+		</div>
 		<form action="process.php"  method="post">
 				<p><span id="inputtitle">We cannot find your book, please enter rest of the information manually<span></p>
 				<p><input type="text" name="Title" placeholder="Title"></p>

@@ -1,16 +1,9 @@
 body {
 	margin: 0;
-	background-color:white;
-	width:100%;
+	background-color: white;
+	width: 100%;
 	font-family: "Helvetica Neue","Helvetica",sans;
 }
-
-/*#button{
-	display: block;
-	list-style: none;
-	color: blue;
-	text-decoration: underline;
-}*/
 
 #close{
 	text-align:right;
@@ -74,7 +67,10 @@ body {
 	float: left;
 	display: block;
 	width: 32%;
-	margin: 3%;
+	margin-top: 0;
+	margin-left: 3%;
+	margin-right: 3%;
+	margin-bottom: 3%;
 	height: 30em;
 }
 
@@ -135,12 +131,23 @@ body {
 	background-color: #C6ECFC;
 	margin-top: 2em;
 	padding: 1em;
+	padding-top: 1.5em;
 	border-radius: 5px;
 	text-align: center;
 }
 
+.bookInput{
+	height: 2.5em;
+	width: 60%;
+	padding-left: 0.4em;
+}
+
 #inputtitle{
 	text-align: center;
+	margin-top: 0.1em;
+	margin-bottom: 2em;
+	margin-left: 1.5em;
+	margin-right: 1.5em;
 }
 
 .right{
@@ -148,7 +155,10 @@ body {
 	display: block;
 	width: 56%;
 	background: #C6ECFC;
-	margin: 3%;
+	margin-top: 0;
+	margin-left: 3%;
+	margin-right: 3%;
+	margin-bottom: 3%;
 	height: 30em;
 }
 
@@ -158,7 +168,7 @@ body {
 	padding-left: 2em;
 }
 
-input[type=submit] {
+#addButton {
 	height: 2.5em;
 	border-radius: 2px;
 	width: 60%;

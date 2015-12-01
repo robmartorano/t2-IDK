@@ -1,3 +1,9 @@
+body {
+	margin: 0;
+	background-color: white;
+	width:100%;
+}
+
 #whole_page{
 	box-sizing: border-box;
 	padding: 0;
