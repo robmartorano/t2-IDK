@@ -17,6 +17,7 @@ $namename = array();
 $pp = array();
 $isis = array();
 $adad = array();
+$img = array();
 $aa = array();
 $sqlQ5 = $db->prepare('SELECT * FROM Books');
 $sqlQ5->execute();
@@ -29,6 +30,7 @@ $sqlQ5->execute();
 	  $isiss[$ct] = $row['ISBN13'];
 	  $adad[$ct] = $row['addition'];
 	  $aa[$ct] = $row['author'];
+	  $img[$ct] = $row['img'];
 	  $ct = $ct + 1;
 	  //echo $bookid;
 	  }
@@ -87,6 +89,7 @@ foreach ($result as $value){
  		var isiss= <?php echo json_encode($isiss); ?>;
  		var adad= <?php echo json_encode($adad); ?>;
  		var aa= <?php echo json_encode($aa); ?>;
+		var img= <?php echo json_encode($img); ?>;
  		var track = 0;
         for(var i=0;i<idid.length;i++){
          	if(idid[i] == clicked_id){
@@ -94,7 +97,7 @@ foreach ($result as $value){
          	}
         }  
         
-		var wtfa = 
+		var wtfa =  "<img src=" + img[track] +" alt='No image of textbook'>" + "<p>" + "Book name: " + namename[track] + "</p>" + "\n" +
 			"<p>" + "<div class='floatleft'><strong>Title: </strong></div>" + 
 				"<div class='floatright'>" + namename[track] + "</div></p>" + "\n" + 
 			"<p>" + "<div class='floatleft'><strong>Author: </strong></div>" + 
