@@ -17,13 +17,18 @@ try {
 
 
 $name = $_SESSION["booktitle"]; 
+$name = mysql_real_escape_string($name);
 $price = $_SESSION['price'];
 $isbn10 = $_SESSION["isbn10"];   
 $isbn13 = $_SESSION["isbn13"];  
 $author = $_SESSION["author"]; 
+$author = mysql_real_escape_string($author);
 $img = $_SESSION["imglink"]; 
+$img = mysql_real_escape_string($img);
 $additional = $_SESSION["additional"];
+$additional = mysql_real_escape_string($additional);
 $class = $_SESSION['class'];
+$class = mysql_real_escape_string($class);
 unset($_SESSION["booktitle"]);
 unset($_SESSION["price"]);
 unset($_SESSION["isbn10"]);
