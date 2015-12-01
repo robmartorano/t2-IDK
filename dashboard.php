@@ -77,6 +77,7 @@ foreach ($result as $value){
 <head>
 	<link rel="stylesheet" href="styledashboard.css">
 	<link rel="stylesheet" href="stylenav.css">
+	<link rel="stylesheet" href="stylesearchbar.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script>
 	function reply_click(clicked_id){
@@ -136,6 +137,8 @@ foreach ($result as $value){
 		<?php require_once 'navcontrol.php';?>
 	</header>
 
+	<?php require_once 'searchbar.php';?>
+	
 	<div class = "left">
     	<?php if(isset($_SESSION['results'])){
 			if(($_SESSION['results'])==true){
@@ -157,7 +160,7 @@ foreach ($result as $value){
 		
 		</div>				
 		
-		<div class = "add">
+		<div class = "addNewBook">
 			<form action="isbndb.php"  method="post">
 				<p><span id="inputtitle">
 					Enter the ISBN Number, Price, and any notes about
