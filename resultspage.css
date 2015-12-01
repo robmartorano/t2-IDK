@@ -181,6 +181,7 @@ body {
 
 .text li{
 	width: 100%;
+	list-style: none;
 }
 
 /*------------- INFORMATION THAT IS DISPLAYED --------------*/
@@ -196,37 +197,36 @@ body {
 .price{
 	font-size: 1em; 
 	font-weight: 900;
-	color: red;
-	padding-top: 0.8em;
-	padding-bottom: 0.5em;
+	color: rgb(177, 39, 4);
+	padding-top:5px;
 }
 
 .seller {
 	font-size: 0.8em;
-	padding-bottom: 0.3em;
 }
 
 .type{
 	font-size: 0.8em;
-	padding-bottom: 0.35em;
 }
 
 .ISBN{
 	font-size: 0.8em;
-	padding-bottom: 0.35em;
 }
 
 .notes{
 	font-size: 0.8em;
-	padding-bottom: 0.5em;
 }
 
 .purchase{
 	font-size: 0.8em;
-	padding-bottom: 0.8em;
 }
 
 .hyperlink{
 	color: blue;
 	text-decoration: underline;
+	padding-bottom: 5px;
+}
+
+.wth{
+	padding-bottom: 5px;
 }

@@ -81,6 +81,7 @@ body {
 	margin-top: 0;
 	border: Blue solide;
 	border-radius: 5px;
+
 }
 
 .sell h1{
@@ -88,7 +89,9 @@ body {
 }
 
 #textbox{
+
 	width: auto;
+
 }
 
 #text{ /*ul*/
@@ -103,6 +106,8 @@ body {
 	border-top-style: solid;
 	border-top-color: #b3b3b3;
 	border-width: 1px;
+	height: 100px;
+	overflow: scroll;
 }
 
 .booktitle{
