@@ -6,7 +6,7 @@ $_SESSION['temp']=$_POST["wtf"];
 
 }else{
 	$_SESSION['temp']="jfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfsadkfa1290dslfjaksdlfjalsdfka";
-	/* pls don't judge */
+	/* pls don't judge Jerry*/
 }
 $needtosearch = $_SESSION['temp'];
 unset($_SESSION['temp']);
@@ -15,7 +15,7 @@ $abc = "%";
 $needtosearch = $abc.$needtosearch.$abc;
 
 
-function getresult($BookName, $Price, $ISBN10, $ISBN13, $author, $img, $email) {
+function getresult($BookName, $Price, $ISBN10, $ISBN13, $author, $img, $email, $add) {
 	return 
 	"<div class='one_result'>
 		<div class='textbook_image'>
@@ -29,7 +29,7 @@ function getresult($BookName, $Price, $ISBN10, $ISBN13, $author, $img, $email) {
 				<li class='ISBN'>ISBN10 #: $ISBN10</li>
 				<li class='ISBN'>ISBN13 #: $ISBN13</li>
 				<li class='type'>Item: Hardcover Textbook</li>
-				<li class='notes'>Notes: Has some minor highlighting, writing...</li>
+				<li class='notes'>Notes: $add</li>
 				<li class='purchasehyperlink'>Contact User:</li>
 				<li class='wth' id=$email  >Email: $email</li>
 				
@@ -88,7 +88,7 @@ while($row = $sqlQ -> fetch(PDO::FETCH_ASSOC)){
 	  $uemail = $row2['email'] ;
 	  }
 	  
-      $result[$counter] = getresult($row['BookName'], $row['Price'], $row['ISBN10'], $row['ISBN13'], $row['author'], $row['img'],$uemail);
+      $result[$counter] = getresult($row['BookName'], $row['Price'], $row['ISBN10'], $row['ISBN13'], $row['author'], $row['img'],$uemail, $row['addition']);
       $counter = $counter +1;
 }
 

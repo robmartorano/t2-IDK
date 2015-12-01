@@ -17,6 +17,7 @@ $namename = array();
 $pp = array();
 $isis = array();
 $adad = array();
+$img = array();
 $aa = array();
 $sqlQ5 = $db->prepare('SELECT * FROM Books');
 $sqlQ5->execute();
@@ -29,6 +30,7 @@ $sqlQ5->execute();
 	  $isiss[$ct] = $row['ISBN13'];
 	  $adad[$ct] = $row['addition'];
 	  $aa[$ct] = $row['author'];
+	  $img[$ct] = $row['img'];
 	  $ct = $ct + 1;
 	  //echo $bookid;
 	  }
@@ -88,6 +90,7 @@ foreach ($result as $value){
  		var isiss= <?php echo json_encode($isiss); ?>;
  		var adad= <?php echo json_encode($adad); ?>;
  		var aa= <?php echo json_encode($aa); ?>;
+ 		var img= <?php echo json_encode($img); ?>;
  		var track = 0;
         for(var i=0;i<idid.length;i++){
          	if(idid[i] == clicked_id){
@@ -95,12 +98,11 @@ foreach ($result as $value){
          	}
         }  
         
-		var wtfa = "<p>" + "book name: " + namename[track] + "</p>" + "\n" + 
-         "<p>" + "price: " + pp[track] + "</p>" + "\n"+
+		var wtfa = "<img src=" + img[track] +" alt='No image of textbook'>" + "<p>" + "Book name: " + namename[track] + "</p>" + "\n" + 
+         "<p>" + "Price: " + pp[track] + "</p>" + "\n"+
          "<p>" + "ISBN10: " + isisi[track] + "</p>" + "\n"+
          "<p>" + "ISBN13: " + isiss[track] + "</p>" + "\n"+
-         "<p>" + "book ID: " + idid[track] + "</p>" + "\n" + 
-         "<p>" + "author: " + aa[track] + "</p>" + "\n" +"<form action=delete.php method=Post>"
+         "<p>" + "Author: " + aa[track] + "</p>" + "\n" +"<form action=delete.php method=Post>"
           + "<button type=submit  name=mybutton value =" + idid[track] + ">delete</button>" + "</form>" + "\n";
 
          	
