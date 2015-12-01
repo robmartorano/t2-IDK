@@ -107,12 +107,7 @@ foreach ($result as $value){
 		<link rel="stylesheet" href="stylenav.css">
 		<link rel="stylesheet" href="stylesearchbar.css">
 				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script>
-		
-		
-	
-		
-		
+		<script>	
 		$(document).ready(function(){
 		$(".wth").click(function(){
 		var email = jQuery(this).attr("id");
@@ -148,35 +143,22 @@ foreach ($result as $value){
 	</header>
 	
 	<div id="email">
-
-	<div id ="close">
-		close
-		</div>
-	<form action="takeform.php" method="POST">
-	<p>
-	<?php if(isset($_SESSION['email'])){echo $_SESSION['email'];}else{echo 'Need to Login!';} ?> 
-	</p>
+		
 	
-	<p>
-	Subject Of Your Message<br>
-	<input
-	name="subject"
-	size="64"
-	maxlength="64"/>
+		<form action="takeform.php" method="POST">
+			<div id ="close">
+				Close
+			</div>
+			
+			<?php if(isset($_SESSION['email'])){echo $_SESSION['email'];}else{echo 'Need to Login!';} ?>
 	
-	</p>
-	<p>
-	<i>Please enter the text of your message in the field that follows.</i>
-	</p>
-	<textarea
-	name="body"
-	rows="10"
-	cols="60">
-	</textarea>
-	<p>
-	<input type="submit" name="send" value="Send Your Message"/>
-	</p>
-	</form>
+			<p class="bold" id="subject">Subject: <input id="subjectinput" name="subject" size="64" maxlength="64"/> </p>
+	
+			<p><i>Please enter the text of your message in the field that follows.</i></p>
+			<textarea id="message" name="body" rows="10"	cols="60">	</textarea>
+	
+			<p>	<input type="submit" name="send" value="Send Your Message"/> </p>
+		</form>
 
 	</div>
 	
