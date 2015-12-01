@@ -37,8 +37,13 @@ $sqlQ5->execute();
 
 function getresult($BookName, $Count) {
 	return
-	"<li class='booktitle' id = $Count onClick=reply_click(this.id)>
-		$BookName</li>";
+	"<div class='one_result'>
+		<div class='text_box'>
+			<ul class='text'>
+				<li class='title' id = $Count onClick=reply_click(this.id)>$BookName</li>
+			</ul>
+		</div>
+	</div>";
 }
 $counter = 0;
 $abc = 1000;
@@ -73,106 +78,100 @@ foreach ($result as $value){
 ?>
 
 <html>
+	<head>
+		<link rel="stylesheet" href="styledashboard.css">
+		<link rel="stylesheet" href="stylenav.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>
+		
 
-<head>
-	<link rel="stylesheet" href="styledashboard.css">
-	<link rel="stylesheet" href="stylenav.css">
-	<link rel="stylesheet" href="stylesearchbar.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script>
-	function reply_click(clicked_id){
- 		var idid= <?php echo json_encode($idid); ?>;
- 		var namename= <?php echo json_encode($namename); ?>;
- 		var pp= <?php echo json_encode($pp); ?>;
- 		var isisi= <?php echo json_encode($isisi); ?>;
- 		var isiss= <?php echo json_encode($isiss); ?>;
- 		var adad= <?php echo json_encode($adad); ?>;
- 		var aa= <?php echo json_encode($aa); ?>;
- 		var track = 0;
-        for(var i=0;i<idid.length;i++){
-         	if(idid[i] == clicked_id){
-         	   	track = i;
-         	}
-        }  
-        
-		var wtfa = "<p>" + "book name: " + namename[track] + "</p>" + "\n" + 
-         "<p>" + "price: " + pp[track] + "</p>" + "\n"+
-         "<p>" + "ISBN10: " + isisi[track] + "</p>" + "\n"+
-         "<p>" + "ISBN13: " + isiss[track] + "</p>" + "\n"+
-         "<p>" + "book ID: " + idid[track] + "</p>" + "\n" + 
-         "<p>" + "author: " + aa[track] + "</p>" + "\n" +"<form action=delete.php method=Post>"
-          + "<button type=submit  name=mybutton value =" + idid[track] + ">delete</button>" + "</form>" + "\n";
+		function reply_click(clicked_id)
+			{
+ 			var idid= <?php echo json_encode($idid); ?>;
+ 			var namename= <?php echo json_encode($namename); ?>;
+ 			var pp= <?php echo json_encode($pp); ?>;
+ 			var isisi= <?php echo json_encode($isisi); ?>;
+ 			var isiss= <?php echo json_encode($isiss); ?>;
+ 			var adad= <?php echo json_encode($adad); ?>;
+ 			var aa= <?php echo json_encode($aa); ?>;
+ 			var track = 0;
+            for(var i=0;i<idid.length;i++)
+            {
+         	    if(idid[i] == clicked_id)
+         	    {
+         	   		track = i;
+         	    }
+         	}  
+         	var wtfa = "<p>" + "book name: " + namename[track] + "</p>" + "\n" + 
+         	"<p>" + "price: " + pp[track] + "</p>" + "\n"+
+         	"<p>" + "ISBN10: " + isisi[track] + "</p>" + "\n"+
+         	"<p>" + "ISBN13: " + isiss[track] + "</p>" + "\n"+
+         	"<p>" + "book ID: " + idid[track] + "</p>" + "\n" + 
+         	"<p>" + "author: " + aa[track] + "</p>" + "\n" +"<form action=delete.php method=Post>"
+         	 + "<button type=submit  name=mybutton value =" + idid[track] + ">delete</button>" + "</form>" + "\n";
 
          	
-        document.getElementById("lol").innerHTML = wtfa;
-//		document.getElementById("aaa").innerHTML = "lololo";
-//		document.getElementById("lol").innerHTML = "book name: " + namename[track];
-//		document.getElementById("lol").innerHTML = "price: " + pp[track];
-//		document.getElementById("lol").innerHTML = "ISBN: " + isis[track];
-//		document.getElementById("lol").innerHTML = "book name: " + namename[track];
-//		document.getElementById("lol").innerHTML = "author: " + namename[track];
-//		document.getElementById("lol").innerHTML = "book name: " + aa[track];
-		}
+         	document.getElementById("lol").innerHTML = wtfa;
+//			document.getElementById("aaa").innerHTML = "lololo";
+//			document.getElementById("lol").innerHTML = "book name: " + namename[track];
+//			document.getElementById("lol").innerHTML = "price: " + pp[track];
+//			document.getElementById("lol").innerHTML = "ISBN: " + isis[track];
+//			document.getElementById("lol").innerHTML = "book name: " + namename[track];
+//			document.getElementById("lol").innerHTML = "author: " + namename[track];
+//			document.getElementById("lol").innerHTML = "book name: " + aa[track];
+			}
 
 
 											
-	$(document).ready(function(){
+		$(document).ready(function(){
 		$("#button").click(function(){
-			$("#popup").show();
+        $("#popup").show();
 		});
-	});
-		
-	$(document).ready(function(){
+		});
+		$(document).ready(function(){
 		$("#close").click(function(){
-			$("#popup").hide();
+        $("#popup").hide();
 		});
-	});
+		});
 		
-	</script>
-</head>
+		
 
+</script>
+	</head>
 <body>
 
 	<header>
 		<?php require_once 'navcontrol.php';?>
 	</header>
 
-	<?php require_once 'searchbar.php';?>
-	
+		
+
 	<div class = "left">
     	<?php if(isset($_SESSION['results'])){
 			if(($_SESSION['results'])==true){
 				require_once('popup.php');
 				unset($_SESSION['results']);}
 			else{
-				echo "no books found";
+				
 				require_once('popup1.php');
 				unset($_SESSION['results']);
 			}} ?>
     	
 		<div class = "sell">
     		<h1 class = "titledash">Books that you're currently selling:</h1>
-			
-			<div id='text_box'>
-				<ul id='text'>	
-					<?php echo $finalHTML; ?>
-				</ul>
-			</div>
+    			<?php echo $finalHTML; ?>	
+    	</div>
 		
-		</div>				
-		
-		<div class = "addNewBook">
+		<div class = "add">
 			<form action="isbndb.php"  method="post">
-				<p id="inputtitle">
-					Enter ISBN number, price, and any notes about
-					the book or its condition.</p>
-				<p><input class="bookInput" type="number" name="ISBN" placeholder="ISBN"></p>
-				<p><input class="bookInput" type="number" name="price" placeholder="Price"></p>
-				<p><input class="bookInput" type="text" name="additional" placeholder="Notes about the book, condition, etc."></p>
-				<input id="addButton" type="submit" value="Add Textbook">
-			</form>
+				<p><span id="inputtitle">Enter the ISBN Number, Price, and any notes about the book or its condition.<span></p>
+				<p><input type="number" name="ISBN" placeholder="ISBN"></p>
+				<p><input type="number" name="price" placeholder="Price"></p>
+				<p><input type="text" name="additional" placeholder="a few sentences to describe the book"></p>
+				<input type="submit">
+		</form>
 		</div>
-    </div>
+    	</div>
     	<div class = "right">
 
     		<div class = "displaybook" id = "lol">
