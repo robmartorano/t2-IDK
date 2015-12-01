@@ -19,12 +19,11 @@
 
 <body id="backgroundregister">
 	
-	<div id="blackfilter">
 	<header>
 		<?php require_once('navcontrol.php'); ?>
 	</header>
 	
-	
+	<div id="blackfilter">
 	<div class="text">
 		Register to buy textbooks from classmates at low prices. 
 			<br>

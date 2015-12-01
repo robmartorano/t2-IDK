@@ -13,11 +13,13 @@
 </head>
 
 <body id="backgroundlogin">
-	<div id="blackfilter">
 
 	<header>
 		<?php require_once('navcontrol.php'); ?>
 	</header>	
+	
+	<div id="blackfilter">
+
 	
 	<div class="welcometext">Sign In to buy textbooks</div>
 	<div class="forms">
