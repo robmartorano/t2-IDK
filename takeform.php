@@ -43,13 +43,7 @@ $messages[] = "Your message was blank. Did you mean to say " .
       "Then click Send Your Message again.</p>");
   } else {
     # Send the email - we're done
-	echo $_SESSION['sending'];
-	echo 'wtf';
-	echo $_SESSION['email'];
-	echo $_SESSION['name'];
-	echo $_POST['subject'];
-	echo $_POST['body'];
-	echo "before sending";
+	
 mail($recipient,
       $subject,
       $body,
