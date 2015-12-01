@@ -4,7 +4,7 @@
 	<head>
 		<link rel="stylesheet" href="stylehomepage.css">
 		<link rel="stylesheet" href="stylenav.css">
-		<link rel="stylesheet" href="stylesearchbar.css">
+		<!-- <link rel="stylesheet" href="stylesearchbar.css"> -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script>
 		
