@@ -15,11 +15,11 @@ $abc = "%";
 $needtosearch = $abc.$needtosearch.$abc;
 
 
-function getresult($BookName, $Price, $ISBN10, $ISBN13, $author, $img, $email, $add) {
+function getresult($BookName, $Price, $ISBN10, $ISBN13, $author, $img, $email, $add, $class) {
 	return 
 	"<div class='one_result'>
 		<div class='textbook_image'>
-			<img src= $img alt='Organic Chemistry, 5th Edition'>
+			<img src= $img alt='No image of textbook found'>
 		</div>
 		<div class='text_box'>
 			<ul class='text'>
@@ -28,6 +28,7 @@ function getresult($BookName, $Price, $ISBN10, $ISBN13, $author, $img, $email, $
 				<li class='price'>$$Price</li>
 				<li class='ISBN'>ISBN10 #: $ISBN10</li>
 				<li class='ISBN'>ISBN13 #: $ISBN13</li>
+				<li class='notes'>Class Used: $class</li>
 				<li class='notes'>Notes: $add</li>
 				<li class='purchasehyperlink'>Contact User:</li>
 				<li class='wth' id=$email  >Email: $email</li>
@@ -58,9 +59,10 @@ try {
 //between two %% should be userinput
 //for example "econ" should be a variable posted in
 $counter = 0;
-$sqlQ = $db->prepare('SELECT * FROM Books WHERE author LIKE :author or BookName LIKE :BookName or ISBN10 LIKE :ISBN10 or ISBN13 LIKE :ISBN13 ');
+$sqlQ = $db->prepare('SELECT * FROM Books WHERE author LIKE :author or BookName LIKE :BookName or ISBN10 LIKE :ISBN10 or ISBN13 LIKE :ISBN13 or class like :class');
 $sqlQ->bindValue(':author', $needtosearch, PDO::PARAM_STR);
 $sqlQ->bindValue(':BookName', $needtosearch, PDO::PARAM_STR);
+$sqlQ->bindValue(':class', $needtosearch, PDO::PARAM_STR);
 $sqlQ->bindValue(':ISBN10', $needtosearch, PDO::PARAM_INT);
 $sqlQ->bindValue(':ISBN13', $needtosearch, PDO::PARAM_INT);
 
@@ -87,7 +89,7 @@ while($row = $sqlQ -> fetch(PDO::FETCH_ASSOC)){
 	  $uemail = $row2['email'] ;
 	  }
 	  
-      $result[$counter] = getresult($row['BookName'], $row['Price'], $row['ISBN10'], $row['ISBN13'], $row['author'], $row['img'],$uemail, $row['addition']);
+      $result[$counter] = getresult($row['BookName'], $row['Price'], $row['ISBN10'], $row['ISBN13'], $row['author'], $row['img'],$uemail, $row['addition'], $row['class']);
       $counter = $counter +1;
 }
 

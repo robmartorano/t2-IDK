@@ -2,6 +2,7 @@
 session_start();
 $_SESSION['price']=$_POST['price']; 
 $_SESSION['additional']=$_POST['additional'];
+$_SESSION['class']=$_POST['class'];
 
 $isbn = $_POST["ISBN"];
 $url="https://www.googleapis.com/books/v1/volumes?q=isbn:".$isbn;

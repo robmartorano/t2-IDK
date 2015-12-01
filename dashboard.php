@@ -118,7 +118,12 @@ foreach ($result as $value){
 
 
 											
-	
+	$(document).ready(function(){
+		$("#button").click(function(){
+			$("#popup").show();
+		});
+	});
+		
 	$(document).ready(function(){
 		$("#close").click(function(){
 			$("#popup").hide();
@@ -165,7 +170,9 @@ foreach ($result as $value){
 					the book or its condition.</p>
 				<p><input class="bookInput" type="number" name="ISBN" placeholder="ISBN"></p>
 				<p><input class="bookInput" type="number" name="price" placeholder="Price"></p>
+				<p><input class="bookInput" type="text" name="class" placeholder="What class is this book used in"></p>
 				<p><input class="bookInput" type="text" name="additional" placeholder="Notes about the book, condition, etc."></p>
+				
 				<input id="addButton" type="submit" value="Add Textbook">
 			</form>
 		</div>
