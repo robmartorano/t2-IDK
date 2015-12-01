@@ -30,8 +30,7 @@ unset($_SESSION["isbn13"]);
 unset($_SESSION["author"]);
 unset($_SESSION["imglink"]);
 unset($_SESSION["additional"]);
-echo $price;
-echo $additional;
+
 
 //Verifcation 
 
@@ -96,6 +95,7 @@ echo $additional;
 	
 	$_SESSION['bookname'] = $arr;
 	header("Location: dashboard.php");
+	exit();
 
     
     
