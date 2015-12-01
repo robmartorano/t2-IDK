@@ -17,7 +17,7 @@ try {
 
 
 $name = $_SESSION["booktitle"]; 
-$price = $_SESSION['price']
+$price = $_SESSION['price'];
 $isbn10 = $_SESSION["isbn10"];   
 $isbn13 = $_SESSION["isbn13"];  
 $author = $_SESSION["author"]; 
