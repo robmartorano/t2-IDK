@@ -26,28 +26,22 @@ body {
 }
 
 #popup{
-	position: absolute;
-	z-index: 1000;
-	padding: 5px;
-	margin-top: 2%;
+	z-index: 3000;
+	position: fixed;
+	float: middle;
+	left: 50%;
+	margin-left: -15em;
+	padding: 1em;
 	color: rgba(0,51,102,.85);
 	background-color: #e0e4ed;
-	display: block;
-	/*left: 30%;
-	top: 10%;*/
-	
-	margin-left: auto;
-	margin-right: auto;
-	width: 40%;
+	width: 30em;
 	height: auto;
 	text-align: center; /*centers the input boxes*/
+	border-radius: 5px;
 }
 
-#popup form{
-	vertical-align: middle;
-}
 
-.box {
+/*.box {
 	font-family: "Helvetica Neue","Helvetica",sans;
 	font-size: 1.5em;
 	margin-top: 0.8em;
@@ -55,7 +49,7 @@ body {
 	width: 80%;
 }
 
-/*.buy{
+.buy{
 	display: block;
 	background: #F9FDFE;
 	height: 50%;
@@ -113,6 +107,7 @@ body {
 
 .booktitle{
 	width: auto;
+	font-size: 0.9em;
 	margin-right: auto;
 	border-bottom-style: solid;
 	border-bottom-color: #b3b3b3;
@@ -136,18 +131,29 @@ body {
 	text-align: center;
 }
 
+.bookInputBorders{
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+}
+
 .bookInput{
-	height: 2.5em;
-	width: 60%;
+	height: 2em;
+	width: 20em;
 	padding-left: 0.4em;
 }
 
-#inputtitle{
+.inputtitle{
 	text-align: center;
+	font-weight: 700;
 	margin-top: 0.1em;
-	margin-bottom: 2em;
+	margin-bottom: 1.5em;
 	margin-left: 1.5em;
 	margin-right: 1.5em;
+}
+
+.bold{
+	font-weight: 700;
+	text-align: center;
 }
 
 .right{
