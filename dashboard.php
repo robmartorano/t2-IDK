@@ -37,11 +37,11 @@ $sqlQ5->execute();
 
 
 
-function getresult($BookName, $Count) {
+function getresult($BookName, $Count, $bid) {
 	return
-	"<li class='booktitle' id = $Count onClick=reply_click(this.id)>
+	"<li class='booktitle' id = $bid onClick=reply_click(this.id)>
 		<div class='bookname'>$BookName</div>
-		<div class='price'>$$Count</div>
+		<div class='price'>$Count</div>
 		</li>";
 }
 $counter = 0;
@@ -61,7 +61,7 @@ $sqlQ->execute();
        {
        //echo $row1['BookName'];
        
-       $result[$counter] = getresult($row1['BookName'], $row1['Price']) ;
+       $result[$counter] = getresult($row1['BookName'], $row1['Price'], $row1['id']) ;
        $counter = $counter +1;
        }
 	  }
