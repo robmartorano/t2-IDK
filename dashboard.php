@@ -40,7 +40,9 @@ $sqlQ5->execute();
 function getresult($BookName, $Count) {
 	return
 	"<li class='booktitle' id = $Count onClick=reply_click(this.id)>
-		<p>$BookName</p><p>$Count</p></li>";
+		<div class='bookname'>$BookName</div>
+		<div class='price'>$$Count</div>
+		</li>";
 }
 $counter = 0;
 $abc = 1000;
