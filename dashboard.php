@@ -11,7 +11,6 @@ try {
 } catch(PDOException $e) {
     die('Could not connect to the database:<br/>' . $e);
 }
-$ct = 0;
 $idid = array();
 $namename = array();
 $pp = array();
@@ -19,24 +18,6 @@ $isis = array();
 $adad = array();
 $img = array();
 $aa = array();
-$sqlQ5 = $db->prepare('SELECT * FROM Books');
-$sqlQ5->execute();
- while($row = $sqlQ5 -> fetch(PDO::FETCH_ASSOC))
-	  {
-	  $idid[$ct] = $row['id'];
-	  $namename[$ct] = $row['BookName'];
-	  $pp[$ct] = $row['Price'];
-	  $isisi[$ct] = $row['ISBN10'];
-	  $isiss[$ct] = $row['ISBN13'];
-	  $adad[$ct] = $row['addition'];
-	  $aa[$ct] = $row['author'];
-	  $img[$ct] = $row['img'];
-	  $ct = $ct + 1;
-	  //echo $bookid;
-	  }
-
-
-
 function getresult($BookName, $Count, $bid) {
 	return
 	"<li class='booktitle' id = $bid onClick=reply_click(this.id)>
@@ -45,7 +26,6 @@ function getresult($BookName, $Count, $bid) {
 		</li>";
 }
 $counter = 0;
-$abc = 1000;
 $result = array();
 $sqlQ = $db->prepare('SELECT * FROM ownedBooks WHERE user_id = :user_id');
 $sqlQ->bindValue(':user_id', $_SESSION['userid'], PDO::PARAM_STR);
@@ -62,6 +42,14 @@ $sqlQ->execute();
        //echo $row1['BookName'];
        
        $result[$counter] = getresult($row1['BookName'], $row1['Price'], $row1['id']) ;
+       $idid[$counter] = $row1['id'];
+	   $namename[$counter] = $row1['BookName'];
+	   $pp[$counter] = $row1['Price'];
+	   $isisi[$counter] = $row1['ISBN10'];
+	   $isiss[$counter] = $row1['ISBN13'];
+	   $adad[$counter] = $row1['addition'];
+	   $aa[$counter] = $row1['author'];
+	   $img[$counter] = $row1['img'];
        $counter = $counter +1;
        }
 	  }
