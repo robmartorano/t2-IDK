@@ -40,7 +40,7 @@ $sqlQ5->execute();
 function getresult($BookName, $Count) {
 	return
 	"<li class='booktitle' id = $Count onClick=reply_click(this.id)>
-		$BookName</li>";
+		<p>$BookName</p><p>$Count</p></li>";
 }
 $counter = 0;
 $abc = 1000;
@@ -59,7 +59,7 @@ $sqlQ->execute();
        {
        //echo $row1['BookName'];
        
-       $result[$counter] = getresult($row1['BookName'], $row1['id']) ;
+       $result[$counter] = getresult($row1['BookName'], $row1['Price']) ;
        $counter = $counter +1;
        }
 	  }
