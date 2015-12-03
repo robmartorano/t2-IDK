@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+<div class="bootstrap-iso">
 <div class="nav-large">
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -11,7 +12,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Duke TextBook Exchange</a>
+      <a class="navbar-brand" href="index.php">Duke TextBook Exchange</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -24,5 +25,6 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+</div>
 </div>
 </html>
