@@ -51,6 +51,14 @@ body{
 	border-radius: 8px;
 }
 
+.errorFeedback{
+	font-family: "Helvetica Neue","Helvetica",sans;
+	font-weight: 700;
+	color: red;
+	text-align: center;
+	margin-top: 1.5em;
+}
+
 .loginpic{
 	padding:0;
 	height: 120px;

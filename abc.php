@@ -54,8 +54,8 @@ if(!strpos($email, $jk))
 }
 
 // Password length
-if (strlen($password) <= 6){
-    $error = "Choose a password longer then 6 character";
+if (strlen($password) < 6){
+    $error = "Choose a password of 6 characters or longer";
 }
 
 if(!isset($error)){

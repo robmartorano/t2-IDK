@@ -26,13 +26,12 @@ function userLogin($emails, $passwords, $dbs) {
 		exit;
 	}
 	else {
-		
-		$_SESSION["Login.Error"] = 'Invalid Login/Password';
+		$_SESSION["Login.Error"] = 'Invalid Email/Password';
 		header("Location: login.php");
 		exit();
 	}
 	return $return;
-	}
+}
 	
 
 $emailx = $_POST['NetID'];

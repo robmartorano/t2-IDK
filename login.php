@@ -23,14 +23,6 @@
 	
 	<div class="welcometext">Sign In to buy textbooks</div>
 	<div class="forms">
-		<?php if(isset($_SESSION['Login.Error'])){
-			echo $_SESSION['Login.Error'];
-			unset($_SESSION['Login.Error']); } 
-			if(isset($_SESSION['rsuccess']))
-			{
-			echo $_SESSION['rsuccess'];
-			unset($_SESSION['rsuccess']);
-			}?>
 
 		<form action="def.php"  method="post">
 			<img class="loginpic" src="login.png" alt="Login"/>
@@ -39,6 +31,18 @@
 			<input class="typehere" type="password" name="password" placeholder="Password"><br>
 			<input type="submit" value="Sign In">
 		</form>
+	</div>
+	<div class="errorFeedback">
+		<?php 
+		if(isset($_SESSION['Login.Error'])){
+			echo $_SESSION['Login.Error'];
+			unset($_SESSION['Login.Error']);
+		} 
+		if(isset($_SESSION['rsuccess'])){
+			echo $_SESSION['rsuccess'];
+			unset($_SESSION['rsuccess']);
+		}
+		?>
 	</div>
 	</div>
 
