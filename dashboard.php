@@ -22,7 +22,7 @@ function getresult($BookName, $Count, $bid) {
 	return
 	"<li class='booktitle' id = $bid onClick=reply_click(this.id)>
 		<div class='bookname'>$BookName</div>
-		<div class='price'>$Count</div>
+		<div class='price'>$ $Count</div>
 		</li>";
 }
 $counter = 0;
@@ -67,8 +67,9 @@ foreach ($result as $value){
 <html>
 
 <head>
+	
+	<link href="css/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" href="styledashboard.css">
-	<link rel="stylesheet" href="stylenav.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script>
 	function reply_click(clicked_id){

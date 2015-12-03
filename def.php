@@ -15,8 +15,9 @@ function userLogin($emails, $passwords, $dbs) {
 	$sthandler->execute();
 	$result = $sthandler->fetch(PDO::FETCH_ASSOC);
 	$hash = $result['password'];
+	$activation = $result['activation'];
 
-	if (password_verify($passwords, $hash)){
+	if (password_verify($passwords, $hash) && is_null($activation)){
 		$_SESSION['logged_in'] = true;
 		$return = true;
 		$_SESSION['name']=$result['firstname'];
@@ -26,7 +27,8 @@ function userLogin($emails, $passwords, $dbs) {
 		exit;
 	}
 	else {
-		$_SESSION["Login.Error"] = 'Invalid Email/Password';
+<<
+		$_SESSION["Login.Error"] = 'Invalid Login/Password or Unactivated';
 		header("Location: login.php");
 		exit();
 	}
@@ -38,9 +40,5 @@ $emailx = $_POST['NetID'];
 $emailx = mysql_real_escape_string($emailx);
 $passwordx = $_POST['password'];
 $passwordx = mysql_real_escape_string($passwordx);
-if(userLogin($emailx, $passwordx, $db) != true)
-{
-	$errors[] = 'Username/password mismatch';
-}
-
+userLogin($emailx, $passwordx, $db);
 ?>

@@ -32,6 +32,7 @@ function getresult($BookName, $Price, $ISBN10, $ISBN13, $author, $img, $email, $
 				<li class='item notes'>Notes: $add</li>
 				<li class='item contact'>Contact Seller:</li>
 				<li class='wth' id=$email  >Email: $email</li>
+				 
 			</ul>
 		</div>
 	</div>";
@@ -100,9 +101,12 @@ foreach ($result as $value){
 ?>
 
 <head>
-	<link rel="stylesheet" href="resultspage.css">
+	
 	<!-- <link rel="stylesheet" href="stylehomepage.css"> -->
-	<link rel="stylesheet" href="stylenav.css">
+	
+	
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="resultspage.css">
 	<link rel="stylesheet" href="stylesearchbar.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script>	

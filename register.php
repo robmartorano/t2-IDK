@@ -3,6 +3,7 @@
 	<head>
 		<link rel="stylesheet" href="styleregister.css">
 		<link rel="stylesheet" href="stylenav.css">
+		<link href="css/bootstrap.css" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script> 
 			$(document).ready(function(){

@@ -4,6 +4,8 @@
 	<head>
 		<link rel="stylesheet" href="stylehomepage.css">
 		<link rel="stylesheet" href="stylenav.css">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<script src="js/bootstrap.min.js"></script>
 		<!-- <link rel="stylesheet" href="stylesearchbar.css"> -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script>
