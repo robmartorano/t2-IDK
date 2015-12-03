@@ -15,8 +15,9 @@ function userLogin($emails, $passwords, $dbs) {
 	$sthandler->execute();
 	$result = $sthandler->fetch(PDO::FETCH_ASSOC);
 	$hash = $result['password'];
+	$activation = $result['activation'];
 
-	if (password_verify($passwords, $hash)){
+	if (password_verify($passwords, $hash) && is_null($activation)){
 		$_SESSION['logged_in'] = true;
 		$return = true;
 		$_SESSION['name']=$result['firstname'];
@@ -27,7 +28,7 @@ function userLogin($emails, $passwords, $dbs) {
 	}
 	else {
 		
-		$_SESSION["Login.Error"] = 'Invalid Login/Password';
+		$_SESSION["Login.Error"] = 'Invalid Login/Password or have not tried ';
 		header("Location: login.php");
 		exit();
 	}

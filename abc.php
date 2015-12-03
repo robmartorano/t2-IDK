@@ -65,10 +65,10 @@ $sthandler->bindParam(':email', $email);
 $sthandler->execute();
 
 if($sthandler->rowCount() > 0){
-    echo "exists! cannot insert";
+    echo "User exists! cannot insert";
 } else {
-    
-    $sql = 'INSERT INTO Users (firstname ,lastname, email, password, ip) VALUES (:firstname,:lastname,:email,:password,:ip)';    
+    $activation = md5(uniqid(rand(), true));
+    $sql = 'INSERT INTO Users (firstname ,lastname, email, password, ip, activation) VALUES (:firstname,:lastname,:email,:password,:ip, :activation)';    
     $query = $db->prepare($sql);
     $password_check = password_hash($password, PASSWORD_DEFAULT);
     $query->execute(array(
@@ -77,10 +77,15 @@ if($sthandler->rowCount() > 0){
     ':lastname' => $lastname,
     ':email' => $email,
     ':password' => $password_check,
-    ':ip' => $ip
+    ':ip' => $ip,
+    ':activation' => $activation
 
     ));
-    $_SESSION['rsuccess'] = "Success";
+    $message = " To activate your account, please click on this link:\n\n";
+    $message .= 'https://users.cs.duke.edu/~bz43/t2-IDK'. '/activate.php?email=' . urlencode($email) . "&key=$activation";
+    mail($email, 'Registration Confirmation', $message, 'From:DoNotReply@duke.edu');
+	echo "success";
+    $_SESSION['rsuccess'] = "Check your email for an activation link";
     header('Location: login.php');
     }
 }else{
