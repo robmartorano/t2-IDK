@@ -31,10 +31,12 @@ if (isset($email) && isset($key)) {
  // Print a customized message:
  if ($count == 1) //if update query was successfull
  {
- echo '<div>Your account is now active. You may now <a href="login.php">Log in</a></div>';
+ $_SESSION['rsuccess'] = 'Your account is now active. Try login';
+ header("Location: login.php");
  } 
  else 
  {
+ $_SESSION['rsuccess'] = 'Your account is now active. Try login';
  echo '<div>Oops !Your account could not be activated or is already activated. Please recheck the link or contact the system administrator.</div>';
  }
 

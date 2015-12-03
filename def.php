@@ -28,7 +28,7 @@ function userLogin($emails, $passwords, $dbs) {
 	}
 	else {
 		
-		$_SESSION["Login.Error"] = 'Invalid Login/Password or have not tried ';
+		$_SESSION["Login.Error"] = 'Invalid Login/Password or have not activated ';
 		header("Location: login.php");
 		exit();
 	}
@@ -40,9 +40,5 @@ $emailx = $_POST['NetID'];
 $emailx = mysql_real_escape_string($emailx);
 $passwordx = $_POST['password'];
 $passwordx = mysql_real_escape_string($passwordx);
-if(userLogin($emailx, $passwordx, $db) != true)
-{
-	$errors[] = 'Username/password mismatch';
-}
-
+userLogin($emailx, $passwordx, $db);
 ?>
