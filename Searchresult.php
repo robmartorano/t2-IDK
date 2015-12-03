@@ -32,6 +32,7 @@ function getresult($BookName, $Price, $ISBN10, $ISBN13, $author, $img, $email, $
 				<li class='item notes'>Notes: $add</li>
 				<li class='item contact'>Contact Seller:</li>
 				<li class='wth' id=$email  >Email: $email</li>
+				 
 			</ul>
 		</div>
 	</div>";
