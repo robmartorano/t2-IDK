@@ -3,6 +3,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="stylehomepage.css">
+		<link rel="stylesheet" href="stylenavnew.css">
 		
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

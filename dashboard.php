@@ -70,6 +70,8 @@ foreach ($result as $value){
 	
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" href="styledashboard.css">
+	<link rel="stylesheet" href="stylenavnew.css">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script>
 	function reply_click(clicked_id){

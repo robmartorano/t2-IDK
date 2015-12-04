@@ -455,3 +455,25 @@ input[type=submit]:hover {
 	padding-bottom: 0;
 }
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 670px) {
+	.left{
+		width: 94%;
+		height: auto;
+		margin: 3%;
+	}
+
+	.selling{
+		width: 100%;
+	}
+	
+	.addNewBook{
+		width: 100%;
+	}
+	
+	.right{
+		width: 94%;
+	}
+	
+	
+}
+
