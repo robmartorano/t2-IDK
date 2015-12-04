@@ -33,11 +33,7 @@
 	</div>	
 	
 	<div class="register">
-	<?php if(isset($_SESSION['rsuccess']))
-			{
-			echo $_SESSION['rsuccess'];
-			unset($_SESSION['rsuccess']);
-			}?>
+	
 		<form action="abc.php" method="post">
 			<br><br>
 			<div class="entry">
@@ -66,7 +62,11 @@
 				</div>
 			
 			<div class="errorFeedback">
-
+				<?php if(isset($_SESSION['rsuccess'])){
+					echo $_SESSION['rsuccess'];
+					unset($_SESSION['rsuccess']);
+					}?>
+			</div>
 			
 			<input id="registerButton" type="submit" value="Sign Up" onclick = checkTextField(entry)>
 		</form>
