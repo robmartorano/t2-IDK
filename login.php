@@ -1,13 +1,12 @@
-<?php session_start()
-#login page made by Jerry 
- ?>
+<?php session_start() ?>
 <html>
 
 <head>
 	<link rel="stylesheet" href="stylelogin.css">
-	<link rel="stylesheet" href="stylenavnew.css">
 	<link href="css/bootstrap.css" rel="stylesheet">
+	
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<script> 
 	$(document).ready(function(){
 		$('#blackfilter').hide().delay(200).fadeIn(1000);
@@ -32,7 +31,6 @@
 
 			<input class="typehere" type="text" name="NetID" placeholder="Duke E-mail"><br>
 			<input class="typehere" type="password" name="password" placeholder="Password"><br>
-			
 			<div class="errorFeedback">
 			<?php 
 				if(isset($_SESSION['Login.Error'])){
