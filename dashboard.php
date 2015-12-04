@@ -4,14 +4,8 @@ session_start();
 if(isset($_SESSION['logged_in'])){
 	
 
-$dsn = 'mysql:host=cgi.cs.duke.edu;port=3306;dbname=qp7;';
-$username = 'qp7';
-$password = 'qnDM4.fo6sX_';
-try {
-    $db = new PDO($dsn, $username, $password);
-} catch(PDOException $e) {
-    die('Could not connect to the database:<br/>' . $e);
-}
+require_once('database.php');
+
 $idid = array();
 $namename = array();
 $pp = array();
@@ -182,7 +176,7 @@ foreach ($result as $value){
     </div>
     <div class = "right">
    		<div class="displaybook">
-   			<h1 class="titledash" id="details"><u>Click a textbook to view details</u></h1>
+   			<h1 class="titledash" id="details"><u>Click a textbook (to the left) to view more details</u></h1>
 			<div id="lol"></div>
    		</div>
    	</div>
