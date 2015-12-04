@@ -7148,7 +7148,9 @@
 .bootstrap-iso .navbar{
   min-height:50px; 
   margin-bottom: 0px;
+  
 }
+
 .bootstrap-iso .navbar-default {
   background-color: #222222;
   border-color: #000000;
@@ -7156,6 +7158,7 @@
 .bootstrap-iso .navbar-default .navbar-brand {
   color: #889596;
   background-color: #222222;
+  font-size: 1.4em;
 }
 .bootstrap-iso .navbar-default .navbar-brand:hover,
 .bootstrap-iso .navbar-default .navbar-brand:focus {
@@ -7171,42 +7174,50 @@
 .bootstrap-iso .navbar-default .navbar-nav > li > a:focus {
   color: #ffffff;
 }
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+.bootstrap-iso .navbar-default .navbar-nav > .active > a,
+.bootstrap-iso .navbar-default .navbar-nav > .active > a:hover,
+.bootstrap-iso .navbar-default .navbar-nav > .active > a:focus {
   color: #ffffff;
   background-color: #000000;
 }
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+.navbar-default .navbar-nav > .open > a,
+.bootstrap-iso .navbar-default .navbar-nav > .open > a:hover,
+.bootstrap-iso .navbar-default .navbar-nav > .open > a:focus {
   color: #ffffff;
   background-color: #000000;
 }
 .navbar-default .navbar-toggle collapsed{
   border-color: #000000;
 }
-.navbar-default .navbar-toggle collapsed :hover, .navbar-default .navbar-toggle:focus {
+.bootstrap-iso .navbar-default .navbar-toggle:hover,
+.bootstrap-iso .navbar-default .navbar-toggle:focus {
   background-color: #000000;
 }
-.navbar-default .navbar-toggle collapsed .icon-bar {
+.navbar-default .navbar-toggle .icon-bar {
   background-color: #889596;
 }
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
+.bootstrap-iso .navbar-default .navbar-collapse,
+.bootstrap-iso .navbar-default .navbar-form {
   border-color: #889596;
 }
-.navbar-default .navbar-link {
+.bootstrap-iso .navbar-default .navbar-link {
   color: #889596;
 }
-.navbar-default .navbar-link:hover {
+.bootstrap-iso .navbar-default .navbar-link:hover {
   color: #ffffff;
 }
 
 @media (max-width: 767px) {
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  .bootstrap-iso .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #889596;
   }
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+  .bootstrap-iso .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .bootstrap-iso .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
     color: #ffffff;
   }
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  .bootstrap-iso .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .bootstrap-iso .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .bootstrap-iso .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #ffffff;
     background-color: #000000;
   }
