@@ -32,7 +32,7 @@
 
 			<input class="typehere" type="text" name="NetID" placeholder="Duke E-mail"><br>
 			<input class="typehere" type="password" name="password" placeholder="Password"><br>
-			<input type="submit" value="Sign In">
+			<input id="signinbutton" type="submit" value="Sign In">
 		</form>
 	</div>
 	<div class="errorFeedback">

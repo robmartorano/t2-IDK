@@ -65,7 +65,7 @@ body {
 	/*color: rgba(0,51,102,.85);*/
 	color: white;
 	width: auto;
-	padding-top: 1.8em;
+	padding-top: 1.2em;
 	margin-left: auto;
 	margin-right: auto;
 	
@@ -76,9 +76,9 @@ body {
 }
 
 .register{
-	width: 36%;
-	height: 55%;
-	margin-top: 4em;
+	width: 32em;
+	height: auto;
+	margin-top: 2.4em;
 	
 	color: rgba(0,51,102,.85);
 	background-color: #e0e4ed;
@@ -92,6 +92,10 @@ body {
 	text-align: center;
 	border-radius: 10px;
 } 
+
+.register form{
+	padding-bottom: 2em;
+}
 
 .entry{
 	margin-bottom: 1em;
@@ -138,6 +142,7 @@ input[type=submit]:hover {
 
 #registerButton{
 	border-style: none;
+	padding-bottom: 2.5em;
 }
 
 #login:hover{
