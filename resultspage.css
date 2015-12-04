@@ -29,7 +29,7 @@ styling of results page,written by Andy
 	position: fixed;
 	top: 23%;
 	right: 10%;
-	width: auto;
+	width: 31em;
 	height: auto;
 	display: none;
 	z-index: 2000;
@@ -199,8 +199,10 @@ styling of results page,written by Andy
 }
 
 @media screen and (max-width:1000px){
-	#searchresults{
-		left: 10%;
+	#searchresults{left: 10%;}
+	#email{
+		top: 20%;
+		right: 5%;
 	}
 }
 
@@ -209,10 +211,20 @@ styling of results page,written by Andy
 		width: 90%;
 		left: 5%;
 	}
+	#email{
+		top: 20%;
+		right: 5%;
+	}
 }
 
 @media screen and (max-width:680px){
 	.text_box{
 		width: 60%;
+	}
+	#email{
+		position: fixed;
+		top: 15%;
+		margin-right: auto;
+		margin-left: auto;
 	}
 }
