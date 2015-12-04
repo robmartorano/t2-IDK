@@ -1,3 +1,4 @@
+/* Styling of dashboard written by Andy */
 body {
 	margin: 0;
 	width: 100%;
@@ -120,7 +121,8 @@ body {
 }
 
 #yesButton{margin-right: 1em;}
-#yesButton:hover{cursor: hand;}
+#yesButton:hover{cursor: hand;
+}
 
 #noButton{margin-left: 1em;}
 #noButton:hover{cursor: hand;}
