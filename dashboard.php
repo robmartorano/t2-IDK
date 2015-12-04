@@ -167,7 +167,7 @@ foreach ($result as $value){
 					the book or its condition.</p>
 					
 				<p class="bookInputBorders"><input class="bookInput" type="number" name="ISBN" placeholder="ISBN"></p>
-				<p class="bookInputBorders"><input class="bookInput" type="number" name="price" placeholder="Price"></p>
+				<p class="bookInputBorders"><input class="bookInput" type="number" step="0.01" name="price" placeholder="Price"></p>
 				<p class="bookInputBorders"><input class="bookInput" type="text" name="class" placeholder="What class is this book used in"></p>
 				<p class="bookInputBorders"><input class="bookInput" type="text" name="additional" placeholder="Notes about the book, condition, etc."></p>
 				<input id="addButton" type="submit" value="Add Textbook">
