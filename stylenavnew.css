@@ -12,3 +12,9 @@
 .navbar-right{
 	color: white;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 670px) {
+	.navbar-header{
+		height: 2em;
+	}
+}

@@ -134,7 +134,7 @@ foreach ($result as $value){
 	</script>
 </head>
 
-<body>
+<body id="backgroundregister">
 	<header>
 		<?php require_once 'navcontrol.php';?>
 	</header>
@@ -153,8 +153,6 @@ foreach ($result as $value){
 			}} ?>
 	
 	<div class = "left">
-    	
-    	
 		<div class = "selling">
     		<h1 class = "titledash">Books that you're currently selling:</h1>
 			
