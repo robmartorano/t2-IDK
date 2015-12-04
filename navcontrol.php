@@ -21,7 +21,7 @@
 
       <ul class="nav navbar-nav navbar-right">
 	  <?php if(isset($_SESSION['logged_in'])){
-			echo' <li><a href="dasboard.php">'.$_SESSION["name"].'</a></li>
+			echo' <li><a href="dashboard.php">'.$_SESSION["name"].'</a></li>
         <li><a href="logout.php">Log Out</a></li>';
 		}else{echo'<li><a href="register.php">Sign Up</a></li>
         <li><a href="login.php">Log In</a></li>';}?>
