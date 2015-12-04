@@ -3,16 +3,7 @@
 session_start();
 
 
-$dsn = 'mysql:host=cgi.cs.duke.edu;port=3306;dbname=qp7;';
-$username = 'qp7';
-$password = 'qnDM4.fo6sX_';
-
-
-try {
-    $db = new PDO($dsn, $username, $password);
-} catch(PDOException $e) {
-    die('Could not connect to the database:<br/>' . $e);
-}
+require_once('database.php');
 
 
 
@@ -39,14 +30,6 @@ unset($_SESSION["additional"]);
 unset($_SESSION["class"]);
 
 //Verifcation 
-
-
-
-
-
-
-    
-
     $sql = 'INSERT INTO Books (BookName ,Price, ISBN10,ISBN13, author, addition,img, class) VALUES (:BookName,:Price,:ISBN10,:ISBN13,:author,:addition,:img, :class)';    
 
     $query = $db->prepare($sql);

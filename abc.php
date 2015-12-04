@@ -1,19 +1,9 @@
 <?php
-/*script that registers accounts written by Wilson*/
 session_set_cookie_params(0);
 session_start();
 
 
-$dsn = 'mysql:host=cgi.cs.duke.edu;port=3306;dbname=qp7;';
-$username = 'qp7';
-$password = 'qnDM4.fo6sX_';
-
-
-try {
-    $db = new PDO($dsn, $username, $password);
-} catch(PDOException $e) {
-    die('Could not connect to the database:<br/>' . $e);
-}
+require_once('database.php');
 
 
 
@@ -83,12 +73,11 @@ if($sthandler->rowCount() > 0){
 
     ));
     $message = " To activate your account, please click on this link:\n\n";
-    $message .= 'https://users.cs.duke.edu/~bz43/t2-IDK'. '/activate.php?email=' . urlencode($email) . "&key=$activation";
+    $message .= 'https://users.cs.duke.edu/~qp7/t2-IDK'. '/activate.php?email=' . urlencode($email) . "&key=$activation";
     mail($email, 'Registration Confirmation', $message, 'From:DoNotReply@duke.edu');
 	echo "success";
     $_SESSION['rsuccess'] = "Check your email for an activation link";
     header('Location: login.php');
-	exit();
     }
 }else{
 	$_SESSION['rsuccess'] = $error;

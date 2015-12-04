@@ -48,14 +48,8 @@ function getresult($BookName, $Price, $ISBN10, $ISBN13, $author, $img, $email, $
 	//	</div>";
 }
 
-$dsn = 'mysql:host=cgi.cs.duke.edu;port=3306;dbname=qp7;';
-$username = 'qp7';
-$password = 'qnDM4.fo6sX_';
-try {
-    $db = new PDO($dsn, $username, $password);
-} catch(PDOException $e) {
-    die('Could not connect to the database:<br/>' . $e);
-}
+require_once('database.php');
+
 
 //between two %% should be userinput
 //for example "econ" should be a variable posted in

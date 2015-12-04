@@ -36,8 +36,8 @@ if (isset($email) && isset($key)) {
  } 
  else 
  {
- $_SESSION['rsuccess'] = 'Your account is now active. Try login';
- echo '<div>Oops !Your account could not be activated or is already activated. Please recheck the link or contact the system administrator.</div>';
+ $_SESSION['rsuccess'] = 'Oops !Your account could not be activated or is already activated. Please recheck the link or contact the system administrator.';
+ header("Location: login.php");
  }
 
 
