@@ -64,7 +64,10 @@
 			<span class="left">Duke E-mail:</span>
 				<input class="typehere" id="email" type="text" name="NetID"><br><br>
 				</div>
-				
+			
+			<div class="errorFeedback">
+
+			
 			<input id="registerButton" type="submit" value="Sign Up" onclick = checkTextField(entry)>
 		</form>
 	</div>
