@@ -31,21 +31,23 @@
 
 			<input class="typehere" type="text" name="NetID" placeholder="Duke E-mail"><br>
 			<input class="typehere" type="password" name="password" placeholder="Password"><br>
-			<input type="submit" value="Sign In">
+			<div class="errorFeedback">
+			<?php 
+				if(isset($_SESSION['Login.Error'])){
+					echo $_SESSION['Login.Error'];
+					unset($_SESSION['Login.Error']);
+				} 
+				if(isset($_SESSION['rsuccess'])){
+					echo $_SESSION['rsuccess'];
+					unset($_SESSION['rsuccess']);
+				}
+				?>
+			</div>
+			
+			<input id="signinbutton" type="submit" value="Sign In">
 		</form>
 	</div>
-	<div class="errorFeedback">
-		<?php 
-		if(isset($_SESSION['Login.Error'])){
-			echo $_SESSION['Login.Error'];
-			unset($_SESSION['Login.Error']);
-		} 
-		if(isset($_SESSION['rsuccess'])){
-			echo $_SESSION['rsuccess'];
-			unset($_SESSION['rsuccess']);
-		}
-		?>
-	</div>
+	
 	</div>
 
 </body>

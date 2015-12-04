@@ -182,7 +182,7 @@ foreach ($result as $value){
     </div>
     <div class = "right">
    		<div class="displaybook">
-   			<h1 class="titledash" id="details"><u>Click a textbook (to the left) to view more details</u></h1>
+   			<h1 class="titledash" id="details"><u>Click a textbook to view details</u></h1>
 			<div id="lol"></div>
    		</div>
    	</div>
