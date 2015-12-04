@@ -198,4 +198,21 @@ styling of results page,written by Andy
 	padding-bottom: 0.8em;
 }
 
+@media screen and (max-width:1000px){
+	#searchresults{
+		left: 10%;
+	}
+}
 
+@media screen and (max-width:760px){
+	#searchresults{
+		width: 90%;
+		left: 5%;
+	}
+}
+
+@media screen and (max-width:680px){
+	.text_box{
+		width: 60%;
+	}
+}
