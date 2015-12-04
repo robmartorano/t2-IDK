@@ -168,10 +168,6 @@ input[type=submit]:hover {
 	
 }
 
-
-
-
-
 img{
 	
 	display:block;
@@ -188,32 +184,3 @@ img{
 	font-weight: 600;
 }
 
-	
-@media screen and (min-width: 1em){
-	li{
-		display:block;
-		margin-left:auto;
-		margin-right:auto;
-	}
-
-
-	img{
-		width:360px;
-		height:240px;
-	
-		}
-}
-
-
-@media screen and (min-width: 40em){
-	li{
-		display:inline-block;
-	}
-
-
-	img{
-		width:640px;
-		height:360px;
-		}
-
-}
