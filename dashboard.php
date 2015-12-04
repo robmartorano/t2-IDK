@@ -74,6 +74,7 @@ foreach ($result as $value){
 	<link rel="stylesheet" href="stylenavnew.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<script>
 	function reply_click(clicked_id){
  		var idid= <?php echo json_encode($idid); ?>;
