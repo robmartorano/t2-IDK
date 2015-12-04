@@ -10,33 +10,9 @@ body {
 	margin: 0;
 	width: 100%;
 }
-
-/* -------------- SIDEBAR --------------
-
-#sidebar{
-	background-color: #E4E4E4;
-	width: 15%;
-	height: 50em;
-	padding-left: 5%;
-	padding-right: 1%;
-	/*display: inline-block;
-	float: left;
-}
-
-#sidebar_text{
-	padding-left:0.5em;
-}
-
-#sidebar_text li {
-	width: 100%;
-	padding-bottom: 0.3em;
-}
-
-.indent1{padding-left: 0;}
-.indent2{padding-left: 1em;}
-
-
-/* ------------- EMAIL ----------- */
+/*
+styling of results page,written by Andy
+*/
 
 .wth{
 	text-decoration: underline;

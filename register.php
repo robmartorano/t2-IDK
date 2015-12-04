@@ -1,6 +1,7 @@
 <?php session_set_cookie_params(0); session_start() ?>
 <html>
 	<head>
+	<!-- Registration page, written by Jerry -->
 		<link rel="stylesheet" href="styleregister.css">
 		<link rel="stylesheet" href="stylenavnew.css">
 		<link href="css/bootstrap.css" rel="stylesheet">

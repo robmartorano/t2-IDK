@@ -2,7 +2,7 @@
 
 <div id="blackfilter">
 <div id="popupcorrect">
-		
+<!-- Prompts the result the google Api found, written by Jerry -->		
 	<p id="prompt">Is this the book you want to sell? </p>
 	
 	<div id="popuptext">

@@ -4,7 +4,7 @@
 	<div id ="close">
 		Close
 	</div>
-	
+<!-- Prompts the result if the google api didn't find any books, written by Jerry -->	
 	<form action="process.php"  method="post">
 		<p id="help"><span class="inputtitle">We're sorry, we cannot find your book.</span><br> 
 		<span class="inputtitle">Please enter rest of the information manually:</span></p>

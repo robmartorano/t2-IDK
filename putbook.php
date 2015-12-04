@@ -1,5 +1,5 @@
 <?php
-
+#Written by Wilson, enters the book into the database
 session_start();
 
 

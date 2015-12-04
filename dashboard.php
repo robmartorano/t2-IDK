@@ -1,4 +1,5 @@
 <?php
+/*dashboard where user can add and delete their textbook listings written by Jerry and Wilson and styling by Andy*/
 session_start();
 if(isset($_SESSION['logged_in'])){
 	

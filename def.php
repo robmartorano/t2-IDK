@@ -1,4 +1,5 @@
 <?php
+/* Script to login the user worked on by Jerry and Wilson */
 session_set_cookie_params(0);
 session_start();
 
