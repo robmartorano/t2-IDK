@@ -117,7 +117,8 @@ body {
 }
 
 #yesButton{margin-right: 1em;}
-#yesButton:hover{cursor: hand;}
+#yesButton:hover{cursor: hand;
+}
 
 #noButton{margin-left: 1em;}
 #noButton:hover{cursor: hand;}
