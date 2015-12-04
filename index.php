@@ -1,5 +1,6 @@
 <DOCTYPE! HTML>
 <?php  session_start() ?>
+
 <html>
 	<head>
 		<link rel="stylesheet" href="stylehomepage.css">
@@ -11,7 +12,7 @@
 		<!-- <link rel="stylesheet" href="stylesearchbar.css"> -->
 		
 		<script>
-		
+		//Homepage made mainly by Andy
 		function checkTextField(field) {
     if (field.value == '') {
         alert("Field is empty");

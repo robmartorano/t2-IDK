@@ -1,4 +1,5 @@
 <?php
+/*script that registers accounts written by Wilson*/
 session_set_cookie_params(0);
 session_start();
 
@@ -87,6 +88,7 @@ if($sthandler->rowCount() > 0){
 	echo "success";
     $_SESSION['rsuccess'] = "Check your email for an activation link";
     header('Location: login.php');
+	exit();
     }
 }else{
 	$_SESSION['rsuccess'] = $error;

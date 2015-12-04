@@ -1,7 +1,7 @@
 <?PHP 
 session_set_cookie_params(0);
 session_start();
-
+#made by wilson, copied from http://youhack.me/2010/04/01/building-a-registration-system-with-email-verification-in-php/
 $dsn = 'mysql:host=cgi.cs.duke.edu;port=3306;dbname=qp7;';
 $username = 'qp7';
 $password = 'qnDM4.fo6sX_';

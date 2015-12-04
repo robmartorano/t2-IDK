@@ -1,4 +1,5 @@
 <?php
+#Script that takes in the isbn and uses google books api to retrieve information, made by Jerry
 session_start();
 $_SESSION['price']=$_POST['price']; 
 $_SESSION['additional']=$_POST['additional'];
@@ -15,6 +16,7 @@ if($json['totalItems']!=1){
 	exit();
 }else{
 $newurl=$json['items'][0]['selfLink'];
+#need to go to the actual link since some information is missing 
 $newcontent = file_get_contents($newurl);
 $json = json_decode($newcontent,true);
 $authors="";

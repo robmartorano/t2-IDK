@@ -1,5 +1,6 @@
 <html>
 <?php
+#Results page written by Andy and Wilson
 session_start();
 if(isset($_POST["wtf"])){
 $_SESSION['temp']=$_POST["wtf"];

@@ -1,5 +1,6 @@
 <?php session_start();
 echo hi;
+#intermediate step that serves no purpose 
 $_SESSION['author']=$_POST['Authors'];
 $_SESSION['booktitle']=$_POST['Title'];
 $_SESSION['isbn10']=$_POST['ISBN10'];

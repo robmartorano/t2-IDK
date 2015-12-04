@@ -1,5 +1,5 @@
 <?php
-session_start(); # NOTE THE SESSION START
+session_start(); # Script to log user out, written by Jerry 
 $_SESSION = array(); 
 session_unset();
 session_destroy();

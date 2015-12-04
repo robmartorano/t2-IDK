@@ -1,4 +1,5 @@
 <?php
+/* Script to delete textbook, worked on by Wilson */
 session_start();
 $dele = $_POST["mybutton"]; 
 //echo $dele;

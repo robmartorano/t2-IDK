@@ -5,7 +5,8 @@
 <body>
 <?php
 session_start();
-  // Change this to YOUR address
+//Emails seller books, copied from http://www.boutell.com/newfaq/creating/email.html changed slightly by Jerry
+  // Change this to YOUR address 
   $recipient = $_SESSION['sending'];
   $email = $_SESSION['email'];
   $realName = $_SESSION['name'];
