@@ -27,7 +27,6 @@ function userLogin($emails, $passwords, $dbs) {
 		exit;
 	}
 	else {
-<<
 		$_SESSION["Login.Error"] = 'Invalid Login/Password or Unactivated';
 		header("Location: login.php");
 		exit();
